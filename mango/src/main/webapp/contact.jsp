@@ -1,8 +1,24 @@
+<%@page import="jdk.internal.misc.FileSystemOption"%>
+<%@page import="MODEL.Time_Temp"%>
+<%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rain Effect Experiments | Demo 1 | Codrops</title>
+	<meta name="description" content="Some WebGL experiments with raindrop effects" />
+	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
+	<meta name="author" content="Lucas Bebber for Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,10 +28,12 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-
+  
   <title>
     team MANGO
   </title>
+ 
+
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
@@ -23,17 +41,30 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<!--   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
-
-<body class="sub_page">
+<!-- 
+<body class="sub_page, demo-3">
+<video class="videobg" src="images/video.mp4" poster="images/video.jpg" autoplay loop muted>
+		<source src="images/video.webm" type="video/web">
+		<source src="images/video.mp4" type="video/mp4">
+	</video>
+	<div class="container">
+		<canvas id="container" width="1255" height="1003" style=" position: absolute; *//* width: 1255px; *//* height: 1003px; ">
+		</canvas>	
+	/container
+	<script src="js/index3.min.js"></script>
+	
+	
+	
+	
   <div class="hero_area">
-    <!-- header section strats -->
+    header section strats
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
@@ -81,12 +112,12 @@
         </nav>
       </div>
     </header>
-    <!-- end header section -->
+    end header section
   </div>
-  <!-- end hero area -->
+  end hero area
 
 
-  <!-- contact section -->
+  contact section
 
   <section class="contact_section layout_padding-bottom layout_padding2-top">
     <div class="container px-0">
@@ -104,8 +135,8 @@
         <div class="col-lg-8 col-md-7 px-0">
           <div class="map_container">
             <div class="map-responsive">
-<!--               <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
- -->              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=60+Songamro+Namgu+Gwangju+Korea" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=60+Songamro+Namgu+Gwangju+Korea" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
 
             </div> 
           </div>
@@ -135,9 +166,9 @@
     </div>
   </section>
 
-  <!-- end contact section -->
+  end contact section
 
-  <!-- client section -->
+  client section
 
   <section class="client_section layout_padding-bottom">
     <div class="container">
@@ -165,13 +196,13 @@
           <img src="images/quote.png" alt="">
         </div>
       </div>
-    </div>
+    </div></div>
   </section>
 
-  <!-- end client section -->
+  end client section
 
 
-  <!-- info section -->
+  info section
 
   <section class="info_section  layout_padding2-top">
     <div class="social_container">
@@ -240,20 +271,25 @@
         </div>
       </div>
     </div>
-    <!-- footer section -->
+    footer section
     <section class=" footer_section">
-      <div class="container">
+      <div class="container" style = "height : 5vh !important;">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
           <a href="https://html.design/">Free Html Templates</a>
         </p>
       </div>
     </section>
-    <!-- footer section -->
+    footer section
 
   </section>
 
-  <!-- end info section -->
+  end info section
+
+
+<script>
+
+</script>
 
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -261,6 +297,84 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script type="text/javascript" src="js/custom.js"></script>
+</body> -->
+
+<body class="demo-1" id = "body">
+	<div class="image-preload">
+		<img src="img/drop-color.png" alt="">
+		<img src="img/drop-alpha.png" alt="">
+		<img src="img/weather/texture-rain-fg.png" />
+		<img src="img/weather/texture-rain-bg.png" />
+		<img src="img/weather/texture-sun-fg.png" />
+		<img src="img/weather/texture-sun-bg.png" />
+		<img src="img/weather/texture-fallout-fg.png" />
+		<img src="img/weather/texture-fallout-bg.png" />
+		<img src="img/weather/texture-drizzle-fg.png" />
+		<img src="img/weather/texture-drizzle-bg.png" />
+	</div>
+	<div class="container">
+	
+	
+		<header class="codrops-header">
+			<div class="codrops-links">
+				<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
+				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a>
+			</div>
+			<h1>Team Mango</h1>
+			<nav class="codrops-demos">
+				<a class="current-demo" href="index.html">Home</a>
+				<a href="index2.html">Perfume</a>
+				<a href="index3.html">Memo</a>
+			</nav>
+		</header>
+		<div class="slideshow">
+			<canvas width="1" height="1" id="container" style="position:absolute"></canvas>
+			<!-- style="position:absolute" -->
+			<!-- Heavy Rain -->
+			<div class="slide" id="slide-1" data-weather="rain">
+				<div class="slide__element slide__element--date">Sunday, 24<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--temp">12¡Æ<small>C</small></div>
+			</div>
+			<!-- Drizzle -->
+			<div class="slide" id="slide-2" data-weather="drizzle">
+				<div class="slide__element slide__element--date">Saturday, 25<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--temp">18¡Æ<small>C</small></div>
+			</div>
+			<!-- Sunny -->
+			<div class="slide" id="slide-3" data-weather="sunny">
+				<div class="slide__element slide__element--date">Monday, 26<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--temp">25¡Æ<small>C</small></div>
+			</div>
+			<!-- Heavy rain -->
+			<div class="slide" id="slide-5" data-weather="storm">
+				<div class="slide__element slide__element--date">Wednesday, 28<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--temp">20¡Æ<small>C</small></div>
+			</div>
+			<!-- Fallout (greenish overlay with slightly greenish/yellowish drops) -->
+			<div class="slide" id="slide-4" data-weather="fallout">
+				<div class="slide__element slide__element--date">Tuesday, 27<sup>th</sup> of October 2043</div>
+				<div class="slide__element slide__element--temp">34¡Æ<small>C</small></div>
+			</div>
+			<nav class="slideshow__nav">	
+	<%
+	 /* Time_Temp t;
+	 System.out.print(t.getT());  */
+	Calendar cal = Calendar.getInstance();
+	int day = cal.get(Calendar.DAY_OF_MONTH);
+	int month = cal.get(Calendar.MONTH)+1;
+	%>
+				<a class="nav-item" href="#slide-1"><i class="icon icon--rainy"></i><span><%=month %>/<%=day %></span></a>
+				<a class="nav-item" href="#slide-2"><i class="icon icon--drizzle"></i><span><%=month %>/<%=day+1 %></span></a>
+				<a class="nav-item" href="#slide-3"><i class="icon icon--sun"></i><span><%=month %>/<%=day+2 %></span></a>
+				<a class="nav-item" href="#slide-5"><i class="icon icon--storm"></i><span><%=month %>/<%=day+3 %></span></a>
+				<a class="nav-item" href="#slide-4"><i class="icon icon--radioactive"></i><span><%=month %>/<%=day+4 %></span></a>
+			</nav>
+		</div>
+		<p class="nosupport">Sorry, but your browser does not support WebGL!</p>
+	</div>
+	<!-- /container -->
+	<script src="js/index.min.js"></script>
 </body>
+
 
 </html>
