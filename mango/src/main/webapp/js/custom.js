@@ -28,3 +28,23 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
+   // 전체코드
+/* const modalOpenBtn = document.getElementById('modal_open');
+ const modal = document.querySelector('.modal');
+ const overlayModal = modal.querySelector('.modal__overlay');
+ const modalCloseBtn = modal.querySelector('button');
+ const HIDDEN = "hidden";
+
+ function closeModal() {
+  modal.setAttribute("style","display:none");
+     modal.classList.add(HIDDEN);    
+ }
+
+ function openModal() {
+     modal.setAttribute("style","display:block");
+     modal.classList.remove(HIDDEN);
+ } 
+
+ overlayModal.addEventListener('click',closeModal);
+ modalCloseBtn.addEventListener('click',closeModal);
+ modalOpenBtn.addEventListener('click',openModal);*/

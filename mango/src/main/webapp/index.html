@@ -29,6 +29,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  
 </head>
 
 <body>
@@ -669,8 +670,6 @@
   </section>
 
   <!-- end info section -->
-
-
 <style>
   .modal{
     position: fixed;
@@ -687,6 +686,7 @@ height: 100%;
 position: absolute;
 z-index: 1000;
 }
+
 .modal__content{
 background-color: white;
 padding: 80px 80px;
@@ -698,11 +698,13 @@ margin-top: 10%;
 box-shadow: 0 10px 20px rgba(0, 0,0, 0.19),0 6px 6px rgba(0, 0,0, 0.23);
 z-index: 1200;
 }
+
 .blankt{
   width: 20%;
   height: 10%;
 }
 </style>
+
 
 <!--id menu-->
 <div class="modal hidden">
@@ -734,8 +736,8 @@ z-index: 1200;
 </div>
 </div>
 
+
 <script>
-   // 전체코드
  const modalOpenBtn = document.getElementById('modal_open');
  const modal = document.querySelector('.modal');
  const overlayModal = modal.querySelector('.modal__overlay');
@@ -755,10 +757,7 @@ z-index: 1200;
  overlayModal.addEventListener('click',closeModal);
  modalCloseBtn.addEventListener('click',closeModal);
  modalOpenBtn.addEventListener('click',openModal);
-</script>
-
-
-
+ </script>
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
