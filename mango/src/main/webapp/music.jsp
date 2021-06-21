@@ -102,7 +102,26 @@
     <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
 
     <div id="wrapper">
-        <div id="slider-wrap">
+    
+    	<div id = "playList" style = "float: right; position: relative; 
+        width: 600px; height: auto; box-sizing: border-box; padding: 90px; max-width:100%" >
+            <ul>
+                <li><h1 style = "text-align: left">PlayList</h1></li>
+                <li>1. BTS - BUTTER</li>
+                <li>2. Aespa - Next Level</li>
+                <li>3. Brave Girls - 치맛바람</li>
+                <li>4. IU - Lilac</li>
+                <li>5. SG워너비 - Timeless</li>
+                <li>6. 세븐틴 - Falling for U</li>
+                <li>7. 오마이걸 - Dun Dun Dance</li>
+                <li>8. BTS - Dynamite</li>
+                <li>9. IU - 잠못드는 밤 비는 내리고</li>
+                <li>10. ITZY - 마.피.아. In the morning</li>
+            </ul>
+
+        </div>
+    
+        <div id="slider-wrap" style = "max-width: 100%">
             <ul id="slider">
                 <li>
                     <div>
@@ -151,6 +170,38 @@
                     </div>
                     <img src="./img/music/Falling_for_U.jpg">
                 </li>
+                
+                <li>
+                    <div>
+                        <h3 style = "color: black">오마이걸</h3>
+                        <span>Dun Dun Dance</span>
+                    </div>
+                    <img src="./img/music/OMG_DunDunDance.jpg">
+                </li>
+                
+                <li>
+                    <div>
+                        <h3 style = "color: black">BTS</h3>
+                        <span>Dynamite</span>
+                    </div>
+                    <img src="./img/music/BTS_DYNAMITE.jpg">
+                </li>
+                
+                <li>
+                    <div>
+                        <h3 style = "color: black">IU</h3>
+                        <span>잠못드는밤 비는 내리고</span>
+                    </div>
+                    <img src="./img/music/IU_NIGHT.jpg">
+                </li>
+                
+                <li>
+                    <div>
+                        <h3 style = "color: black">ITZY</h3>
+                        <span>마.피.아. In the morning</span>
+                    </div>
+                    <img src="./img/music/ITZY_MAFIA.jpg">
+                </li>
 
 
             </ul>
@@ -174,76 +225,6 @@
 
   <!-- end portfolio section -->
 
-
-  <!-- info section -->
-
-  <section class="info_section  layout_padding2-top">
-    <div class="social_container">
-      <div class="social_box">
-        <a href="">
-          <img src="images/fb.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/twitter.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/linkedin.png" alt="">
-        </a>
-        <a href="">
-          <img src="images/youtube.png" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="info_container ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              ABOUT US
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              Instagram
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipi
-              scing elit, sed doLorem ipsum dolor sit
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              NEED HELP
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <h6>
-              CONTACT US
-            </h6>
-            <div class="info_link-box">
-              <a href="">
-                <img src="images/location.png" alt="">
-                <span> Gb road 123 london Uk </span>
-              </a>
-              <a href="">
-                <img src="images/call.png" alt="">
-                <span>+01 12345678901</span>
-              </a>
-              <a href="">
-                <img src="images/mail.png" alt="">
-                <span> demo@gmail.com</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- footer section -->
     <section class="footer_section">
       <div class="container">
@@ -254,8 +235,6 @@
       </div>
     </section>
     <!-- footer section -->
-
-  </section>
 
   <!-- end info section -->
 
