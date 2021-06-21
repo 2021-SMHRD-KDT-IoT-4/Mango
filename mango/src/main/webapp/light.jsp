@@ -78,7 +78,7 @@
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link"
-									href="about.html"> About </a></li>
+									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="service.html"> Services </a></li>
 								<li class="nav-item"><a class="nav-link"
