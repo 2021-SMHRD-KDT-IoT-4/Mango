@@ -28,12 +28,12 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+ 
   <link rel="stylesheet" type="text/css" href="css/style2.css" />
-  
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />	
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css"/>
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
@@ -63,17 +63,17 @@
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="service.html">
-                    Services
+                  <a class="nav-link" href="perfume.jsp">
+                    Perfume
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="portfolio.html">
-                    Portfolio
+                    Music
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="contact.jsp">Contact Us</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -85,15 +85,22 @@
       </div>
     </header>
     <!-- end header section -->
-  </div>
+  </div><br>
   <!-- end hero area -->
-
+ <div class="container">
+      <div class="heading_container">
+        <h2>SCENT <span>NOTE</span></h2>
+        <p>
+         기분좋은 향기와 함께 깨어난 하루라면, 분명 좀 더 행복한 날이 될 거예요.
+        </p>
+      </div>
+    </div>
 	<!-- service section -->
 
  <section class="slider-1">
   <div class="slider-1">
     <div class="slides">
-        <div class="active" style="background-image:url(https://images.prismic.io/stayfolio-production/73f99b79-336f-47fd-8ace-afc00978147d_banner.jpg?auto=compress,format);"></div>
+        <div class="active" style="background-image:url(http://www.howsweeteats.com/wp-content/uploads/2011/04/ccake-2-2.jpg);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/038914a1-9b23-4f26-9b10-84669d9a1339_banner.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/586abdef-7163-4629-9c39-6d7a627ae10e_01_banner_picture.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/3b4bf417-3c41-4d05-b62c-f02a293ba115_banner.jpg?auto=compress,format);"></div>
@@ -114,79 +121,19 @@
     </div>
 </div>
  
-  <!--  <div class="container">
-      <div class="heading_container">
-        <h2>
-          Ser<span>vi</span>ces
-        </h2>
-        <p>
-          adipiscingelit,sed do eiusmod tempor incididunt ut labore et dolore magn
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 ">
-          <div class="img-container tab-content">
-            <div class="img-box tab-pane fade show active" id="img1" role="tabpanel" align = "center">
-              <img src="images/service-img.jpg" alt="" />
-            </div>
-       
-            <div class="img-box tab-pane fade  " id="img3" role="tabpanel">
-              <img src="images/service-img.jpg" alt="" />
-            </div>
-            <div class="img-box tab-pane fade  " id="img4" role="tabpanel">
-              <img src="images/service-img.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="detail-container nav nav-tabs" id="myTab" role="tablist">
-            <div class="detail-box active" id="img1-tab" data-toggle="tab" href="#img1" role="tab" aria-selected="true">
-              <h4>
-                Website <br />
-                design
-              </h4>
-            </div>
-            <div class="detail-box" id="img2-tab" data-toggle="tab" href="#img2" role="tab" aria-selected="false">
-              <h4>
-                Logo <br />
-                design
-              </h4>
-            </div>
-            <div class="detail-box" id="img2-tab" data-toggle="tab" href="#img3" role="tab" aria-selected="false">
-              <h4>
-                brochure <br />
-                design
-              </h4>
-            </div>
-            <div class="detail-box" id="img2-tab" data-toggle="tab" href="#img4" role="tab" aria-selected="false">
-              <h4>
-                visiting card <br />
-                design
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section> -->
-
+ 
   <!-- end service section -->
-<!-- logo section -->
+
+  <!-- logo section -->
 
   <section class="logo_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
-          A N<span>EW</span> Logo <br>
-          FOR YOUR COMPANY
+          RECOMMEND <span>THIS</span> PERFUME <br>
         </h2>
         <p>
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magn
+          당신의 마음을 사로잡은 향은 무엇이었나요?
         </p>
       </div>
     </div>
@@ -196,23 +143,24 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l1.jpg" alt="">
+                <img src="images/floral.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Floral
                 </h4>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="box b2">
+           
               <div class="img-box">
-                <img src="images/l2.jpg" alt="">
+                 <a href="index.html"><img src="images/citrus.jpg" alt=""></a>
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Citrus
                 </h4>
               </div>
             </div>
@@ -220,11 +168,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l3.jpg" alt="">
+                <img src="images/fruity.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Fruity
                 </h4>
               </div>
             </div>
@@ -232,11 +180,11 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l4.jpg" alt="">
+                <img src="images/woody.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Woody
                 </h4>
               </div>
             </div>
@@ -244,11 +192,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l5.jpg" alt="">
+                <img src="images/green.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Green
                 </h4>
               </div>
             </div>
@@ -256,11 +204,11 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l6.jpg" alt="">
+                <img src="images/musk.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Musk
                 </h4>
               </div>
             </div>
@@ -268,11 +216,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l3.jpg" alt="">
+                <img src="images/oriental.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Oriental
                 </h4>
               </div>
             </div>
@@ -280,11 +228,107 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l4.jpg" alt="">
+                <img src="images/aqua.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Aqua
+                </h4>
+              </div>
+            </div>
+          </div>
+           <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/spicy.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Spicy
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/gourmand.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Gourmand
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/powdery.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Powdery
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/chypre.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Chypre
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/aldehyde.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Aldehyde
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/fougere.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Fougere
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/fresh.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  fresh
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/tabacco_leather.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  tabacco leather
                 </h4>
               </div>
             </div>
@@ -294,14 +338,18 @@
     </div>
   </section>
 
-
+  &copy; <span id="displayYear"></span> 
+          <a href="https://html.design/"></a>
+        
   <!-- end logo section -->
 
- 
 
-  <script src="js/slider.js"></script>
+ 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/slider.js"></script>
+  
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
   <script type="text/javascript" src="js/custom.js"></script>

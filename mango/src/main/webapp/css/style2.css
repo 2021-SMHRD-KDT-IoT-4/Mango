@@ -54,6 +54,7 @@ a {
 /* 슬라이더 1 - 슬라이드 */
 
 .slider-1 > .slides > div {
+    
     position:absolute;
     top:0;
     left:0;
