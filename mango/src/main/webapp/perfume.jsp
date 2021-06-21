@@ -100,7 +100,7 @@
  <section class="slider-1">
   <div class="slider-1">
     <div class="slides">
-        <div class="active" style="background-image:url(https://images.prismic.io/stayfolio-production/73f99b79-336f-47fd-8ace-afc00978147d_banner.jpg?auto=compress,format);"></div>
+        <div class="active" style="background-image:url(http://www.howsweeteats.com/wp-content/uploads/2011/04/ccake-2-2.jpg);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/038914a1-9b23-4f26-9b10-84669d9a1339_banner.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/586abdef-7163-4629-9c39-6d7a627ae10e_01_banner_picture.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/3b4bf417-3c41-4d05-b62c-f02a293ba115_banner.jpg?auto=compress,format);"></div>
@@ -143,23 +143,24 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l1.jpg" alt="">
+                <img src="images/floral.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Floral
                 </h4>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="box b2">
+           
               <div class="img-box">
-                <img src="images/l2.jpg" alt="">
+                 <a href="index.html"><img src="images/citrus.jpg" alt=""></a>
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Citrus
                 </h4>
               </div>
             </div>
@@ -167,11 +168,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l3.jpg" alt="">
+                <img src="images/fruity.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Fruity
                 </h4>
               </div>
             </div>
@@ -179,11 +180,11 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l4.jpg" alt="">
+                <img src="images/woody.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Woody
                 </h4>
               </div>
             </div>
@@ -191,11 +192,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l5.jpg" alt="">
+                <img src="images/green.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Green
                 </h4>
               </div>
             </div>
@@ -203,11 +204,11 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l6.jpg" alt="">
+                <img src="images/musk.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Musk
                 </h4>
               </div>
             </div>
@@ -215,11 +216,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/l3.jpg" alt="">
+                <img src="images/oriental.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Oriental
                 </h4>
               </div>
             </div>
@@ -227,11 +228,107 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/l4.jpg" alt="">
+                <img src="images/aqua.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Logo
+                  Aqua
+                </h4>
+              </div>
+            </div>
+          </div>
+           <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/spicy.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Spicy
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/gourmand.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Gourmand
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/powdery.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Powdery
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/chypre.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Chypre
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/aldehyde.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Aldehyde
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/fougere.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  Fougere
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box  b1">
+              <div class="img-box">
+                <img src="images/fresh.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  fresh
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box b2">
+              <div class="img-box">
+                <img src="images/tabacco_leather.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h4>
+                  tabacco leather
                 </h4>
               </div>
             </div>
