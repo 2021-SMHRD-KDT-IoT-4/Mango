@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 
@@ -19,13 +19,9 @@
 <title>Diffuso</title>
 
 <style>
-
 #wcat {
 	text-align: center;
 }
-
-
-
 </style>
 
 <!-- slider stylesheet -->
@@ -80,11 +76,14 @@
 								<li class="nav-item active"><a class="nav-link"
 									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link"
-									href="service.html"> Services </a></li>
+									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link"
-									href="portfolio.html"> Portfolio </a></li>
+									href="music.jsp"> Music </a></li>
 								<li class="nav-item"><a class="nav-link"
-									href="contact.html">Contact Us</a></li>
+									href="contact.jsp">Contact Us</a></li>
+								<li class="nav-item">
+									<button class="nav-link" id="modal_open">Login</button>
+								</li>
 							</ul>
 							<form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
 								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
@@ -110,36 +109,36 @@
 	
 	<br>
 	<br>
-	
+
 
 	<div id="wcat">
-		<img src="img/wcat.png" width="400" >
+		<img src="img/wcat.png" width="400">
 	</div>
 
 	<div class="container">
-		
+
 
 		<div class="panel panel-default">
 			<div class="pannel-heading"></div>
-			<div class="panel-body" align="center" >
-			
+			<div class="panel-body" align="center">
+
 				<!--슬라이더로 선택할 input-->
 				<input id="mini" type="text" data-slider-min="0" data
-					slider-max="10" data-slider-step="1" data-slidr-value="0" ><span>
+					slider-max="10" data-slider-step="1" data-slidr-value="0"><span>
 					<br>현재 선택 값: <span id="miniVal">0</span>
 				</span>
 			</div>
 		</div>
 	</div>
-	
-	<section class="footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
-        </p>
-      </div>
-    </section>
+
+	<section class=" footer_section">
+		<div class="container">
+			<p>
+				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span>
+			</p>
+		</div>
+	</section>
 
 s
 	<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -153,7 +152,6 @@ s
 			var val = $('#mini').val();
 			document.getElementById("miniVal").textContent = val;
 		});
-
 	</script>
 
 
@@ -172,6 +170,98 @@ s
 		});
 	</script>
 
+	<style>
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+}
+
+.modal__overlay {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1000;
+}
+
+.modal__content {
+	background-color: white;
+	padding: 80px 80px;
+	text-align: center;
+	position: relative;
+	width: 50%;
+	margin-left: 20%;
+	margin-top: 10%;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
+	z-index: 1200;
+}
+
+.blankt {
+	width: 20%;
+	height: 10%;
+}
+</style>
+
+	<!--id menu-->
+	<div class="modal hidden">
+		<div class="modal__overlay"></div>
+		<div class="modal__content">
+			<button style="margin-left: 100%;">X</button>
+
+			<ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
+				<form action="#">
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="submit" value="LogIn" class="button fit"></li>
+				</form>
+			</ul>
+			<div class=blankt></div>
+			<ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+				<form action="#" method=post>
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="text" name=tel placeholder="전화번호를 입력하세요"></li>
+					<li><input type="text" name=addr placeholder="집주소를 입력하세요"></li>
+					<li><input type="submit" value="JoinUs" class="button fit"></li>
+				</form>
+			</ul>
+			<div class=blankt></div>
+
+		</div>
+	</div>
+
+
+
+	<script>
+		const modalOpenBtn = document.getElementById('modal_open');
+		const modal = document.querySelector('.modal');
+		const overlayModal = modal.querySelector('.modal__overlay');
+		const modalCloseBtn = modal.querySelector('button');
+		const HIDDEN = "hidden";
+
+		function closeModal() {
+			modal.setAttribute("style", "display:none");
+			modal.classList.add(HIDDEN);
+		}
+
+		function openModal() {
+			modal.setAttribute("style", "display:block");
+			modal.classList.remove(HIDDEN);
+		}
+
+		overlayModal.addEventListener('click', closeModal);
+		modalCloseBtn.addEventListener('click', closeModal);
+		modalOpenBtn.addEventListener('click', openModal);
+	</script>
 </body>
 
 </html>
