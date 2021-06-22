@@ -110,8 +110,6 @@ while((line=bf.readLine())!=null){
     
 }
 
-
-
 ////¹®ÀÚ¿­À» JSONÀ¸·Î ÆÄ½Ì
 JSONParser jsonParser = new JSONParser();
 JSONObject jsonObj = null;
@@ -141,16 +139,50 @@ for(int i=0;i<arr.size();i+=7){
 	
 }
 
+String urlstr = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid="+"01302211c0ad8247844362fd2d8280f7";
+URL url2 = new URL(urlstr);
+BufferedReader bf2;
+String line2;
+String result2="";
 
-	
+bf2 = new BufferedReader(new InputStreamReader(url2.openStream()));
+
+while((line2=bf2.readLine())!=null){
+    result2=result2.concat(line2);
+}
+
+JSONParser jsonParser2 = new JSONParser();
+JSONObject jsonObj2 = null;
+try {
+	jsonObj2 = (JSONObject) jsonParser2.parse(result2);
+} catch (ParseException e) {
+	e.printStackTrace();
+}
+
+
+JSONArray weatherArray2 = (JSONArray) jsonObj2.get("weather");
+JSONObject wea = (JSONObject) weatherArray2.get(0);
+/* System.out.println("³¯¾¾ : "+wea.get("main")); */
+
+
 %>
 
 
 		<div class="slideshow">
 			<canvas width="1" height="1" id="container" style="position:absolute"></canvas>
 			<!-- style="position:absolute" -->
+			<%String dataW = "";
+			String dataR = "";
+			String todayW = (String)wea.get("main");
+			if(todayW.equals("Thunderstorm"))dataR = "storm";
+			if(todayW.equals("Drizzle"))dataR = "drizzle";
+			if(todayW.equals("Rain"))dataR = "rain";
+			if(todayW.equals("Clear"))dataR = "sunny";
+			if(todayW.equals("Clouds"))dataR = "fallout";
+			
+	 %>
 			<!-- Heavy Rain -->
-			<div class="slide" id="slide-1" data-weather="rain">
+			<div class="slide" id="slide-1" data-weather="<%=dataR%>">
 				<div class="slide__element slide__element--date"><%=date.getDay(0) %>, <%=date.getDayOfWeek(0)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"></div>
 			</div>
