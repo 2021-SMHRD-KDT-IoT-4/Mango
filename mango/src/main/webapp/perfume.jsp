@@ -16,7 +16,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>
-    Diffuso
+    당신의 아침 망고와 함께
   </title>
 
   <!-- slider stylesheet -->
@@ -36,16 +36,39 @@
   <link rel="stylesheet" href="css/style.css"/>
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  
+  <style>
+  
+	  #modal_open {
+		border-color: transparent;
+		BACKGROUND-COLOR: transparent;
+		
+	  }
+
+	  #setting {
+	  	text-align: center;
+	  }
+	  
+	  #setTable {
+	  	
+	  	width: 50%;
+	  	height: 30%;
+	  	margin: auto;
+	  
+	  }
+		
+  </style>
+  
 </head>
 
 <body class="sub_page">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" />
+      <div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+          <a class="navbar-brand" href="home.jsp">
+            <img src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -55,33 +78,27 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link2" href="home.jsp">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="light.jsp">
+                  <a class="nav-link2" href="light.jsp">
                     Light
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="perfume.jsp">
+                  <a class="nav-link2" href="perfume.jsp" style = "color:black;">
                     Perfume
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="music.jsp">
+                  <a class="nav-link2" href="music.jsp">
                     Music
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.jsp">Contact Us</a>
-                </li>
-                <li class="nav-item">
-				  <button class="nav-link" id="modal_open">Login</button>
+				  <button class="nav-link2" id="modal_open" style = "color:black;">Login</button>
 				</li>
               </ul>
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
             </div>
           </div>
         </nav>
@@ -126,10 +143,156 @@
  
  
   <!-- end service section -->
+  
+  <!-- setting section -->
+  <br><br>
+  <div class="container">
+      <div class="heading_container">
+        <h2>SETT<span>ING</span></h2>
+        <p>
+         날씨에 맞게 원하는 향과 시간을 선택해 주세요.
+        </p>
+      </div>
+    </div>
+  
+   <div id = "setting">
+	   <form>
+			<table id = "setTable" border = "1">
+				<tr>
+					<td>설정1</td>
+					<td>향수1</td>
+					<td>날씨1</td>
+					<td>시간1</td>
+					<td>음악1</td>
+				</tr>
+				
+				<tr>
+					<td>설정2</td>
+					<td>향수2</td>
+					<td>날씨2</td>
+					<td>시간2</td>
+					<td>음악2</td>
+				</tr>
+				
+				<tr>
+					<td>설정3</td>
+					<td>향수3</td>
+					<td>날씨3</td>
+					<td>시간3</td>
+					<td>음악3</td>
+				</tr>
+				
+				<tr>
+					<td>설정4</td>
+					<td>향수4</td>
+					<td>날씨4</td>
+					<td>시간4</td>
+					<td>음악4</td>
+				</tr>
+				
+				<tr>
+					<td>설정5</td>
+					<td>향수5</td>
+					<td>날씨5</td>
+					<td>시간5</td>
+					<td>음악5</td>
+				</tr>
+				
+			</table>   
+	  
+		  <select name="setting" >
+		    <option value="none" selected>=== 옵션 ===</option>
+		    <option value="s1">설정1</option>
+		    <option value="s2">설정2</option>
+		    <option value="s3">설정3</option>
+		    <option value="s4">설정4</option>
+		    <option value="s5">설정5</option>
+		  </select>
+		  
+		  <select name="perfume" >
+		    <option value="none" selected>==== 향수 ====</option>
+		    <option value="p1">Floral</option>
+		    <option value="p2">Citrus</option>
+		    <option value="p3">Fruity</option>
+		    <option value="p4">Woody</option>
+		    <option value="p5">Green</option>
+		    <option value="p6">Musk</option>
+		    <option value="p7">Oriental</option>
+		    <option value="p8">Aqua</option>
+		    <option value="p9">Spicy</option>
+		    <option value="p10">Gourmand</option>
+		    <option value="p11">Powdery</option>
+		    <option value="p12">Chypre</option>
+		    <option value="p13">Aldehyde</option>
+		    <option value="p14">Fougere</option>
+		    <option value="p15">Fresh</option>
+		    <option value="p16">Tabacco leather</option>
+		  </select>
+		  
+		  <select name="weather" >
+		    <option value="none" selected>=== 날씨 ===</option>
+		    <option value="w1">맑음</option>
+		    <option value="w2">비</option>
+		    <option value="w3">흐림</option>
+		    <option value="w4">눈</option>
+		  </select>
+		  
+		  <select name="time" >
+		    <option value="none" selected>=== 시간 ===</option>
+		    <option value="t6">06:00</option>
+		    <option value="t7">07:00</option>
+		    <option value="t8">08:00</option>
+		    <option value="t9">09:00</option>
+		    <option value="t10">10:00</option>
+		    <option value="t11">11:00</option>
+		    <option value="t12">12:00</option>
+		    <option value="t13">13:00</option>
+		    <option value="t14">14:00</option>
+		    <option value="t15">15:00</option>
+		    <option value="t16">16:00</option>
+		    <option value="t17">17:00</option>
+		    <option value="t18">18:00</option>
+		    <option value="t19">19:00</option>
+		    <option value="t20">20:00</option>
+		    <option value="t21">21:00</option>
+		    <option value="t22">22:00</option>
+		    <option value="t23">23:00</option>
+		    <option value="t24">24:00</option>
+		  </select>
+		  
+		  <select name="music" >
+		    <option value="none" selected>=== 음악 ===</option>
+		    <option value="m1">트랙1</option>
+		    <option value="m2">트랙2</option>
+		    <option value="m3">트랙3</option>
+		    <option value="m4">트랙4</option>
+		    <option value="m5">트랙5</option>
+		    <option value="m6">트랙6</option>
+		    <option value="m7">트랙7</option>
+		    <option value="m8">트랙8</option>
+		    <option value="m9">트랙9</option>
+		    <option value="m10">트랙10</option>
+		    <option value="m11">트랙11</option>
+		    <option value="m12">트랙12</option>
+		    <option value="m13">트랙13</option>
+		    <option value="m14">트랙14</option>
+		    <option value="m15">트랙15</option>
+		  </select>
+		  
+	      <p>
+	      	<input type="submit" value="설정">
+	      </p>
+	   
+	   </form>
+	   
+   </div>
+  
+  
+  <!-- end setting section -->
 
   <!-- logo section -->
 
-  <section class="logo_section layout_padding">
+  <section class="logo_section layout_padding" style="padding-bottom: 60px; padding-top: 60px;">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -145,7 +308,7 @@
         <div class="owl-carousel">
           <div class="item">
             <div class="box  b1">
-              <div class="img-box">
+              <div class="img-box" >
                 <img src="images/floral.jpg" alt="">
               </div>
               <div class="detail-box">
@@ -339,28 +502,33 @@
       </div>
     </div>
   </section>
-  <section class="recommend_section">
+  
   <div class="container">
-  <div id = "pf_pic">
-  <img src="images/floral.jpg" width="50%" height="30%">
-  </div>
-  <div id = "pf_inf">
-  <p>화사한 플로럴</p>
-  <p>화원 속을 거니는 듯한 풍부한 꽃 향기가 특징입니다..</p><br>
-  <p>햇살 비추는 맑은 날 아침을 시작하기에 어울리는 향</p><br>
-  <p>#청순한 #청초한 #여성스러운 #우아한 #세련된</p>
-  </div>
-  </div>
-  </section>
+      <div class="heading_container">
+        <div class = "pf_detail" style = "background-color: white; padding: 5%; width: 80%; height: 60%">
+		  	  <div id = "pf_pic">
+		  	  <img src="images/floral.jpg" width="50%" height="30%">
+	  	</div>
+		  <div id = "pf_inf">
+		      <p>화사한 플로럴</p>
+			  <p>화원 속을 거니는 듯한 풍부한 꽃 향기가 특징입니다..</p><br>
+			  <p>햇살 비추는 맑은 날 아침을 시작하기에 어울리는 향</p><br>
+			  <p>#청순한 #청초한 #여성스러운 #우아한 #세련된</p>
+		  </div>
+  		</div>
+        
+      </div>
+    </div>
+  
 
-  <section class=" footer_section">
+  <section class="footer_section">
 		<div class="container">
 			<p>
 				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
 					pictures cannot be copied without permission.</span>
 			</p>
 		</div>
-	</section>
+  </section>
         
   <!-- end logo section -->
 
@@ -386,7 +554,7 @@
 	text-align: center;
 	position: relative;
 	width: 50%;
-	margin-left: 20%;
+	margin-left: 25%;
 	margin-top: 10%;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);

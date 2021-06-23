@@ -14,7 +14,7 @@
   <meta name="author" content="" />
 
   <title>
-    Mango
+    당신의 아침 망고와 함께
   </title>
 
   <!-- slider stylesheet -->
@@ -36,27 +36,42 @@
   <style>
   	#wrapper {
   		
-  		background-image: url('img/music/back2.jpg');
+  		background-image: url('img/music/list.jpg');
   		background-repeat: no-repeat;
   		background-size: cover;
+  		margin-top: 0px;
   	
   	}
   	
   	#modal_open {
   	
 		border-color: transparent;
+		BACKGROUND-COLOR: transparent;
 		
+	}
+	
+	.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link2 {
+    margin-left: 22px;
+    color: #514f4f;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    
+    display: inline-block;
+    font-weight: bold;
+    color: #488bce;
+    
 	}
   </style>
 </head>
-<body class="sub_page">
+<body class="sub_page" style = "background:white">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" />
+      <div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+          <a class="navbar-brand" href="home.jsp">
+            <img src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -66,31 +81,28 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="home.jsp">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link3" href="home.jsp">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="light.jsp">
+                  <a class="nav-link3" href="light.jsp">
                     Light
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="perfume.jsp">
+                  <a class="nav-link3" href="perfume.jsp">
                     Perfume
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="music.jsp">
+                  <a class="nav-link3" href="music.jsp" style = "color:black;">
                     Music
                   </a>
                 </li>
                 
                 <li class="nav-item">
-				  <button class="nav-link" id="modal_open">Login</button>
+				  <button class="nav-link3" id="modal_open" style = "color:black;">Login</button>
 				</li>
               </ul>
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
             </div>
           </div>
         </nav>
@@ -102,20 +114,18 @@
 
   <!-- portfolio section -->
 
-  <section class="portfolio_section layout_padding2-top">
-    <div class="heading_container">
-      <h2>
-        MUSIC
-      </h2>
-      <p>
-        오늘 하루는 어떤가요. 당신만을 위해 음악을 추천해 드립니다.
-      </p>
+  <section class="portfolio_section layout_padding2-top" style="
+    padding-top: 23px;">
+    <div class="container">
+      <div class="heading_container">
+        <h2>MU<span>SIC</span></h2>
+        <p>
+         오늘 당신의 하루는 어떤가요. 당신만을 위한 음악을 준비 했습니다.
+        </p>
+      </div>
     </div>
       
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
-
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <div id="wrapper">
     
     	<div id = "playList" style = "float: right; position: relative; 
@@ -277,7 +287,7 @@
 	text-align: center;
 	position: relative;
 	width: 50%;
-	margin-left: 20%;
+	margin-left: 25%;
 	margin-top: 10%;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
