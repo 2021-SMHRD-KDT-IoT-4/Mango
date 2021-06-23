@@ -21,7 +21,11 @@
 <style>
 #wcat {
 	text-align: center;
+	background-image: url('img/night_star.jpg');
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
+
 </style>
 
 <!-- slider stylesheet -->
@@ -111,7 +115,7 @@
 
 
 	<div id="wcat">
-		<img src="img/wcat.png" width="400">
+		<img src="img/wcat.png" width="600" style = "padding: 5%">
 	</div>
 
 	<div class="container">

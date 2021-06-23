@@ -33,7 +33,15 @@
   
   <!-- querys -->
   <script src="js/jquery-3.6.0.min.js"></script>
-  
+  <style>
+  	#wrapper {
+  		
+  		background-image: url('img/music/back2.jpg');
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  	
+  	}
+  </style>
 </head>
 <body class="sub_page">
   <div class="hero_area">
@@ -107,7 +115,7 @@
     <div id="wrapper">
     
     	<div id = "playList" style = "float: right; position: relative; 
-        width: 600px; height: auto; box-sizing: border-box; padding: 90px; max-width:100%" >
+        width: 600px; height: auto; box-sizing: border-box; padding: 90px; max-width:100% background-color: black;">
             <ul>
                 <li><h1 style = "text-align: left">PlayList</h1></li>
                 <li>1. BTS - BUTTER</li>
