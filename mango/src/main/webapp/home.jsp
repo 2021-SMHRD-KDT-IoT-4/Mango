@@ -66,7 +66,7 @@
     font-weight: bold;
     background-color: #D7F1FA;
     border-color: transparent;
-    background: rgb(72 139 206 / 32%);
+    background: transparent;
   
   }
   
@@ -99,16 +99,16 @@
 	
 		<header class="codrops-header">
 			<div class="codrops-links">
-				<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
-				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a>
+				<!-- <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
+				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a> -->
 			</div>
 			<h1>Team Mango<%=downJson %></h1>
 			<nav class="codrops-demos">
-				<a class="current-demo" href="home.jsp">Home</a>
-				<a href="light.jsp">Light</a>
-				<a href="perfume.jsp">Perfume</a>
-				<a href="music.jsp">Music</a>
-				<button id = "lg_btn">Login</button>
+				<a class="current-demo" href="home.jsp">HOME</a>
+				<a href="light.jsp">LIGHT</a>
+				<a href="perfume.jsp">PERFUME</a>
+				<a href="music.jsp">MUSIC</a>
+				<button id = "lg_btn">LOGIN</button>
 			</nav>
 		</header>
 <%	

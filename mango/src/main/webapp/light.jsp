@@ -56,6 +56,7 @@
 		border-color: transparent;
 		
 	}
+	
 
 </style>
 
@@ -67,10 +68,10 @@
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
-			<div class="container-fluid">
-				<nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style="flex-direction: row;">
 					<a class="navbar-brand" href="index.html"> <img
-						src="img/mango_logo2.png" alt="" />
+						src="img/mango_logo2.png" alt="logo" style = "width:200px; margin-top:15px; margin-left:15px">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
@@ -83,23 +84,23 @@
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  ">
-								<li class="nav-item "><a class="nav-link" href="home.jsp">Home
+								<li class="nav-item "><a class="nav-link2" href="home.jsp">Home
 										<span class="sr-only">(current)</span>
 								</a></li>
-								<li class="nav-item active"><a class="nav-link"
+								<li class="nav-item active"><a class="nav-link2"
 									href="light.jsp"> Light </a></li>
-								<li class="nav-item"><a class="nav-link"
+								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
-								<li class="nav-item"><a class="nav-link"
+								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
 								
 								<li class="nav-item">
-									<button class="nav-link" id="modal_open">Login</button>
+									<button class="nav-link2" id="modal_open">Login</button>
 								</li>
 							</ul>
-							<form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
 								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-							</form>
+							</form> -->
 						</div>
 					</div>
 				</nav>
@@ -119,10 +120,6 @@
 
 	<!-- mood lamp area -->
 	
-	<br>
-	<br>
-
-
 	<div id="wcat">
 		<img src="img/wcat.png" width="600" style = "padding: 5%">
 	</div>
@@ -132,7 +129,7 @@
 
 		<div class="panel panel-default">
 			<div class="pannel-heading"></div>
-			<div class="panel-body" align="center">
+			<div class="panel-body" align="center" style = "margin-top: 30px;">
 
 				<!--슬라이더로 선택할 input-->
 				<input id="mini" type="text" data-slider-min="0" data

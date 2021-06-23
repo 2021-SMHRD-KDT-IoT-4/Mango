@@ -1169,3 +1169,16 @@ h2 {
     transition: all 0.3s cubic-bezier(1, .01, .32, 1);
 }
 
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link2 {
+    margin-left: 22px;
+    color: #514f4f;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    
+    display: inline-block;
+    font-weight: bold;
+    color: #488bce;
+    
+	}
+	

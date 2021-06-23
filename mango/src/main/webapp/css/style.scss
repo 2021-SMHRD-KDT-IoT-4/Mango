@@ -177,7 +177,7 @@ a:focus {
 .custom_nav-container {
   // z-index: 500;
   padding: 15px 0;
-  flex-direction: column;
+  flex-direction: inherit;
   align-items: center;
 
   .navbar-toggler {
