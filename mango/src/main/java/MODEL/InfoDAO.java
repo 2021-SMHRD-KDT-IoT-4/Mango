@@ -30,7 +30,7 @@ public int login(InfoDTO dto) {
 	
 public int join(InfoDTO dto) {
 		conn();
-		String sql = "insert into info values(?,?,?,?,0,?)";
+		String sql = "insert into info values(?,?,?,?,0,?,?)";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
@@ -38,6 +38,7 @@ public int join(InfoDTO dto) {
 			psmt.setString(3, dto.getPerfume());
 			psmt.setString(4, dto.getSong());
 			psmt.setString(5, dto.getPdnumber());
+			psmt.setString(6, dto.getLoc());
 			
 			result = psmt.executeUpdate();
 			
@@ -57,13 +58,14 @@ public int join(InfoDTO dto) {
 	
 public int change(InfoDTO dto) {
 	conn();
-	String sql = "update info set pw = ?, perfume = ?, song = ?, pdnumber =?";
+	String sql = "update info set pw = ?, perfume = ?, song = ?, pdnumber =?, loc = ?";
 	try {
 		psmt = conn.prepareStatement(sql);
 		psmt.setString(1, dto.getPw());
 		psmt.setString(2, dto.getPerfume());
 		psmt.setString(3, dto.getSong());
 		psmt.setString(4, dto.getPdnumber());
+		psmt.setString(5, dto.getLoc());
 		
 		result = psmt.executeUpdate();
 	} catch (SQLException e) {
