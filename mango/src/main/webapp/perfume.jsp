@@ -159,7 +159,8 @@
             <div class="box b2">
            
               <div class="img-box">
-                 <a href="index.html"><img src="images/citrus.jpg" alt=""></a>
+                 <button id="modal_open1"><img  src="images/citrus.jpg" alt=""></button>
+                
               </div>
               <div class="detail-box">
                 <h4>
@@ -420,16 +421,49 @@
 
 		</div>
 	</div>
+<!--id menu end-->
+<!-- recommend sales menu -->
+<div class="modal hidden">
+		<div class="modal__overlay"></div>
+		<div class="modal__content">
+			<button style="margin-left: 100%;">X</button>
 
+			<ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
+				<form action="#">
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="submit" value="LogIn" class="button fit"></li>
+				</form>
+			</ul>
+			<div class=blankt></div>
+			<ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+				<form action="#" method=post>
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="text" name=tel placeholder="전화번호를 입력하세요"></li>
+					<li><input type="text" name=addr placeholder="집주소를 입력하세요"></li>
+					<li><input type="submit" value="JoinUs" class="button fit"></li>
+				</form>
+			</ul>
+			<div class=blankt></div>
 
+		</div>
+	</div>
+<!-- end recommend sales menu -->
 
 	<script>
-		const modalOpenBtn = document.getElementById('modal_open');
+		//const modalOpenBtn = document.getElementById('modal_open');
+		const modalOpenBtn1 = document.getElementById('modal_open1');
 		const modal = document.querySelector('.modal');
 		const overlayModal = modal.querySelector('.modal__overlay');
 		const modalCloseBtn = modal.querySelector('button');
 		const HIDDEN = "hidden";
-
+	
+		
 		function closeModal() {
 			modal.setAttribute("style", "display:none");
 			modal.classList.add(HIDDEN);
@@ -442,7 +476,8 @@
 
 		overlayModal.addEventListener('click', closeModal);
 		modalCloseBtn.addEventListener('click', closeModal);
-		modalOpenBtn.addEventListener('click', openModal);
+		//modalOpenBtn.addEventListener('click', openModal);
+		modalOpenBtn1.addEventListener('click', openModal);
 	</script>	
  
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
