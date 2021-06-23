@@ -21,8 +21,8 @@
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
 	<meta name="author" content="Lucas Bebber for Codrops" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/style1.css" />
 

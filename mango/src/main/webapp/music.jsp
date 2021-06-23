@@ -12,6 +12,12 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  
+  
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+  
 
   <title>
     Mango
@@ -49,7 +55,11 @@
 	}
   </style>
 </head>
-<body class="sub_page">
+<body class="sub_page demo-1">
+
+	<div class="container" style = "margin-left : 0">
+			<canvas width="1920" height="937" id="container" style="position:absolute"></canvas>
+	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -249,10 +259,15 @@
         </p>
       </div>
     </section>
+    
+    </div>
+	</div>
     <!-- footer section -->
 
   <!-- end info section -->
-	
+		<script src="js/index.min.js"></script>
+		
+		
   <style>
 .modal {
 	position: fixed;
