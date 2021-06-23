@@ -184,8 +184,8 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 %>
 
 
-		<div class="slideshow">
-			<canvas width="1" height="1" id="container" style="position:absolute"></canvas>
+		<div class="slideshow" style = "padding: 35vh 0 0 0">
+			<canvas width="1" height="1" id="container" style="position:absolute" ></canvas>
 			<!-- style="position:absolute" -->
 			<%String dataW = "";
 			String dataR = "";
