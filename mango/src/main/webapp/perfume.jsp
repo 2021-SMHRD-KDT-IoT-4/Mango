@@ -157,10 +157,8 @@
           </div>
           <div class="item">
             <div class="box b2">
-           
               <div class="img-box">
-                 <button id="modal_open1"><img  src="images/citrus.jpg" alt=""></button>
-                
+                 <img src="images/citrus.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -341,6 +339,19 @@
       </div>
     </div>
   </section>
+  <section class="recommend_section">
+  <div class="container">
+  <div id = "pf_pic">
+  <img src="images/floral.jpg" width="50%" height="30%">
+  </div>
+  <div id = "pf_inf">
+  <p>화사한 플로럴</p>
+  <p>화원 속을 거니는 듯한 풍부한 꽃 향기가 특징입니다..</p><br>
+  <p>햇살 비추는 맑은 날 아침을 시작하기에 어울리는 향</p><br>
+  <p>#청순한 #청초한 #여성스러운 #우아한 #세련된</p>
+  </div>
+  </div>
+  </section>
 
   <section class=" footer_section">
 		<div class="container">
@@ -362,7 +373,6 @@
 	height: 100%;
 	z-index: 900;
 }
-
 .modal__overlay {
 	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
@@ -370,7 +380,6 @@
 	position: absolute;
 	z-index: 1000;
 }
-
 .modal__content {
 	background-color: white;
 	padding: 80px 80px;
@@ -383,7 +392,6 @@
 		rgba(0, 0, 0, 0.23);
 	z-index: 1200;
 }
-
 .blankt {
 	width: 20%;
 	height: 10%;
@@ -423,41 +431,11 @@
 	</div>
 <!--id menu end-->
 <!-- recommend sales menu -->
-<div class="modal hidden">
-		<div class="modal__overlay"></div>
-		<div class="modal__content">
-			<button style="margin-left: 100%;">X</button>
 
-			<ul style='list-style: none;'>
-				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
-				<form action="#">
-					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
-					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
-					<li><input type="submit" value="LogIn" class="button fit"></li>
-				</form>
-			</ul>
-			<div class=blankt></div>
-			<ul style='list-style: none;'>
-				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
-				<form action="#" method=post>
-					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
-					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
-					<li><input type="text" name=tel placeholder="전화번호를 입력하세요"></li>
-					<li><input type="text" name=addr placeholder="집주소를 입력하세요"></li>
-					<li><input type="submit" value="JoinUs" class="button fit"></li>
-				</form>
-			</ul>
-			<div class=blankt></div>
-
-		</div>
-	</div>
 <!-- end recommend sales menu -->
 
 	<script>
-		//const modalOpenBtn = document.getElementById('modal_open');
-		const modalOpenBtn1 = document.getElementById('modal_open1');
+		const modalOpenBtn = document.getElementById('modal_open');
 		const modal = document.querySelector('.modal');
 		const overlayModal = modal.querySelector('.modal__overlay');
 		const modalCloseBtn = modal.querySelector('button');
@@ -473,11 +451,12 @@
 			modal.setAttribute("style", "display:block");
 			modal.classList.remove(HIDDEN);
 		}
-
+		
 		overlayModal.addEventListener('click', closeModal);
 		modalCloseBtn.addEventListener('click', closeModal);
-		//modalOpenBtn.addEventListener('click', openModal);
-		modalOpenBtn1.addEventListener('click', openModal);
+		modalOpenBtn.addEventListener('click', openModal);
+		
+		
 	</script>	
  
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
