@@ -103,13 +103,16 @@
  <section class="slider-1">
   <div class="slider-1">
     <div class="slides">
-        <div class="active" style="background-image:url(http://www.howsweeteats.com/wp-content/uploads/2011/04/ccake-2-2.jpg);"></div>
+        <div class="active" style="background-image:url(http://www.howsweeteats.com/wp-content/uploads/2011/04/ccake-2-2.jpg?auto=compress,format);"></div>
+        <div style="background-image:url(images/perfume/floral_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/citrus_info.jpg?auto=compress,format)";></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/038914a1-9b23-4f26-9b10-84669d9a1339_banner.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/586abdef-7163-4629-9c39-6d7a627ae10e_01_banner_picture.jpg?auto=compress,format);"></div>
         <div style="background-image:url(https://images.prismic.io/stayfolio-production/3b4bf417-3c41-4d05-b62c-f02a293ba115_banner.jpg?auto=compress,format);"></div>
     </div>
     <div class="page-btns">
         <div class="active"></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
