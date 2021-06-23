@@ -241,9 +241,9 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  /* font-family: inherit; */
   font-size: inherit;
-  line-height: inherit;
+  /* line-height: inherit; */
 }
 
 button,
@@ -10051,12 +10051,6 @@ a {
 
 a:hover {
     color: #1bc1a3;
-}
-
-body,
-hmtl {
-    background: #ecf0f1;
-    font-family: 'Anton', sans-serif;
 }
 
 

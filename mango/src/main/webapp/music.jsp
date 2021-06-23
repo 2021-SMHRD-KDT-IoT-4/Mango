@@ -41,6 +41,12 @@
   		background-size: cover;
   	
   	}
+  	
+  	#modal_open {
+  	
+		border-color: transparent;
+		
+	}
   </style>
 </head>
 <body class="sub_page">
@@ -60,7 +66,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home.jsp">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="light.jsp">
@@ -77,9 +83,7 @@
                     Music
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.jsp">Contact Us</a>
-                </li>
+                
                 <li class="nav-item">
 				  <button class="nav-link" id="modal_open">Login</button>
 				</li>

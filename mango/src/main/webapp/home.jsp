@@ -16,7 +16,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Rain Effect Experiments | Demo 1 | Codrops</title>
+	<title>당신의 아침 망고와 함께해요</title>
 	<meta name="description" content="Some WebGL experiments with raindrop effects" />
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
 	<meta name="author" content="Lucas Bebber for Codrops" />
@@ -54,6 +54,23 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  
+  <style>
+  
+  #lg_btn {
+  
+  	height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    color: #252445;
+    font-weight: bold;
+    background-color: #D7F1FA;
+    border-color: transparent;
+    background: rgb(72 139 206 / 32%);
+  
+  }
+  
+  </style>
 	
 </head>
 <body class="demo-1" id = "body">
@@ -87,12 +104,11 @@
 			</div>
 			<h1>Team Mango<%=downJson %></h1>
 			<nav class="codrops-demos">
-				<a class="current-demo" href="index.html">Home</a>
-				<a href="about.html">Perfume</a>
-				<a href="service.html">Light</a>
-				<a href="portfolio.html">Music</a>
-				<a href="portfolio.html">Music</a>
-				<button>Login</button>
+				<a class="current-demo" href="home.jsp">Home</a>
+				<a href="light.jsp">Light</a>
+				<a href="perfume.jsp">Perfume</a>
+				<a href="music.jsp">Music</a>
+				<button id = "lg_btn">Login</button>
 			</nav>
 		</header>
 <%	

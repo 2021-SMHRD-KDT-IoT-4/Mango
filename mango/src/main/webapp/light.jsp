@@ -16,7 +16,7 @@
 <meta name="author" content="" />
 
 
-<title>Diffuso</title>
+<title>당신의 아침 망고와 함께해요</title>
 
 <style>
 #wcat {
@@ -50,18 +50,27 @@
 <!-- Bootstrap slider CSS-->
 <link href="css/bootstrap-slider.css" rel="stylesheet">
 
+<style>
+	
+	#modal_open {
+		border-color: transparent;
+		
+	}
+
+</style>
+
 </head>
 
 
 
-<body class="sub_page">
+<body class="sub_page" >
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg custom_nav-container pt-3">
 					<a class="navbar-brand" href="index.html"> <img
-						src="images/logo.png" alt="" />
+						src="img/mango_logo2.png" alt="" />
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
@@ -74,7 +83,7 @@
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  ">
-								<li class="nav-item "><a class="nav-link" href="index.html">Home
+								<li class="nav-item "><a class="nav-link" href="home.jsp">Home
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link"
@@ -83,8 +92,7 @@
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="music.jsp"> Music </a></li>
-								<li class="nav-item"><a class="nav-link"
-									href="contact.jsp">Contact Us</a></li>
+								
 								<li class="nav-item">
 									<button class="nav-link" id="modal_open">Login</button>
 								</li>
