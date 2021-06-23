@@ -16,15 +16,38 @@
 <meta name="author" content="" />
 
 
-<title>당신의 아침 망고와 함께해요</title>
+<title>당신의 아침 망고와 함께</title>
 
 <style>
-#wcat {
-	text-align: center;
-	background-image: url('img/night_star.jpg');
-  	background-repeat: no-repeat;
-  	background-size: cover;
-}
+	#wcat {
+		text-align: center;
+		background-image: url('img/night_star.jpg');
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	}
+
+	#modal_open {
+		border-color: transparent;
+		BACKGROUND-COLOR: transparent;
+		
+	}
+	
+	#onOff {
+		
+		display: block;
+    	margin: auto;
+    	margin-top: 30px;
+			
+	}
+	
+	.sub_page {
+	
+		background-image: url('img/city.jpg');
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+		
+	}
+
 
 </style>
 
@@ -52,26 +75,21 @@
 
 <style>
 	
-	#modal_open {
-		border-color: transparent;
-		
-	}
+	
 	
 
 </style>
 
 </head>
 
-
-
-<body class="sub_page" >
+<body class="sub_page">
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
 			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
-				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style="flex-direction: row;">
-					<a class="navbar-brand" href="index.html"> <img
-						src="img/mango_logo2.png" alt="logo" style = "width:200px; margin-top:15px; margin-left:15px">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+					<a class="navbar-brand" href="home.jsp"> <img
+						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
@@ -88,14 +106,14 @@
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp"> Light </a></li>
+									href="light.jsp" style = "color: black;"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
 								
 								<li class="nav-item">
-									<button class="nav-link2" id="modal_open">Login</button>
+									<button class="nav-link2" id="modal_open" style = "color: black;">Login</button>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -107,8 +125,17 @@
 			</div>
 		</header>
 		<!-- end header section -->
-	</div>
+	</div><br>
 	<!-- end hero area -->
+	
+	 <div class="container">
+      <div class="heading_container">
+        <h2>Li<span>ght</span></h2>
+        <p>
+         당신의 일상을 밝게 비춰줄게요.
+        </p>
+      </div>
+    </div>
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
@@ -123,10 +150,13 @@
 	<div id="wcat">
 		<img src="img/wcat.png" width="600" style = "padding: 5%">
 	</div>
-
+	
+	<div>
+		<input type = button name = "onOffBtn" id = "onOff" style="WIDTH: 100pt; HEIGHT: 30pt; text-align: center" value="on/off위치"> 
+	</div>
+	
 	<div class="container">
-
-
+		
 		<div class="panel panel-default">
 			<div class="pannel-heading"></div>
 			<div class="panel-body" align="center" style = "margin-top: 30px;">
@@ -149,7 +179,7 @@
 		</div>
 	</section>
 
-s
+
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
 
@@ -203,7 +233,7 @@ s
 	text-align: center;
 	position: relative;
 	width: 50%;
-	margin-left: 20%;
+	margin-left: 25%;
 	margin-top: 10%;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);

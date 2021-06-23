@@ -16,7 +16,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>당신의 아침 망고와 함께해요</title>
+	<title>당신의 아침 망고와 함께</title>
 	<meta name="description" content="Some WebGL experiments with raindrop effects" />
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
 	<meta name="author" content="Lucas Bebber for Codrops" />
@@ -260,6 +260,7 @@ $.ajax({
     }
 })
 </script>
+
 
 
 </body>
