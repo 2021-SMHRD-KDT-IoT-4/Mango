@@ -90,6 +90,54 @@ public class test extends HttpServlet {
         	
         	response.sendRedirect("contact.jsp");
         */	
+		
+		
+		//==========================================================
+		
+		String urlstr = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid="+"01302211c0ad8247844362fd2d8280f7";
+		URL url2 = new URL(urlstr);
+		BufferedReader bf2;
+		String line2;
+		String result2="";
+
+		bf2 = new BufferedReader(new InputStreamReader(url2.openStream()));
+
+		while((line2=bf2.readLine())!=null){
+		    result2=result2.concat(line2);
+		}
+
+		JSONParser jsonParser2 = new JSONParser();
+		JSONObject jsonObj2 = null;
+		try {
+			jsonObj2 = (JSONObject) jsonParser2.parse(result2);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+
+		JSONArray weatherArray2 = (JSONArray) jsonObj2.get("weather");
+		JSONObject wea = (JSONObject) weatherArray2.get(0);
+		
+		
+		String dataW = "";
+		String dataR = "";
+		String todayW = (String)wea.get("main");
+		if(todayW.equals("Thunderstorm"))dataW = "storm";
+		if(todayW.equals("Drizzle"))dataW = "drizzle";
+		if(todayW.equals("Rain"))dataW = "rain";
+		if(todayW.equals("Clear"))dataW = "sunny";
+		if(todayW.equals("Clouds"))dataW = "fallout";
+		
+			switch(dataW){
+			case "rain":		dataR = "rain"; break;
+			case "drizzle":		dataR = "drizzle"; break;
+			case "sunny":		dataR = "sunny"; break;
+			case "storm":		dataR = "storm"; break;
+			case "fallout":		dataR = "fallout"; break;
+					
+		} 
+			System.out.println(dataR);
+		
 		}
 	
 }

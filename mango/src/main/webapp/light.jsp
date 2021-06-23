@@ -110,6 +110,7 @@
 	<script type="text/javascript" src="js/custom.js"></script>
 
 	<!-- mood lamp area -->
+	
 	<br>
 	<br>
 
@@ -143,7 +144,7 @@
 		</div>
 	</section>
 
-
+s
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
 
