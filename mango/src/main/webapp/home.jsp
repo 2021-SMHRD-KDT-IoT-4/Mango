@@ -94,7 +94,7 @@
 				<a href="music.jsp">MUSIC</a>
 				<% String id = null;
 				id = (String) session.getAttribute("id");
-				if(id!= null){%>
+				if(id == null){%>
 				<button id = "modal_open">LOGIN</button><%}else{ %>
 				<a href = "#">JOIN</a>
 				<a href = "#">LOGOUT</a>
