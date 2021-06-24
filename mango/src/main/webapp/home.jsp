@@ -21,8 +21,8 @@
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
 	<meta name="author" content="Lucas Bebber for Codrops" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/style1.css" />
 
@@ -97,7 +97,7 @@
 	<div class="container">
 	
 	
-		<header class="codrops-header">
+		<header class="codrops-header" >
 			<div class="codrops-links">
 				<!-- <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
 				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a> -->
@@ -108,7 +108,7 @@
 				<a href="light.jsp">LIGHT</a>
 				<a href="perfume.jsp">PERFUME</a>
 				<a href="music.jsp">MUSIC</a>
-				<button id = "lg_btn">LOGIN</button>
+				<button id = "lg_btn" >LOGIN</button>
 			</nav>
 		</header>
 <%	
@@ -185,7 +185,7 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 
 
 		<div class="slideshow">
-			<canvas width="1" height="1" id="container" style="position:absolute"></canvas>
+			<canvas width="1" height="1" id="container" style="position:absolute" ></canvas>
 			<!-- style="position:absolute" -->
 			<%String dataW = "";
 			String dataR = "";
@@ -198,27 +198,27 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			
 	 %>
 			<!-- Heavy Rain -->
-			<div class="slide" id="slide-1" data-weather="<%=dataR%>">
+			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-1" data-weather="<%=dataR%>">
 				<div class="slide__element slide__element--date"><%=date.getDay(0) %>, <%=date.getDayOfWeek(0)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"></div>
 			</div>
 			<!-- Drizzle -->
-			<div class="slide" id="slide-2" data-weather="drizzle">
+			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-2" data-weather="drizzle">
 				<div class="slide__element slide__element--date"><%=date.getDay(1) %>, <%=date.getDayOfWeek(1)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(0)%>¡Æ<small>C</small></div>
 			</div>
 			<!-- Sunny -->
-			<div class="slide" id="slide-3" data-weather="sunny">
+			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-3" data-weather="sunny">
 				<div class="slide__element slide__element--date"><%=date.getDay(2)%>, <%=date.getDayOfWeek(2)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(1)%>¡Æ<small>C</small></div>
 			</div>
 			<!-- Heavy rain -->
-			<div class="slide" id="slide-5" data-weather="storm">
+			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-5" data-weather="storm">
 				<div class="slide__element slide__element--date"><%=date.getDay(3) %>, <%=date.getDayOfWeek(3)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(2)%>¡Æ<small>C</small></div>
 			</div>
 			<!-- Fallout (greenish overlay with slightly greenish/yellowish drops) -->
-			<div class="slide" id="slide-4" data-weather="fallout">
+			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-4" data-weather="fallout">
 				<div class="slide__element slide__element--date"><%=date.getDay(4) %>, <%=date.getDayOfWeek(4)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(3)%>¡Æ<small>C</small></div>
 			</div>

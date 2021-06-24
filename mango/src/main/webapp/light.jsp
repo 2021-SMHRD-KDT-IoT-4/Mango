@@ -15,6 +15,11 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+  
+
 
 <title>당신의 아침 망고와 함께</title>
 
@@ -40,13 +45,7 @@
 			
 	}
 	
-	.sub_page {
 	
-		background-image: url('img/city.jpg');
-	  	background-repeat: no-repeat;
-	  	background-size: cover;
-		
-	}
 
 
 </style>
@@ -82,7 +81,10 @@
 
 </head>
 
-<body class="sub_page">
+<body class="sub_page demo-1">
+<div class="container" style = "margin-left : 0">
+			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
@@ -178,11 +180,12 @@
 			</p>
 		</div>
 	</section>
-
+</div>
+	</div>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
-
+	<script src="js/index.min.js"></script>
 
 	<script>
 		// Without JQuery
@@ -250,7 +253,7 @@
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
 		<div class="modal__content">
-			<button style="margin-left: 100%;">X</button>
+			<!-- <button style="margin-left: 100%;">X</button> -->
 
 			<ul style='list-style: none;'>
 				<li><h5

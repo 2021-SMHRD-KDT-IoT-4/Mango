@@ -15,6 +15,14 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  
+    
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+  
+  
+  
   <title>
     당신의 아침 망고와 함께
   </title>
@@ -61,7 +69,11 @@
   
 </head>
 
-<body class="sub_page">
+<body class="sub_page demo-1">
+
+<div class="container" style = "margin-left : 0; width: 100.5vw; height: 100vh ">
+			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -530,7 +542,12 @@
 		</div>
   </section>
         
+        		</div>
+	</div>
+        
   <!-- end logo section -->
+
+	<script src="js/index.min.js"></script>
 
 	<style>
 .modal {
@@ -575,7 +592,7 @@
 			<ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
-				<form action="#">
+				<form action="LoginCon.do">
 					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
 					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
 					<li><input type="submit" value="LogIn" class="button fit"></li>
