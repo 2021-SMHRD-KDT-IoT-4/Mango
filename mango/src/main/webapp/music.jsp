@@ -13,6 +13,10 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+  
   <title>
     당신의 아침 망고와 함께
   </title>
@@ -33,10 +37,13 @@
   
   <!-- querys -->
   <script src="js/jquery-3.6.0.min.js"></script>
+  
+  
+  
   <style>
   	#playList {
   		
-  		background-image: url('img/music/list2.jpg');
+  		background-image: url('img/list2.jpg');
   		background-repeat: no-repeat;
   		background-size: cover;
   		margin-top: 0px;
@@ -64,7 +71,11 @@
 	}
   </style>
 </head>
-<body class="sub_page" style = "background:white">
+<body class="sub_page demo-1" style = "background:white">
+  
+<div class="container" style = "margin-left : 0; width: 100.5vw; height: 100vh ">
+			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -259,7 +270,11 @@
         </p>
       </div>
     </section>
+    </div>
+    </div>
     <!-- footer section -->
+
+<script src="js/index.min.js"></script>
 
   <!-- end info section -->
 	
