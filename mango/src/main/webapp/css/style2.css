@@ -68,7 +68,7 @@ a {
 }
 
 .slider-1 > .slides > div.active {
- 	opacity:5;
+ 	opacity:15;
 }
 
 /* 슬라이더 좌우 버튼 */

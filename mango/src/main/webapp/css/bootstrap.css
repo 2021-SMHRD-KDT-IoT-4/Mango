@@ -235,6 +235,7 @@ button:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+
 input,
 button,
 select,
@@ -8134,10 +8135,10 @@ button.bg-dark:focus {
   padding: 1rem !important;
 }
 
-.pt-3,
+/* .pt-3,
 .py-3 {
   padding-top: 1rem !important;
-}
+} */
 
 .pr-3,
 .px-3 {

@@ -2,14 +2,14 @@ package MODEL;
 
 public class SongDTO {
 	private String song;
-	private String singet;
+	private String singer;
 	private String album;
 	private String songtype;
 	
 	
 	public SongDTO(String song, String singet, String album, String songtype) {
 		this.song = song;
-		this.singet = singet;
+		this.singer = singet;
 		this.album = album;
 		this.songtype = songtype;
 	}
@@ -21,10 +21,10 @@ public class SongDTO {
 		this.song = song;
 	}
 	public String getSinget() {
-		return singet;
+		return singer;
 	}
 	public void setSinget(String singet) {
-		this.singet = singet;
+		this.singer = singet;
 	}
 	public String getAlbum() {
 		return album;

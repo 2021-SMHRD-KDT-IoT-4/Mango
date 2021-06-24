@@ -13,8 +13,12 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+  
   <title>
-    Mango
+    당신의 아침 망고와 함께
   </title>
 
   <!-- slider stylesheet -->
@@ -33,30 +37,52 @@
   
   <!-- querys -->
   <script src="js/jquery-3.6.0.min.js"></script>
+  
+  
+  
   <style>
-  	#wrapper {
+  	#playList {
   		
-  		background-image: url('img/music/back2.jpg');
+  		background-image: url('img/list2.jpg');
   		background-repeat: no-repeat;
   		background-size: cover;
+  		margin-top: 0px;
   	
   	}
   	
   	#modal_open {
   	
 		border-color: transparent;
+		BACKGROUND-COLOR: transparent;
 		
+	}
+	
+	.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link2 {
+    margin-left: 22px;
+    color: #514f4f;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    
+    display: inline-block;
+    font-weight: bold;
+    color: #488bce;
+    
 	}
   </style>
 </head>
-<body class="sub_page">
+<body class="sub_page demo-1" style = "background:white">
+  
+<div class="container" style = "margin-left : 0; width: 100.5vw; height: 100vh ">
+			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" />
+      <div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+          <a class="navbar-brand" href="home.jsp">
+            <img src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -66,31 +92,28 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="home.jsp">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link3" href="home.jsp">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="light.jsp">
+                  <a class="nav-link3" href="light.jsp">
                     Light
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="perfume.jsp">
+                  <a class="nav-link3" href="perfume.jsp">
                     Perfume
                   </a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="music.jsp">
+                  <a class="nav-link3" href="music.jsp" style = "color:black;">
                     Music
                   </a>
                 </li>
                 
                 <li class="nav-item">
-				  <button class="nav-link" id="modal_open">Login</button>
+				  <button class="nav-link3" id="modal_open" style = "color:black;">Login</button>
 				</li>
               </ul>
-              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
             </div>
           </div>
         </nav>
@@ -102,24 +125,22 @@
 
   <!-- portfolio section -->
 
-  <section class="portfolio_section layout_padding2-top">
-    <div class="heading_container">
-      <h2>
-        MUSIC
-      </h2>
-      <p>
-        오늘 하루는 어떤가요. 당신만을 위해 음악을 추천해 드립니다.
-      </p>
+  <section class="portfolio_section layout_padding2-top" style="
+    padding-top: 23px;">
+    <div class="container">
+      <div class="heading_container">
+        <h2>MU<span>SIC</span></h2>
+        <p>
+         오늘 당신의 하루는 어떤가요. 당신만을 위한 음악을 준비 했습니다.
+        </p>
+      </div>
     </div>
       
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
-
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <div id="wrapper">
     
     	<div id = "playList" style = "float: right; position: relative; 
-        width: 600px; height: auto; box-sizing: border-box; padding: 90px; max-width:100% background-color: black;">
+        width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%;">
             <ul>
                 <li><h1 style = "text-align: left">PlayList</h1></li>
                 <li>1. BTS - BUTTER</li>
@@ -249,11 +270,15 @@
         </p>
       </div>
     </section>
+    </div>
+    </div>
     <!-- footer section -->
+
+<script src="js/index.min.js"></script>
 
   <!-- end info section -->
 	
-  <style>
+ <style>
 .modal {
 	position: fixed;
 	top: 0;
@@ -276,9 +301,7 @@
 	padding: 80px 80px;
 	text-align: center;
 	position: relative;
-	width: 50%;
-	margin-left: 20%;
-	margin-top: 10%;
+	margin-top: 300px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 	z-index: 1200;
@@ -288,27 +311,66 @@
 	width: 20%;
 	height: 10%;
 }
+
+.ip {
+
+	width: 15em;
+/* 	height: 2em; */
+	padding: 5px;
+	margin: 5px;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+
+}
+
+.button, fit {
+
+	width: 60px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
+	
+
+}
+
+/* ::placeholder {
+	color : white;
+} */
+
 </style>
 
 	<!--id menu-->
-	<div class="modal hidden">
+	<div class="modal hidden" >
 		<div class="modal__overlay"></div>
-		<div class="modal__content">
-			<button style="margin-left: 100%;">X</button>
+		<div class="modal__content" 
+			style = 
+			"background-image: url('img/login3.jpg');
+	 		background-repeat: no-repeat;
+	  		background-size: cover;
+	  		background-position: center;
+	  		">
+			<button style="margin-left: 100%; display: none;" >X</button>
 
 			<ul style='list-style: none;'>
 				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
 				<form action="#">
-					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
-					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
-					<li><input type="submit" value="LogIn" class="button fit"></li>
+					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
+					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
+					<li>
+						<input type="submit" value="LogIn" class="button fit">
+						<input type="submit" value="join" class="button fit">
+					</li>
+					
 				</form>
 			</ul>
 			<div class=blankt></div>
-			<ul style='list-style: none;'>
-				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+			
+			<!-- <ul style='list-style: none;'>
+				<li><h5 style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
 				<form action="#" method=post>
 					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
 					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
@@ -317,7 +379,8 @@
 					<li><input type="submit" value="JoinUs" class="button fit"></li>
 				</form>
 			</ul>
-			<div class=blankt></div>
+			
+			<div class=blankt></div> -->
 
 		</div>
 	</div>
@@ -346,6 +409,7 @@
 		modalOpenBtn.addEventListener('click', openModal);
 	</script>
 
+<script src="js/index.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
