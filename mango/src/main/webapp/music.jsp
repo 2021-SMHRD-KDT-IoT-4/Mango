@@ -12,12 +12,6 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  
-  
-  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/style1.css" />
-  
 
   <title>
     당신의 아침 망고와 함께
@@ -70,12 +64,7 @@
 	}
   </style>
 </head>
-<body class="sub_page demo-1">
-
-	<div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
-	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
-<body class="sub_page" >
+<body class="sub_page" style = "background:white">
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -270,21 +259,11 @@
         </p>
       </div>
     </section>
-    
-    </div>
-	</div>
     <!-- footer section -->
 
   <!-- end info section -->
-<<<<<<< HEAD
 	
  <style>
-=======
-		<script src="js/index.min.js"></script>
-		
-		
-  <style>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/Mango.git
 .modal {
 	position: fixed;
 	top: 0;
@@ -351,7 +330,6 @@
 	<!--id menu-->
 	<div class="modal hidden" >
 		<div class="modal__overlay"></div>
-<<<<<<< HEAD
 		<div class="modal__content" 
 			style = 
 			"background-image: url('img/login3.jpg');
@@ -360,10 +338,6 @@
 	  		background-position: center;
 	  		">
 			<button style="margin-left: 100%; display: none;" >X</button>
-=======
-		<div class="modal__content">
-			<button style="margin-left: 100%; display: none;">X</button>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/Mango.git
 
 			<ul style='list-style: none;'>
 				<li><h5
