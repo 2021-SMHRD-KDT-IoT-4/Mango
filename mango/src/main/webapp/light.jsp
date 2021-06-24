@@ -53,6 +53,8 @@
 	}
 	
 	
+	
+	
 
 
 </style>
@@ -79,12 +81,6 @@
 <!-- Bootstrap slider CSS-->
 <link href="css/bootstrap-slider.css" rel="stylesheet">
 
-<style>
-	
-	
-	
-
-</style>
 
 </head>
 
@@ -157,7 +153,7 @@ String dataW = "";
 									href="music.jsp"> Music </a></li>
 								
 								<li class="nav-item">
-									<button class="nav-link2" id="modal_open" style = "color: black;">Login</button>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -277,9 +273,7 @@ String dataW = "";
 	padding: 80px 80px;
 	text-align: center;
 	position: relative;
-	width: 50%;
-	margin-left: 25%;
-	margin-top: 10%;
+	margin-top: 300px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 	z-index: 1200;
@@ -289,25 +283,65 @@ String dataW = "";
 	width: 20%;
 	height: 10%;
 }
+
+.blankt {
+	width: 20%;
+	height: 10%;
+}
+
+.ip {
+
+	width: 15em;
+/* 	height: 2em; */
+	padding: 5px;
+	margin: 5px;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+
+}
+
+.button, fit {
+
+	width: 60px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
+	
+
+}
+
 </style>
 
 	<!--id menu-->
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
-		<div class="modal__content">
-			<!-- <button style="margin-left: 100%;">X</button> -->
+		<div class="modal__content" style = 
+			"background-image: url('img/login3.jpg');
+	 		background-repeat: no-repeat;
+	  		background-size: cover;
+	  		background-position: center;
+	  		">
+			<button style="margin-left: 100%; display: none;" >X</button>
 
 			<ul style='list-style: none;'>
 				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
 				<form action="#">
-					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
-					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
-					<li><input type="submit" value="LogIn" class="button fit"></li>
+					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
+					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
+					<li>
+						<input type="submit" value="LogIn" class="button fit">
+						<input type="submit" value="join" class="button fit">
+					</li>
+					
 				</form>
 			</ul>
 			<div class=blankt></div>
-			<ul style='list-style: none;'>
+			
+			<!-- <ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
 				<form action="#" method=post>
@@ -318,7 +352,7 @@ String dataW = "";
 					<li><input type="submit" value="JoinUs" class="button fit"></li>
 				</form>
 			</ul>
-			<div class=blankt></div>
+			<div class=blankt></div> -->
 
 		</div>
 	</div>
@@ -346,6 +380,124 @@ String dataW = "";
 		modalCloseBtn.addEventListener('click', closeModal);
 		modalOpenBtn.addEventListener('click', openModal);
 	</script>
+
+<script src="js/index.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  
+  
+  <script>
+
+        //current position
+        var pos = 0;
+        //number of slides
+        var totalSlides = $('#slider-wrap ul li').length;
+        //get the slide width
+        var sliderWidth = $('#slider-wrap').width();
+
+
+        $(document).ready(function () {
+
+
+            /*****************
+             BUILD THE SLIDER
+            *****************/
+            //set width to be 'x' times the number of slides
+            $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
+
+            //next slide  
+            $('#next').click(function () {
+                slideRight();
+            });
+
+            //previous slide
+            $('#previous').click(function () {
+                slideLeft();
+            });
+
+
+
+            /*************************
+             //*> OPTIONAL SETTINGS
+            ************************/
+            // automatic slider
+            // var autoSlider = setInterval(slideRight, 3000);
+
+            //for each slide 
+            $.each($('#slider-wrap ul li'), function () {
+
+                //create a pagination
+                var li = document.createElement('li');
+                $('#pagination-wrap ul').append(li);
+            });
+
+            //counter
+            countSlides();
+
+            //pagination
+            pagination();
+
+            //hide/show controls/btns when hover
+            //pause automatic slide when hover
+            $('#slider-wrap').hover(
+                function () { $(this).addClass('active'); /* clearInterval(autoSlider); */ },
+                function () { $(this).removeClass('active'); /* autoSlider = setInterval(slideRight, 3000); */ }
+            );
+
+
+
+        });//DOCUMENT READY
+
+
+
+        /***********
+         SLIDE LEFT
+        ************/
+        function slideLeft() {
+            pos--;
+            if (pos == -1) { pos = totalSlides - 1; }
+            $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+            //*> optional
+            countSlides();
+            pagination();
+        }
+
+
+        /************
+         SLIDE RIGHT
+        *************/
+        function slideRight() {
+            pos++;
+            if (pos == totalSlides) { pos = 0; }
+            $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+            //*> optional 
+            countSlides();
+            pagination();
+        }
+
+
+
+
+        /************************
+         //*> OPTIONAL SETTINGS
+        ************************/
+        function countSlides() {
+            $('#counter').html(pos + 1 + ' / ' + totalSlides);
+        }
+
+        function pagination() {
+            $('#pagination-wrap ul li').removeClass('active');
+            $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
+        }
+
+
+
+    </script>
 </body>
 
 </html>

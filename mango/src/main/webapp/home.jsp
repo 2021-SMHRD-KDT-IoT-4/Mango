@@ -48,29 +48,13 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- bootstrap core css -->
-<!--   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  
-  <style>
-  
-  #lg_btn {
-  
-  	height: 30px;
-    width: 60px;
-    border-radius: 10px;
-    color: #252445;
-    font-weight: bold;
-    background-color: #D7F1FA;
-    border-color: transparent;
-    background: transparent;
-  
-  }
-  
-  </style>
+
 	
 </head>
 <body class="demo-1" id = "body">
@@ -108,9 +92,12 @@
 				<a href="light.jsp">LIGHT</a>
 				<a href="perfume.jsp">PERFUME</a>
 				<a href="music.jsp">MUSIC</a>
-				<button id = "lg_btn" >LOGIN</button>
+				<button id = "modal_open">LOGIN</button>
 			</nav>
 		</header>
+		
+
+		
 <%	
 String URI = "http://api.openweathermap.org/data/2.5/forecast?q=Gwangju&appid=01302211c0ad8247844362fd2d8280f7";
 
@@ -261,7 +248,154 @@ $.ajax({
 })
 </script>
 
+ <style>
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+	 display: none !important;
+	
+}
 
+#modal_open {
+	
+	height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    color: #252445;
+    font-weight: bold;
+    background-color: #D7F1FA;
+    border-color: transparent;
+    background: transparent;
+   
+
+}
+
+.modal__overlay {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1000;
+}
+
+.modal__content {
+	background-color: white;
+	padding: 80px 80px;
+	text-align: center;
+	position: relative;
+	margin-top: 300px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
+	z-index: 1200;
+}
+
+.blankt {
+	width: 20%;
+	height: 10%;
+}
+
+.ip {
+
+	width: 15em;
+/* 	height: 2em; */
+	padding: 5px;
+	margin: 5px;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+
+}
+
+.button, fit {
+
+	width: 60px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
+	
+
+}
+
+
+
+/* ::placeholder {
+	color : white;
+} */
+
+</style>
+
+	<!--id menu-->
+	<div class="modal hidden" >
+		<div class="modal__overlay"></div>
+		<div class="modal__content" 
+			style = 
+			"background-image: url('img/login3.jpg');
+	 		background-repeat: no-repeat;
+	  		background-size: cover;
+	  		background-position: center;
+	  		">
+			<button style="margin-left: 100%; display: none;" >X</button>
+
+			<ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
+				<form action="#">
+					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
+					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
+					<li>
+						<input type="submit" value="LogIn" class="button fit">
+						<input type="submit" value="join" class="button fit">
+					</li>
+					
+				</form>
+			</ul>
+			<div class=blankt></div>
+			
+			<!-- <ul style='list-style: none;'>
+				<li><h5 style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+				<form action="#" method=post>
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="text" name=tel placeholder="전화번호를 입력하세요"></li>
+					<li><input type="text" name=addr placeholder="집주소를 입력하세요"></li>
+					<li><input type="submit" value="JoinUs" class="button fit"></li>
+				</form>
+			</ul>
+			
+			<div class=blankt></div> -->
+
+		</div>
+	</div>
+
+
+
+	<script>
+		const modalOpenBtn = document.getElementById('modal_open');
+		const modal = document.querySelector('.modal');
+		const overlayModal = modal.querySelector('.modal__overlay');
+		const modalCloseBtn = modal.querySelector('button');
+		const HIDDEN = "hidden";
+
+		function closeModal() {
+			modal.setAttribute("style", "display:none");
+			modal.classList.add(HIDDEN);
+		}
+
+		function openModal() {
+			modal.setAttribute("style", "display:block !important");
+			modal.classList.remove(HIDDEN);
+		}
+
+		overlayModal.addEventListener('click', closeModal);
+		modalCloseBtn.addEventListener('click', closeModal);
+		modalOpenBtn.addEventListener('click', openModal);
+	</script>
 
 </body>
 </html>

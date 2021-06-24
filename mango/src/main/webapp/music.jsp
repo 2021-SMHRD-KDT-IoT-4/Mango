@@ -129,7 +129,7 @@ String dataW = "";
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+<!--             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center"> -->
               <ul class="navbar-nav  ">
                 <li class="nav-item ">
                   <a class="nav-link3" href="home.jsp">Home <span class="sr-only">(current)</span></a>
@@ -151,7 +151,7 @@ String dataW = "";
                 </li>
                 
                 <li class="nav-item">
-				  <button class="nav-link3" id="modal_open" style = "color:black;">Login</button>
+				  <button class="nav-link3" id="modal_open" style = "color:black; border: none;">Login</button>
 				</li>
               </ul>
             </div>
