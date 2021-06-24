@@ -86,7 +86,7 @@
 				<!-- <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
 				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a> -->
 			</div>
-			<h1>Team Mango<%=downJson %></h1>
+			<h1>Team Mango<%=downJson%></h1>
 			<nav class="codrops-demos">
 				<a class="current-demo" href="home.jsp">HOME</a>
 				<a href="light.jsp">LIGHT</a>

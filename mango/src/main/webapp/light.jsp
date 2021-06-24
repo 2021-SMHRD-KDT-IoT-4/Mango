@@ -36,6 +36,8 @@
 		background-image: url('img/night_star.jpg');
 	  	background-repeat: no-repeat;
 	  	background-size: cover;
+	  	width: 60%;
+	  	margin-left: 20%;
 	}
 
 	#modal_open {

@@ -31,41 +31,34 @@
 <title>당신의 하루 망고와 함께</title>
 
 <style>
-	
+	#setting {
+	  	text-align: center;
+	  }
 
 	#modal_open {
 		border-color: transparent;
 		BACKGROUND-COLOR: transparent;
 		
 	}
-
-
-</style>
-
-<!-- slider stylesheet -->
-<link rel="stylesheet" type="text/css"
-	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-<!-- fonts style -->
-<link
-	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap"
-	rel="stylesheet" />
-
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-<!-- Custom styles for this template -->
-<link href="css/style.css" rel="stylesheet" />
-<!-- responsive style -->
-<link href="css/responsive.css" rel="stylesheet" />
-
-<!-- Bootstrap CSS-->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap slider CSS-->
-<link href="css/bootstrap-slider.css" rel="stylesheet">
-<style>
-
-	.join_row {
+	
+	#onOff {
+		
+		display: block;
+    	margin: auto;
+    	margin-top: 30px;
+			
+	}
+	
+	#setTable {
+	  	
+	  	width: 30%;
+	  	height: 20em;
+	  	margin: auto;
+	  	margin-bottom: 2%;
+	  
+	  }
+	  
+	  .join_row {
 		
 		vertical-align: bottom;
 		height: 5em;
@@ -116,8 +109,33 @@
 		color: white;
 	
 	}
-
+	
+	
+	
 </style>
+
+<!-- slider stylesheet -->
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+<!-- fonts style -->
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap"
+	rel="stylesheet" />
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="css/responsive.css" rel="stylesheet" />
+
+<!-- Bootstrap CSS-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap slider CSS-->
+<link href="css/bootstrap-slider.css" rel="stylesheet">
+
 
 </head>
 
@@ -163,8 +181,8 @@ String dataW = "";
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
-			<div class="container-fluid" style="padding-right: 37px; padding-left: 32px;">
-				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" /* display: inherit; */ flex-direction: row; margin-top: -4px;">
+			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
 					<a class="navbar-brand" href="home.jsp"> <img
 						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
 					</a>
@@ -190,7 +208,7 @@ String dataW = "";
 									href="music.jsp"> Music </a></li>
 								
 								<li class="nav-item">
-									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 26.5px;">Login</button>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -205,14 +223,13 @@ String dataW = "";
 	</div><br>
 	<!-- end hero area -->
 	
-	 <div class="container">
-      <div class="heading_container">
-        <h2>jo<span>in</span></h2>
-        <p>
-         망고와 함께해요.
-        </p>
-      </div>
-    </div>
+	<div>
+		<a href = "informantion.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<a href = "setting.jsp">SETTING&nbsp;&nbsp;&nbsp;</a>
+		<a href = "recommend.jsp">RECOMMEND</a>
+	</div>
+	<br><br>
+	
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
@@ -222,19 +239,23 @@ String dataW = "";
 	</script>
 	<script type="text/javascript" src="js/custom.js"></script>
 
-
-
-	<div id = "setting">
+	<!-- mood lamp area -->
+   
+   <div class="container">
+      <div class="heading_container">
+        <h2>INFOR<span>MATION</span></h2>
+        <p>
+         회원정보
+        </p>
+      </div>
+    </div>
+    
+    <div id = "setting">
 	   <form action ="">
-	   		<div style = "width: 30%; height: 40%; margin-left: 35%;
+			<div style = "width: 30%; height: 40%; margin-left: 35%;
 			background-color: rgba(255,255,255,0.1); padding: 2%;
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
   			">
-			<div class = "join_row">
-				<div class = "join">ID</div>
-				<input type = "text" name = "id" class = "box" placeholder = "ID를 입력해 주세요."> <br>
-			</div>
-			
 			<div class = "join_row">
 				<div class = "join">PW</div>
 				<input type = "password" name = "pw" class = "box" placeholder = "비밀번호를 입력해 주세요."> <br>
@@ -265,13 +286,9 @@ String dataW = "";
 				<input type = "text" name = "email" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
 			</div>
 			
-			<input type = "submit" value = "가입하기" id = "btn">
+			<input type = "submit" value = "수정하기" id = "btn">
 			</div>
 	   </form>
-	   
-   </div>	
-	
-	
 	
 	<section class=" footer_section">
 		<div class="container">
@@ -324,7 +341,7 @@ String dataW = "";
 }
 
 .modal__overlay {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
 	height: 100%;
 	position: absolute;
