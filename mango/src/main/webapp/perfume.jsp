@@ -653,7 +653,7 @@ String dataW = "";
 			<ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
-				<form action="#">
+				<form action="LoginCon.do" method = post>
 					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
 					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
 					<li>
