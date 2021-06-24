@@ -70,15 +70,12 @@
 	}
   </style>
 </head>
-<<<<<<< HEAD
 <body class="sub_page demo-1">
 
 	<div class="container" style = "margin-left : 0">
-			<canvas width="1920" height="937" id="container" style="position:absolute"></canvas>
+			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="rain" style = "padding:0">
-=======
-<body class="sub_page" style = "background:white">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-IoT-4/mango.git
+<body class="sub_page" >
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -323,7 +320,7 @@
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
 		<div class="modal__content">
-			<button style="margin-left: 100%;">X</button>
+			<button style="margin-left: 100%; display: none;">X</button>
 
 			<ul style='list-style: none;'>
 				<li><h5

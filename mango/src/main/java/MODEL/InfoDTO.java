@@ -11,10 +11,9 @@ public class InfoDTO {
 	
 
 
-	public InfoDTO(String id, String pw, String pdnumber) {
+	public InfoDTO(String id, String pw) {
 		this.id = id;
 		this.pw = pw;
-		this.pdnumber = pdnumber;
 	}
 	
 	public InfoDTO(String id, String pw, String perfume, String song, String light, String pdnumber, String loc) {
