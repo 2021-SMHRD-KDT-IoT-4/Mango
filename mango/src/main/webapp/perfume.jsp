@@ -108,7 +108,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-				  <button class="nav-link2" id="modal_open" style = "color:black;">Login</button>
+				  <button class="nav-link2" id="modal_open" style = "color:black; border: none;">Login</button>
 				</li>
               </ul>
             </div>
@@ -570,9 +570,7 @@
 	padding: 80px 80px;
 	text-align: center;
 	position: relative;
-	width: 50%;
-	margin-left: 25%;
-	margin-top: 10%;
+	margin-top: 300px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 	z-index: 1200;
@@ -581,25 +579,59 @@
 	width: 20%;
 	height: 10%;
 }
+.ip {
+
+	width: 15em;
+/* 	height: 2em; */
+	padding: 5px;
+	margin: 5px;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+
+}
+
+.button, fit {
+
+	width: 60px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
+	
+
+}
 </style>
 
 	<!--id menu-->
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
-		<div class="modal__content">
-			<button style="margin-left: 100%;">X</button>
+		<div class="modal__content"
+			style = 
+			"background-image: url('img/login3.jpg');
+	 		background-repeat: no-repeat;
+	  		background-size: cover;
+	  		background-position: center;
+	  		">
+			<button style="margin-left: 100%; display: none;" >X</button>
 
 			<ul style='list-style: none;'>
 				<li><h5
-						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>로그인</h5></li>
-				<form action="LoginCon.do">
-					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
-					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
-					<li><input type="submit" value="LogIn" class="button fit"></li>
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
+				<form action="#">
+					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
+					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
+					<li>
+						<input type="submit" value="LogIn" class="button fit">
+						<input type="submit" value="join" class="button fit">
+					</li>
+					
 				</form>
 			</ul>
 			<div class=blankt></div>
-			<ul style='list-style: none;'>
+			
+			<!-- <ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
 				<form action="#" method=post>
@@ -610,7 +642,7 @@
 					<li><input type="submit" value="JoinUs" class="button fit"></li>
 				</form>
 			</ul>
-			<div class=blankt></div>
+			<div class=blankt></div> -->
 
 		</div>
 	</div>
