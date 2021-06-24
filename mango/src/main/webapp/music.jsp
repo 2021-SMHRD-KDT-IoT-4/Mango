@@ -1,54 +1,53 @@
 <%@page import="java.net.URL"%>
-<%@page import="org.json.simple.JSONArray"%>
 <%@page import="org.json.simple.parser.ParseException"%>
-<%@page import="org.json.simple.JSONObject"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
+<%@page import="org.json.simple.JSONArray"%>
+<%@page import="org.json.simple.JSONObject"%>
 <%@page import="java.io.InputStreamReader"%>
 <%@page import="java.io.BufferedReader"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Mobile Metas -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<!-- Site Metas -->
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/style1.css" />
   
-  <title>
-    당신의 아침 망고와 함께
-  </title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+<title>당신의 아침 망고와 함께</title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<style>
+	
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  
-  <!-- querys -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  
-  
-  
-  <style>
-  	#playList {
+	#modal_open {
+		border-color: transparent;
+		BACKGROUND-COLOR: transparent;
+		
+	}
+	
+	#onOff {
+		
+		display: block;
+    	margin: auto;
+    	margin-top: 30px;
+			
+	}
+	
+	#playList {
   		
   		background-image: url('img/list2.jpg');
   		background-repeat: no-repeat;
@@ -56,30 +55,39 @@
   		margin-top: 0px;
   	
   	}
-  	
-  	#modal_open {
-  	
-		border-color: transparent;
-		BACKGROUND-COLOR: transparent;
-		
-	}
 	
-	.custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link2 {
-    margin-left: 22px;
-    color: #514f4f;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 5px;
-    
-    display: inline-block;
-    font-weight: bold;
-    color: #488bce;
-    
-	}
-  </style>
+	
+
+
+</style>
+
+<!-- slider stylesheet -->
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+<!-- fonts style -->
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap"
+	rel="stylesheet" />
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet" />
+<!-- responsive style -->
+<link href="css/responsive.css" rel="stylesheet" />
+
+<!-- Bootstrap CSS-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap slider CSS-->
+<link href="css/bootstrap-slider.css" rel="stylesheet">
+
+
 </head>
-<body class="sub_page demo-1" style = "background:white">
-  <%
+
+<body class="sub_page demo-1">
+<%
 String urlstr = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid="+"01302211c0ad8247844362fd2d8280f7";
 URL url2 = new URL(urlstr);
 BufferedReader bf2;
@@ -113,61 +121,56 @@ String dataW = "";
 			if(todayW.equals("Clear"))dataR = "sunny";
 			if(todayW.equals("Clouds"))dataR = "fallout";
 %>
-<div class="container" style = "margin-left : 0; width: 100.5vw; height: 100vh ">
+
+<div class="container" style = "margin-left : 0">
 			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
-          <a class="navbar-brand" href="home.jsp">
-            <img src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+	<div class="hero_area">
+		<!-- header section strats -->
+		<header class="header_section">
+			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+					<a class="navbar-brand" href="home.jsp"> <img
+						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<!--             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center"> -->
-              <ul class="navbar-nav  ">
-                <li class="nav-item ">
-                  <a class="nav-link3" href="home.jsp">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link3" href="light.jsp">
-                    Light
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link3" href="perfume.jsp">
-                    Perfume
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link3" href="music.jsp" style = "color:black;">
-                    Music
-                  </a>
-                </li>
-                
-                <li class="nav-item">
-				  <button class="nav-link3" id="modal_open" style = "color:black; border: none;">Login</button>
-				</li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-  <!-- end hero area -->
-
-  <!-- portfolio section -->
-
-  <section class="portfolio_section layout_padding2-top" style="
-    padding-top: 23px;">
-    <div class="container">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<div
+							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+							<ul class="navbar-nav  ">
+								<li class="nav-item "><a class="nav-link2" href="home.jsp">Home
+										<span class="sr-only">(current)</span>
+								</a></li>
+								<li class="nav-item active"><a class="nav-link2"
+									href="light.jsp"> Light </a></li>
+								<li class="nav-item"><a class="nav-link2"
+									href="perfume.jsp"> Perfume </a></li>
+								<li class="nav-item"><a class="nav-link2"
+									href="music.jsp" style = "color: black;"> Music </a></li>
+								
+								<li class="nav-item">
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
+								</li>
+							</ul>
+							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+								<button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+							</form> -->
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!-- end header section -->
+	</div><br>
+	<!-- end hero area -->
+	
+	 <div class="container">
       <div class="heading_container">
         <h2>MU<span>SIC</span></h2>
         <p>
@@ -175,12 +178,22 @@ String dataW = "";
         </p>
       </div>
     </div>
-      
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+		
+	</script>
+	<script type="text/javascript" src="js/custom.js"></script>
+
+	<!-- mood lamp area -->
+	
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <div id="wrapper">
     
     	<div id = "playList" style = "float: right; position: relative; 
-        width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%;">
+        width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%; text-align: left;">
             <ul>
                 <li><h1 style = "text-align: left">PlayList</h1></li>
                 <li>1. BTS - BUTTER</li>
@@ -282,7 +295,7 @@ String dataW = "";
 
             </ul>
 
-            <!--controls-->
+            controls
             <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
             <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
             <div id="counter"></div>
@@ -291,34 +304,54 @@ String dataW = "";
                 <ul>
                 </ul>
             </div>
-            <!--controls-->
+            controls
 
         </div>
 
     </div>
       
-  </section>
 
-  <!-- end portfolio section -->
+	<section class=" footer_section">
+		<div class="container">
+			<p>
+				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span>
+			</p>
+		</div>
+	</section>
+</div>
+	</div>
 
-    <!-- footer section -->
-    <section class=" footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> Copyright2021. Mango 
-          <span>All pictures cannot be copied without permission.</span>
-        </p>
-      </div>
-    </section>
-    </div>
-    </div>
-    <!-- footer section -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+	<script src="js/index.min.js"></script>
 
-<script src="js/index.min.js"></script>
+	<script>
+		// Without JQuery
 
-  <!-- end info section -->
-	
- <style>
+		$('#mini').on("slide", function(sliderValue) {
+			var val = $('#mini').val();
+			document.getElementById("miniVal").textContent = val;
+		});
+	</script>
+
+
+	<script type="text/javascript">
+		$(function() {
+
+			$('#mini').slider({
+				formatter : function(value) {
+					return '현재값:' + value;
+				}
+			});
+
+			$('#mini').on("slide", function(slideEvt) {
+				$("miniVal").text(slideEvt.value);
+			});
+		});
+	</script>
+
+	<style>
 .modal {
 	position: fixed;
 	top: 0;
@@ -352,6 +385,11 @@ String dataW = "";
 	height: 10%;
 }
 
+.blankt {
+	width: 20%;
+	height: 10%;
+}
+
 .ip {
 
 	width: 15em;
@@ -376,17 +414,12 @@ String dataW = "";
 
 }
 
-/* ::placeholder {
-	color : white;
-} */
-
 </style>
 
 	<!--id menu-->
-	<div class="modal hidden" >
+	<div class="modal hidden">
 		<div class="modal__overlay"></div>
-		<div class="modal__content" 
-			style = 
+		<div class="modal__content" style = 
 			"background-image: url('img/login3.jpg');
 	 		background-repeat: no-repeat;
 	  		background-size: cover;
@@ -397,7 +430,7 @@ String dataW = "";
 			<ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
-				<form action="LoginCon.do" method = post>
+				<form action="#">
 					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
 					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
 					<li>
@@ -410,7 +443,8 @@ String dataW = "";
 			<div class=blankt></div>
 			
 			<!-- <ul style='list-style: none;'>
-				<li><h5 style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
 				<form action="#" method=post>
 					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
 					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
@@ -419,7 +453,6 @@ String dataW = "";
 					<li><input type="submit" value="JoinUs" class="button fit"></li>
 				</form>
 			</ul>
-			
 			<div class=blankt></div> -->
 
 		</div>
@@ -566,7 +599,6 @@ String dataW = "";
 
 
     </script>
-  
 </body>
 
 </html>
