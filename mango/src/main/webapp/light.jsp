@@ -28,7 +28,7 @@
   
 
 
-<title>당신의 아침 망고와 함께</title>
+<title>당신의 하루 망고와 함께</title>
 
 <style>
 	#wcat {
