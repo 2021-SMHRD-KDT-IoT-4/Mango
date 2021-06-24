@@ -94,7 +94,7 @@
       <div class="heading_container">
         <h2>SCENT <span>NOTE</span></h2>
         <p>
-         기분좋은 향기와 함께 깨어난 하루라면, 분명 좀 더 행복한 날이 될 거예요.
+         향기의 종류는 정말 다양해요. 각 향기마다 어떤 매력과 특징을 가지고 있을까요?
         </p>
       </div>
     </div>
@@ -103,15 +103,32 @@
  <section class="slider-1">
   <div class="slider-1">
     <div class="slides">
-        <div class="active" style="background-image:url(http://www.howsweeteats.com/wp-content/uploads/2011/04/ccake-2-2.jpg?auto=compress,format);"></div>
-        <div style="background-image:url(images/perfume/floral_info.jpg?auto=compress,format)";></div>
+        <div class="active" style="background-image:url(images/perfume/floral_info.jpg?auto=compress,format);"></div>
         <div style="background-image:url(images/perfume/citrus_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(https://images.prismic.io/stayfolio-production/038914a1-9b23-4f26-9b10-84669d9a1339_banner.jpg?auto=compress,format);"></div>
-        <div style="background-image:url(https://images.prismic.io/stayfolio-production/586abdef-7163-4629-9c39-6d7a627ae10e_01_banner_picture.jpg?auto=compress,format);"></div>
-        <div style="background-image:url(https://images.prismic.io/stayfolio-production/3b4bf417-3c41-4d05-b62c-f02a293ba115_banner.jpg?auto=compress,format);"></div>
+        <div style="background-image:url(images/perfume/fruity_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/woody_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/green_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/herbal_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/spicy_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/animalic_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/powdery_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/mossy_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/oriental_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/tabacco_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/gourmand_info.jpg?auto=compress,format)";></div>
+        <div style="background-image:url(images/perfume/aqua_info.jpg?auto=compress,format)";></div>
     </div>
     <div class="page-btns">
         <div class="active"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
@@ -149,7 +166,7 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/floral.jpg" alt="">
+                <img src="images/perfume/floral.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -161,7 +178,7 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                 <img src="images/citrus.jpg" alt="">
+                 <img src="images/perfume/citrus.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -173,7 +190,7 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/fruity.jpg" alt="">
+                <img src="images/perfume/fruity.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -185,7 +202,7 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/woody.jpg" alt="">
+                <img src="images/perfume/woody.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -197,7 +214,7 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/green.jpg" alt="">
+                <img src="images/perfume/green.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -209,11 +226,11 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/musk.jpg" alt="">
+                <img src="images/perfume/musk.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Musk
+                  Animalic
                 </h4>
               </div>
             </div>
@@ -221,7 +238,7 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/oriental.jpg" alt="">
+                <img src="images/perfume/oriental.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -233,7 +250,7 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/aqua.jpg" alt="">
+                <img src="images/perfume/aqua.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -245,7 +262,7 @@
            <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/spicy.jpg" alt="">
+                <img src="images/perfume/spicy.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -257,7 +274,7 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/gourmand.jpg" alt="">
+                <img src="images/perfume/gourmand.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -269,7 +286,7 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/powdery.jpg" alt="">
+                <img src="images/perfume/powdery.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
@@ -278,14 +295,15 @@
               </div>
             </div>
           </div>
+          
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/chypre.jpg" alt="">
+                <img src="images/perfume/fougere.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Chypre
+                  herbal
                 </h4>
               </div>
             </div>
@@ -293,11 +311,11 @@
           <div class="item">
             <div class="box  b1">
               <div class="img-box">
-                <img src="images/aldehyde.png" alt="">
+                <img src="images/perfume/mossy.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
-                  Aldehyde
+                  mossy
                 </h4>
               </div>
             </div>
@@ -305,31 +323,7 @@
           <div class="item">
             <div class="box b2">
               <div class="img-box">
-                <img src="images/fougere.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h4>
-                  Fougere
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box  b1">
-              <div class="img-box">
-                <img src="images/fresh.jpg" alt="">
-              </div>
-              <div class="detail-box">
-                <h4>
-                  fresh
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box b2">
-              <div class="img-box">
-                <img src="images/tabacco_leather.jpg" alt="">
+                <img src="images/perfume/tabacco_leather.jpg" alt="">
               </div>
               <div class="detail-box">
                 <h4>
