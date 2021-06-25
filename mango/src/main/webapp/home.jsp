@@ -81,24 +81,25 @@
 	<div class="container">
 	
 	
-		<header class="codrops-header" >
-			<div class="codrops-links">
-				<!-- <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
-				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a> -->
+		<header class="codrops-header" style = "padding-right:2em; padding-left:4em;">
+			<div class="logo">
+				<a class="navbar-brand" href="home.jsp"> <img
+					src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
+				</a>
 			</div>
-			<h1>Team Mango<%=downJson%></h1>
-			<nav class="codrops-demos">
+			<nav class="codrops-demos" style="padding-top:3.5px;">
 				<a class="current-demo" href="home.jsp">HOME</a>
 				<a href="light.jsp">LIGHT</a>
 				<a href="perfume.jsp">PERFUME</a>
-				<a href="music.jsp">MUSIC</a>
+				<a href="music.jsp" style = "margin-right: 1em;">MUSIC</a>
 				<% String id = null;
 				id = (String) session.getAttribute("id");
 				if(id == null){%>
+				<a href = "join.jsp" id = "join">JOIN</a>
 				<button id = "modal_open">LOGIN</button>
-				<a href = "join.jsp">JOIN</a><%}else{ %>
-				<a href = "#">MY PAGE</a>
-				<a href = "LogoutCon.do">LOGOUT</a>
+				<%}else{ %>
+				<a href = "mypage.jsp">MY PAGE</a>
+				<a href = "LogoutCon.do" style="margin-right: 1.05em;">LOGOUT</a>
 				<%} %>
 			</nav>
 		</header>
@@ -294,7 +295,8 @@ $.ajax({
     background-color: #D7F1FA;
     border-color: transparent;
     background: transparent;
-   
+    margin-right: 12px;
+    border: none;
 
 }
 
@@ -343,6 +345,21 @@ $.ajax({
 	border-color: transparent;
 	color: white;
 	
+
+}
+
+#join {
+	
+	height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    color: #488bce;
+    font-weight: bold;
+    background-color: #D7F1FA;
+    border-color: transparent;
+    background: transparent;
+    margin-right: -15px;
+    border: none;
 
 }
 
