@@ -106,8 +106,8 @@ String dataW = "";
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+      <div class="container-fluid" style="padding-right: 2em; padding-left: 4em; padding-top: 1.25em;">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" /* display: inherit; */ flex-direction: row;">
           <a class="navbar-brand" href="home.jsp">
             <img src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
           </a>
@@ -117,7 +117,7 @@ String dataW = "";
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
+              <ul class="navbar-nav  " style = "padding-top: 5px;">
                 <li class="nav-item ">
                   <a class="nav-link2" href="home.jsp">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -140,11 +140,11 @@ String dataW = "";
 				 <% String id = null;
 					id = (String) session.getAttribute("id");
 					if(id == null){%>
-				  <button class="nav-link2" id="modal_open" style = "color:black; border: none;">Login</button>
-				  <a href = "join.jsp">JOIN</a>
+				  <a href = "join.jsp " class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
+				  <button class="nav-link2" id="modal_open" style = "color:black; border: none; margin-left: 13px;">Login</button>
 				<%}else{ %>
-				<a href = "#">MY PAGE</a>
-				<a href = "LogoutCon.do">LOGOUT</a>
+				<a class="nav-link2" href = "mypage.jsp">MY PAGE</a>
+				<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
 				<%} %>
 				</li>
               </ul>

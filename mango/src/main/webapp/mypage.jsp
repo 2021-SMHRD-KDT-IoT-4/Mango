@@ -181,8 +181,8 @@ String dataW = "";
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
-			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
-				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+			<div class="container-fluid" style="padding-right: 2em; padding-left: 4em; padding-top: 1.25em;">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" /* display: inherit; */ flex-direction: row;">
 					<a class="navbar-brand" href="home.jsp"> <img
 						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
 					</a>
@@ -196,19 +196,27 @@ String dataW = "";
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-							<ul class="navbar-nav  ">
+							<ul class="navbar-nav  " style = "padding-top: 5px;">
 								<li class="nav-item "><a class="nav-link2" href="home.jsp">Home
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp" style = "color: black;"> Light </a></li>
+									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
 								
 								<li class="nav-item">
-									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
+								<% String id = null;
+									id = (String) session.getAttribute("id");
+									if(id == null){%>
+									<a href = "join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
+								<%}else{ %>
+								<a class="nav-link2" href = "mypage.jsp" style = "color: black;">MY PAGE</a>
+								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em; color: #488bce;">LOGOUT</a>
+								<%} %>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -224,9 +232,8 @@ String dataW = "";
 	<!-- end hero area -->
 	
 	<div>
-		<a href = "information.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<a href = "mypage.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
 		<a href = "setting.jsp">SETTING&nbsp;&nbsp;&nbsp;</a>
-		<a href = "recommend.jsp">RECOMMEND</a>
 	</div>
 	<br><br>
 	
@@ -251,42 +258,42 @@ String dataW = "";
     </div>
     
     <div id = "setting">
-	   <form action ="">
+	   <form action ="modify.jsp">
 			<div style = "width: 30%; height: 40%; margin-left: 35%;
 			background-color: rgba(255,255,255,0.1); padding: 2%;
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
   			">
 			<div class = "join_row">
 				<div class = "join">PW</div>
-				<input type = "password" name = "pw" class = "box" placeholder = "비밀번호를 입력해 주세요."> <br>
+				<div></div> <br>
 			</div>
 			
 			<div class = "join_row">
 				<div class = "join">Re-PW</div>
-				<input type = "password" name = "repw" class = "box" placeholder = "비밀번호를 다시 한 번 입력해 주세요."><br>
+				<div></div> <br>
 			</div>
 			
 			<div class = "join_row">
 				<div class = "join">Name</div>
-				<input type = "text" name = "name" class = "box" placeholder = "이름을 입력해 주세요."><br>
+				<div></div> <br>
 			</div>
 			
 			<div class = "join_row">
 				<div class = "join">Address</div>
-				<input type = "text" name = "addr" class = "box" placeholder = "주소를 입력해 주세요."><br>
+				<div></div> <br>
 			</div>
 			
 			<div class = "join_row">
 				<div class = "join">Phone</div>
-				<input type = "text" name = "phone" class = "box" placeholder = "전화번호를 입력해 주세요."><br>
+				<div></div> <br>
 			</div>
 			
 			<div class = "join_row">
 				<div class = "join">E-mail</div>
-				<input type = "text" name = "email" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
+				<div></div> <br>
 			</div>
 			
-			<input type = "submit" value = "수정하기" id = "btn">
+			<input type = "submit" value = "수정" id = "btn">
 			</div>
 	   </form>
 	

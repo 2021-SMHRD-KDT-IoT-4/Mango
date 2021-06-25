@@ -51,6 +51,7 @@ alter table song modify (song varchar2(50))
 
 
 --¼³·ºÆ®
+select * from INFO
 select * from perfume
 select * from song
 insert into MESSAGE values('a','a',sysdate,'bbb',3);
