@@ -38,25 +38,6 @@
 		BACKGROUND-COLOR: transparent;
 		
 	}
-	
-	#onOff {
-		
-		display: block;
-    	margin: auto;
-    	margin-top: 30px;
-			
-	}
-	
-	#playList {
-  		
-  		background-image: url('img/list2.jpg');
-  		background-repeat: no-repeat;
-  		background-size: cover;
-  		margin-top: 0px;
-  	
-  	}
-	
-	
 
 
 </style>
@@ -82,7 +63,61 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap slider CSS-->
 <link href="css/bootstrap-slider.css" rel="stylesheet">
+<style>
 
+	.join_row {
+		
+		vertical-align: bottom;
+		height: 5em;
+		
+		
+	}
+
+	.join {
+	
+		width : 90%;
+		text-align: left;
+		margin-left: 5%;
+	
+	}
+	
+	.box {
+		
+		width : 90%;
+		height: 2.5em;
+		
+		padding: 5px;
+		margin-top: -5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid black;
+		background-color: transparent;
+
+	
+	}
+	
+	#btn{
+
+	width: 100px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
+	
+
+	}	
+	
+	
+	::placeholder {
+	
+		color: white;
+	
+	}
+
+</style>
 
 </head>
 
@@ -128,8 +163,8 @@ String dataW = "";
 	<div class="hero_area">
 		<!-- header section strats -->
 		<header class="header_section">
-			<div class="container-fluid" style="padding-right: 32px; padding-left: 32px;">
-				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" display: inherit; flex-direction: row;">
+			<div class="container-fluid" style="padding-right: 37px; padding-left: 32px;">
+				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" /* display: inherit; */ flex-direction: row; margin-top: -4px;">
 					<a class="navbar-brand" href="home.jsp"> <img
 						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
 					</a>
@@ -148,20 +183,14 @@ String dataW = "";
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp"> Light </a></li>
+									href="light.jsp" style = "color: black;"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="music.jsp" style = "color: black;"> Music </a></li>
+									href="music.jsp"> Music </a></li>
+								
 								<li class="nav-item">
-								<% String id = null;
-									id = (String) session.getAttribute("id");
-									if(id == null){%>
-									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
-								<%}else{ %>
-								<a href = "#">MY PAGE</a>
-								<a href = "LogoutCon.do">LOGOUT</a>
-								<%} %>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 26.5px;">Login</button>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -178,9 +207,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>MU<span>SIC</span></h2>
+        <h2>jo<span>in</span></h2>
         <p>
-         오늘 당신의 하루는 어떤가요. 당신만을 위한 음악을 준비 했습니다.
+         망고와 함께해요.
         </p>
       </div>
     </div>
@@ -193,130 +222,57 @@ String dataW = "";
 	</script>
 	<script type="text/javascript" src="js/custom.js"></script>
 
-	<!-- mood lamp area -->
+
+
+	<div id = "setting">
+	   <form action ="">
+	   		<div style = "width: 30%; height: 40%; margin-left: 35%;
+			background-color: rgba(255,255,255,0.1); padding: 2%;
+			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
+  			">
+			<div class = "join_row">
+				<div class = "join">ID</div>
+				<input type = "text" name = "id" class = "box" placeholder = "ID를 입력해 주세요."> <br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">PW</div>
+				<input type = "password" name = "pw" class = "box" placeholder = "비밀번호를 입력해 주세요."> <br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">Re-PW</div>
+				<input type = "password" name = "repw" class = "box" placeholder = "비밀번호를 다시 한 번 입력해 주세요."><br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">Name</div>
+				<input type = "text" name = "name" class = "box" placeholder = "이름을 입력해 주세요."><br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">Address</div>
+				<input type = "text" name = "addr" class = "box" placeholder = "주소를 입력해 주세요."><br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">Phone</div>
+				<input type = "text" name = "phone" class = "box" placeholder = "전화번호를 입력해 주세요."><br>
+			</div>
+			
+			<div class = "join_row">
+				<div class = "join">E-mail</div>
+				<input type = "text" name = "email" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
+			</div>
+			
+			<input type = "submit" value = "가입하기" id = "btn">
+			</div>
+	   </form>
+	   
+   </div>	
 	
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <div id="wrapper">
-    
-    	<div id = "playList" style = "float: right; position: relative; 
-        width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%; text-align: left;">
-            <ul>
-                <li><h1 style = "text-align: left">PlayList</h1></li>
-                <li>1. BTS - BUTTER</li>
-                <li>2. Aespa - Next Level</li>
-                <li>3. Brave Girls - 치맛바람</li>
-                <li>4. IU - Lilac</li>
-                <li>5. SG워너비 - Timeless</li>
-                <li>6. 세븐틴 - Falling for U</li>
-                <li>7. 오마이걸 - Dun Dun Dance</li>
-                <li>8. BTS - Dynamite</li>
-                <li>9. IU - 잠못드는 밤 비는 내리고</li>
-                <li>10. ITZY - 마.피.아. In the morning</li>
-            </ul>
-
-        </div>
-    
-        <div id="slider-wrap" style = "max-width: 100%">
-            <ul id="slider">
-                <li>
-                    <div>
-                        <h3>BTS</h3>
-                        <span>BUTTER</span>
-                    </div>
-                    <img src="img/music/BTS_BUTTER.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>Aespa</h3>
-                        <span>Next Level</span>
-                    </div>
-                    <img src="img/music/Aespa_nextLevel.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>Brave Girls</h3>
-                        <span>치맛바람</span>
-                    </div>
-                    <img src="./img/music/BraveGirs_chiMaBaRam.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>IU</h3>
-                        <span>Lilac</span>
-                    </div>
-                    <img src="./img/music/IU_lilac.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>SG워너비</h3>
-                        <span>Timeless</span>
-                    </div>
-                    <img src="./img/music/SGwannabe_timeless.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3 style = "color: black">세븐틴</h3>
-                        <span>Falling for U</span>
-                    </div>
-                    <img src="./img/music/Falling_for_U.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">오마이걸</h3>
-                        <span>Dun Dun Dance</span>
-                    </div>
-                    <img src="./img/music/OMG_DunDunDance.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">BTS</h3>
-                        <span>Dynamite</span>
-                    </div>
-                    <img src="./img/music/BTS_DYNAMITE.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">IU</h3>
-                        <span>잠못드는밤 비는 내리고</span>
-                    </div>
-                    <img src="./img/music/IU_NIGHT.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">ITZY</h3>
-                        <span>마.피.아. In the morning</span>
-                    </div>
-                    <img src="./img/music/ITZY_MAFIA.jpg">
-                </li>
-
-
-            </ul>
-
-            controls
-            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-            <div id="counter"></div>
-
-            <div id="pagination-wrap">
-                <ul>
-                </ul>
-            </div>
-            controls
-
-        </div>
-
-    </div>
-      
-
+	
+	
 	<section class=" footer_section">
 		<div class="container">
 			<p>
@@ -436,7 +392,7 @@ String dataW = "";
 			<ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
-				<form action="LoginCon.do">
+				<form action="LoginCon.do" method = post>
 					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
 					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
 					<li>

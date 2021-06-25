@@ -16,7 +16,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>당신의 아침 망고와 함께</title>
+	<title>당신의 하루 망고와 함께</title>
 	<meta name="description" content="Some WebGL experiments with raindrop effects" />
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
 	<meta name="author" content="Lucas Bebber for Codrops" />
@@ -86,7 +86,7 @@
 				<!-- <a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/CardStackEffects/" title="Previous Demo"><span>Previous Demo</span></a>
 				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25417" title="Back to the article"><span>Back to the Codrops article</span></a> -->
 			</div>
-			<h1>Team Mango<%=downJson %></h1>
+			<h1>Team Mango<%=downJson%></h1>
 			<nav class="codrops-demos">
 				<a class="current-demo" href="home.jsp">HOME</a>
 				<a href="light.jsp">LIGHT</a>
@@ -216,13 +216,13 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 				<div class="slide__element slide__element--date"><%=date.getDay(4) %>, <%=date.getDayOfWeek(4)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(3)%>°<small>C</small></div>
 			</div>
-			<nav class="slideshow__nav">	
+			<nav class="slideshow__nav" style = "margin-bottom: 50px;">	
 	
-				<a class="nav-item" href="#slide-1"><i class="icon icon--rainy"></i><span><%=gMonth%>/<%=date.getDay(0)%></span></a>
-				<a class="nav-item" href="#slide-2"><i class="icon icon--drizzle"></i><span><%=gMonth%>/<%=date.getDay(1)%></span></a>
-				<a class="nav-item" href="#slide-3"><i class="icon icon--sun"></i><span><%=gMonth%>/<%=date.getDay(2)%></span></a>
-				<a class="nav-item" href="#slide-5"><i class="icon icon--storm"></i><span><%=gMonth%>/<%=date.getDay(3)%></span></a>
-				<a class="nav-item" href="#slide-4"><i class="icon icon--radioactive"></i><span><%=gMonth%>/<%=date.getDay(4)%></span></a>
+				<a class="nav-item" href="#slide-1" style = "margin:17.5px;"><i class="icon icon--rainy"></i><span><%=gMonth%>/<%=date.getDay(0)%></span></a>
+				<a class="nav-item" href="#slide-2" style = "margin:17.5px;"><i class="icon icon--drizzle"></i><span><%=gMonth%>/<%=date.getDay(1)%></span></a>
+				<a class="nav-item" href="#slide-3" style = "margin:17.5px;"><i class="icon icon--sun"></i><span><%=gMonth%>/<%=date.getDay(2)%></span></a>
+				<a class="nav-item" href="#slide-5" style = "margin:17.5px;"><i class="icon icon--storm"></i><span><%=gMonth%>/<%=date.getDay(3)%></span></a>
+				<a class="nav-item" href="#slide-4" style = "margin:17.5px;"><i class="icon icon--radioactive"></i><span><%=gMonth%>/<%=date.getDay(4)%></span></a>
 			</nav>
 		</div>
 		<p class="nosupport">Sorry, but your browser does not support WebGL!</p>
