@@ -60,6 +60,17 @@
 		
 	  }
 	  
+	  #btn{
+
+		width: 200px; 
+		height: 35px; 
+		margin: 10px;
+		background-color: black;
+		border-color: transparent;
+		color: white;
+		
+	  }	
+	  
 		
   </style>
   
@@ -157,7 +168,7 @@ String dataW = "";
   </div><br>
   <!-- end hero area -->
  <div class="container">
-      <div class="heading_container">
+      <div class="heading_container" style = "margin-bottom: -50px;">
         <h2>SCENT <span>NOTE</span></h2>
         <p>
          향기의 종류는 정말 다양해요. 각 향기마다 가지고 있는 매력적인 특징에 대해 알아볼까요?
@@ -169,20 +180,20 @@ String dataW = "";
  <section class="slider-1">
   <div class="slider-1">
     <div class="slides">
-        <div class="active" style="background-image:url(images/perfume/floral_info.jpg?auto=compress,format);"></div>
-        <div style="background-image:url(images/perfume/citrus_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/fruity_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/woody_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/green_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/herbal_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/spicy_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/animalic_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/powdery_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/mossy_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/oriental_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/tabacco_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/gourmand_info.jpg?auto=compress,format)";></div>
-        <div style="background-image:url(images/perfume/aqua_info.jpg?auto=compress,format)";></div>
+        <div class="active" style="background-image:url(images/perfume/floral_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/citrus_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/fruity_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/woody_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/green_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/herbal_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/spicy_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/animalic_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/powdery_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/mossy_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/oriental_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/tabacco_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/gourmand_info.jpg?auto=compress,format); margin: 4em;"></div>
+        <div style="background-image:url(images/perfume/aqua_info.jpg?auto=compress,format); margin: 4em;"></div>
     </div>
     <div class="page-btns">
         <div class="active"></div>
@@ -214,15 +225,12 @@ String dataW = "";
   <!-- end service section -->
   
   <!-- setting section -->
-  <br><br>
-  
-  
   
   <!-- end setting section -->
 
   <!-- logo section -->
-
-  <section class="logo_section layout_padding" style="padding-bottom: 60px; padding-top: 60px;">
+  
+  <section class="logo_section layout_padding" style="padding-bottom: 60px; padding-top: 30px;">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -233,6 +241,13 @@ String dataW = "";
         </p>
       </div>
     </div>
+    
+    <div>
+    	<form action = "recommend.jsp">
+			<button id = "btn">나에게 맞는 향 찾기</button>    
+    	</form>
+    </div>
+    
     <div class="logo_container layout_padding">
       <div class="carousel-wrap">
         <div class="owl-carousel">

@@ -34,7 +34,7 @@
 	#setting {
 	  	text-align: center;
 	  	width: 50%; 
-	  	height: 55%; 
+	  	height: 52em; 
 	  	margin-left: 25%;
 		background-color: rgba(255,255,255,0.1); 
 		padding: 2%;
@@ -58,6 +58,7 @@
 	#setTable {
 	  	
 	  	width: 80%;
+	  	height: 20em;
 	  	margin: auto;
 	  	margin-bottom: 2%;
 	  
@@ -71,17 +72,17 @@
 		
 	}
 
-	.join {
+	.tt {
 	
-		width : 90%;
+		width : 70%;
 		text-align: left;
-		margin-left: 5%;
+		margin-left: 15%;
 	
 	}
 	
 	.box {
 		
-		width : 90%;
+		width : 70%;
 		height: 2.5em;
 		
 		padding: 5px;
@@ -111,9 +112,36 @@
 	
 	::placeholder {
 	
-		color: white;
+		color: black;
 	
 	}
+	
+	#letter {
+	
+		resize: none;
+		width : 70%;
+		height: 31em;
+		
+		padding: 5px;
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid black;
+		
+		background-attachment: local;
+  		background-image:
+	    linear-gradient(to right, white 10px, transparent 10px),
+	    linear-gradient(to left, white 10px, transparent 10px),
+	    repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+  		line-height: 31px;
+  		padding: 2px 10px;
+	
+	}
+	
+
+
 	
 	
 	
@@ -256,32 +284,25 @@ String dataW = "";
 	<!-- mood lamp area -->
 	
    <div id = "setting" style="padding-top: 62.5px;">
-	   
-	   <form action = "sendm.jsp">
-	   <table id = "setTable" border = "1">
-	   
-		   	<tr>
-				<td>번호</td>	   	
-				<td>작성자</td>	   	
-				<td>제목</td>
-				<td>날짜</td>
-		   	</tr>
-		   	
-		   	<tr>
-				<td></td>	   	
-				<td></td>	   	
-				<td></td>
-				<td></td>
-		   	</tr>
-	   
-	   </table>
-	   
-	        <p>
-	      	    <input type="submit" value="편지쓰기" id = "btn" style = "margin-top: 1%;">
-	        </p>
-	   </form>
+          <form action="">
+            <div>
+              <div class = "tt">ID</div>
+              <input type="text" name = "name" class = "box" placeholder="Name">
+            </div>
+            <div>
+              <div class = "tt">NAME</div>
+              <input type="text" name = "id" class = "box" placeholder="id">
+            </div>
+              <div class = "tt">LETTER</div>
+              <textarea id = "letter" class="message-box" placeholder="Message"></textarea>
+              <p>
+	      	    <input type="submit" value="보내기" id = "btn" style = "margin-top: 1%;">
+	          </p>
+          </form>
    </div>
    
+   
+	
 	<section class=" footer_section">
 		<div class="container">
 			<p>
