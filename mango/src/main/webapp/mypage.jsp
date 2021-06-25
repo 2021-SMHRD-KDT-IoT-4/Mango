@@ -1,3 +1,4 @@
+<%@page import="MODEL.InfoDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -256,7 +257,8 @@ String dataW = "";
         </p>
       </div>
     </div>
-    
+    <%InfoDTO info = null;
+   	 info =(InfoDTO)session.getAttribute("info_dto"); %>
     <div id = "setting">
 	   <form action ="modify.jsp">
 			<div style = "width: 30%; height: 40%; margin-left: 35%;
@@ -264,33 +266,33 @@ String dataW = "";
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
   			">
 			<div class = "join_row">
+				<div class = "join">ID</div>
+				<div class = "join"><%=info.getId()%></div> <br>
+			</div>
+			
+			<div class = "join_row">
 				<div class = "join">PW</div>
-				<div></div> <br>
+				<div class = "join"><%=info.getPw()%></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Re-PW</div>
-				<div></div> <br>
+				<div class = "join">NAME</div>
+				<div class = "join"><%=info.getName() %></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Name</div>
-				<div></div> <br>
+				<div class = "join">LOCATION</div>
+				<div class = "join"><%=info.getLoc() %></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Address</div>
-				<div></div> <br>
+				<div class = "join">PERFUME TYPE</div>
+				<div class = "join"><%=info.getPerfume()%></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Phone</div>
-				<div></div> <br>
-			</div>
-			
-			<div class = "join_row">
-				<div class = "join">E-mail</div>
-				<div></div> <br>
+				<div class = "join">PD NUMBER</div>
+				<div class = "join"><%=info.getPdnumber()%></div> <br>
 			</div>
 			
 			<input type = "submit" value = "¼öÁ¤" id = "btn">

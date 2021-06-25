@@ -1,3 +1,4 @@
+<%@page import="MODEL.InfoDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -256,7 +257,8 @@ String dataW = "";
         </p>
       </div>
     </div>
-    
+     <%InfoDTO info = null;
+   	 info =(InfoDTO)session.getAttribute("info_dto"); %>
     <div id = "setting">
 	   <form action ="">
 			<div style = "width: 30%; height: 40%; margin-left: 35%;
@@ -264,15 +266,35 @@ String dataW = "";
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
   			">
 			<div class = "join_row">
-				<div class = "join">PW</div>
-				<input type = "password" name = "pw" class = "box" placeholder = "비밀번호를 입력해 주세요."> <br>
+				<div class = "join">ID</div>
+				<input type = "text" disabled = "disabled" name = "id" class = "box" value = <%=info.getId()%>><br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Re-PW</div>
-				<input type = "password" name = "repw" class = "box" placeholder = "비밀번호를 다시 한 번 입력해 주세요."><br>
+				<div class = "join">PW</div>
+				<input type = "text" name = "pw" class = "box" placeholder = "비밀번호를 입력해 주세요." id="firstpw"><br>
 			</div>
-			
+			<div class = "join_row">
+				<input type = "password" name = "repw" class = "box" placeholder = "비밀번호를 다시 한 번 입력해 주세요." onchange = "pwcheck()" id="secondpw">
+				<span id="pwcheck" >
+				</span>
+				<script>
+				function pwcheck(){
+				var pw = document.getElementbyID("firstpw");
+				var pw2 = document.getElementbyID("secondpw");
+				
+				if(pw.eqauls(pw2)){
+					document.getElementbyID("pwcheck").innerHTML = "<span style = 'color:green' id = pwcheck>비밀번호가 일치합니다</span>"
+				}else{
+					document.getElementbyID("pwcheck").innerHTML = "<span style = 'color:red' id = pwcheck>비밀번호가 일치하지 않습니다</span>"
+
+				}
+				}
+				
+				</script>
+				
+				<br>
+			</div>
 			<div class = "join_row">
 				<div class = "join">Name</div>
 				<input type = "text" name = "name" class = "box" placeholder = "이름을 입력해 주세요."><br>

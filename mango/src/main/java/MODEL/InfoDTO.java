@@ -7,7 +7,20 @@ public class InfoDTO {
 	private String loc;
 	private String perfume;
 	private String pdnumber;
+	private String setting;
 	
+
+
+	public InfoDTO(String id, String pw, String name, String loc, String perfume, String pdnumber, String setting) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.loc = loc;
+		this.perfume = perfume;
+		this.pdnumber = pdnumber;
+		this.setting = setting;
+	}
 	
 	public InfoDTO(String id, String pw, String name, String loc, String perfume, String pdnumber) {
 		super();
@@ -19,6 +32,7 @@ public class InfoDTO {
 		this.pdnumber = pdnumber;
 	}
 	
+	
 	public InfoDTO(String id, String pw) {
 		super();
 		this.id = id;
@@ -26,6 +40,13 @@ public class InfoDTO {
 	}
 	
 	
+	public String getSetting() {
+		return setting;
+	}
+
+	public void setSetting(String setting) {
+		this.setting = setting;
+	}
 	
 	public String getId() {
 		return id;

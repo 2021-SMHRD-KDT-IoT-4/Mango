@@ -1,9 +1,4 @@
 select * from info
---id pw perfume song light pdnum loc
-insert into info values ('aa','aa','aa','aa','aa','aa','aa');
-insert into info values ('mango','mango','5','4','0','2021','광주광역시 남구 송암로 60, CGI센터');
-insert into info values ('admin','admin','1','9','0','0000','광주광역시 남구 송암로 60, CGI센터');
-drop table info;
 create table info(
 id varchar2(50),
 pw varchar2(50),
@@ -13,8 +8,17 @@ perfume varchar2(20),
 pdnumber varchar2(50)
 );
 --id pw name loc perfume pdnum
-insert into info values ('mango','mango','망고','광주광역시 남구 송암로 60, CGI센터','1','2021');
-insert into info values ('admin','admin','관리자','광주광역시 남구 송암로 60, CGI센터','5','0000');
+insert into info values ('mango','mango','망고','광주광역시 남구 송암로 60, CGI센터','1','2021',set_seq.nextval);
+insert into info values ('admin','admin','관리자','광주광역시 남구 송암로 60, CGI센터','5','0000',set_seq.nextval);
+
+alter table info add (setting varchar2(20));
+
+
+create sequence set_seq
+start with 0
+increment by 1
+minvalue 0
+maxvalue 1000
 
 
 

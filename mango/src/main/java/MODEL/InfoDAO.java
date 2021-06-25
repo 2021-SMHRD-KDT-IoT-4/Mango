@@ -28,9 +28,10 @@ public int login(InfoDTO dto) {
 	return result;
 }
 	
+
 public int join(InfoDTO dto) {
 		conn();
-		String sql = "insert into info values(?,?,?,?,?,?)";
+		String sql = "insert into info values(?,?,?,?,?,?,set_seq.nextval)";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getId());
@@ -55,6 +56,9 @@ public int join(InfoDTO dto) {
 		
 		return result;
 	}
+
+
+
 	
 public int change(InfoDTO dto) {
 	conn();
@@ -76,5 +80,38 @@ public int change(InfoDTO dto) {
 	
 }
 	
+public InfoDTO showOne(String id) {
+	InfoDTO dto = null;
+	conn();
+	String sql = "select * from info where id = ?";
+	try {
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1, id);
+		
+		rs = psmt.executeQuery();
+		if(rs.next()) {
+		String id0 =rs.getString(1);
+		String pw =rs.getString(2);
+		String name =rs.getString(3);
+		String loc =rs.getString(4);
+		String perfume =rs.getString(5);
+		String pdnumber =rs.getString(6);
+		String setting =rs.getString(7);
+		
+		dto = new InfoDTO(id0, pw, name, loc, perfume, pdnumber, setting);
+		System.out.println("메세지 선택완료");
+		}
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return dto;
+};
+
+
+
+
 
 }

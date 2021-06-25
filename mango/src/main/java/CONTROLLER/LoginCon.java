@@ -23,10 +23,12 @@ public class LoginCon implements Command {
 		InfoDAO dao = new InfoDAO();
 		
 		int result = dao.login(dto);
+		InfoDTO resultDTO = dao.showOne(id);
 		
 		if(result !=0) {
 			System.out.println("로그인 성공");
 			HttpSession session = request.getSession();
+			session.setAttribute("info_dto", resultDTO);
 			session.setAttribute("id", id);
 		}else {
 			System.out.println("로그인 실패");

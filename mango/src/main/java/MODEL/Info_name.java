@@ -5,7 +5,7 @@ public interface Info_name {
 	public int login(InfoDTO dto);
 	
 	//회원가입 메소드
-	//light를 제외한 값 전부 받아옴
+	//light, setting를 제외한 값 전부 받아옴
 	public int join(InfoDTO dto);
 	
 	//회원정보 변경 메소드
