@@ -22,24 +22,17 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/style1.css" />
   
 
 
 <title>당신의 하루 망고와 함께</title>
 
 <style>
-	#setting {
-	  	text-align: center;
-	  	width: 50%; 
-	  	height: 55%; 
-	  	margin-left: 25%;
-		background-color: rgba(255,255,255,0.1); 
-		padding: 2%;
-		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
-	  }
+
+	}
 
 	#modal_open {
 		border-color: transparent;
@@ -47,76 +40,33 @@
 		
 	}
 	
-	#onOff {
-		
-		display: block;
-    	margin: auto;
-    	margin-top: 30px;
-			
-	}
-	
-	#setTable {
-	  	
-	  	width: 80%;
-	  	margin: auto;
-	  	margin-bottom: 2%;
-	  
-	  }
-	  
-	  .join_row {
-		
-		vertical-align: bottom;
-		height: 5em;
-		
-		
-	}
-
-	.join {
-	
-		width : 90%;
-		text-align: left;
-		margin-left: 5%;
-	
-	}
-	
-	.box {
-		
-		width : 90%;
-		height: 2.5em;
-		
-		padding: 5px;
-		margin-top: -5px;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-bottom: 5px;
-		border: none;
-		border-bottom: 1px solid black;
-		background-color: transparent;
 
 	
+	
+	#wrap {
+	
+		width: 600px;
+		height: 600px;
+		margin: auto;
+		padding-top: 70px; 
+		
 	}
 	
-	#btn{
-
-	width: 100px; 
-	height: 35px; 
-	margin: 10px;
-	background-color: black;
-	border-color: transparent;
-	color: white;
+	.row_pic {
 	
-
-	}	
-	
-	
-	::placeholder {
-	
-		color: white;
+		width: 600px;
+		height: auto;
 	
 	}
 	
+	.pic {
 	
+		border-radius: 15px;
 	
+	}
+	
+
+
 </style>
 
 <!-- slider stylesheet -->
@@ -129,17 +79,17 @@
 	rel="stylesheet" />
 
 <!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 
 <!-- Custom styles for this template -->
-<link href="css/style.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
 <!-- responsive style -->
-<link href="css/responsive.css" rel="stylesheet" />
+<link href="../css/responsive.css" rel="stylesheet" />
 
 <!-- Bootstrap CSS-->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap slider CSS-->
-<link href="css/bootstrap-slider.css" rel="stylesheet">
+<link href="../css/bootstrap-slider.css" rel="stylesheet">
 
 
 </head>
@@ -188,8 +138,8 @@ String dataW = "";
 		<header class="header_section">
 			<div class="container-fluid" style="padding-right: 2em; padding-left: 4em; padding-top: 1.25em;">
 				<nav class="navbar navbar-expand-lg custom_nav-container pt-3" style=" /* display: inherit; */ flex-direction: row;">
-					<a class="navbar-brand" href="home.jsp"> <img
-						src="img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
+					<a class="navbar-brand" href="../home.jsp"> <img
+						src="../img/mango_logo2.png" alt="logo" style = "width:220px; margin-top:15px;">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent"
@@ -198,28 +148,27 @@ String dataW = "";
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent"">
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  " style = "padding-top: 5px;">
-								<li class="nav-item "><a class="nav-link2" href="home.jsp">Home
+								<li class="nav-item "><a class="nav-link2" href="../home.jsp">Home
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp" style = "color: black;"> Light </a></li>
+									href="../light.jsp" style = "color: black;"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="perfume.jsp"> Perfume </a></li>
+									href="../perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="music.jsp"> Music </a></li>
-								
+									href="../music.jsp"> Music </a></li>
 								<li class="nav-item">
 								<% String id = null;
 									id = (String) session.getAttribute("id");
 									if(id == null){%>
-									<a href = "join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
+									<a href = "../join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
 								<%}else{ %>
-								<a class="nav-link2" href = "mypage.jsp" style="marign-left:0.9em;">MY PAGE</a>
+								<a class="nav-link2" href = "../mypage.jsp" style="marign-left:0.9em;">MY PAGE</a>
 								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
 								<%} %>
 								</li>
@@ -238,50 +187,31 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>ME<span>SSA</span>GE</h2>
-        <p>
-        오늘도 당신을 그리고 있습니다.
-        </p>
+        <h2>RECO<span>MMEND</span></h2>
+        <div>
+         	<img src = '../img/recommend/g2.png' style = "width:30%; length:30%;">
+        </div>
       </div>
     </div>
-
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-		
-	</script>
-	<script type="text/javascript" src="js/custom.js"></script>
-
-	<!-- mood lamp area -->
+    
+    <div id = "wrap">
+	    <div class = "row_pic">
+		    <div>
+				<a href = "perfume/third.jsp"><img src="../img/recommend/2-1.jpg" class = "pic"></a>
+			</div>
+			<div>ㅇㅇ</div>
+	    </div>
+    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "perfume/third.jsp"><img src="../img/recommend/2-2.jpg" class = "pic"></a>
+			</div>
+			<div>ㄴㄴ</div>
+	    </div>
+	    
+	    
+    </div>
 	
-   <div id = "setting" style="padding-top: 62.5px;">
-	   
-	   <form action = "sendm.jsp">
-	   <table id = "setTable" border = "1">
-	   
-		   	<tr>
-				<td>번호</td>	   	
-				<td>작성자</td>	   	
-				<td>제목</td>
-				<td>날짜</td>
-		   	</tr>
-		   	
-		   	<tr>
-				<td></td>	   	
-				<td></td>	   	
-				<td></td>
-				<td></td>
-		   	</tr>
-	   
-	   </table>
-	   
-	        <p>
-	      	    <input type="submit" value="편지쓰기" id = "btn" style = "margin-top: 1%;">
-	        </p>
-	   </form>
-   </div>
-   
 	<section class=" footer_section">
 		<div class="container">
 			<p>
@@ -290,12 +220,27 @@ String dataW = "";
 			</p>
 		</div>
 	</section>
+	
+
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../js/custom.js"></script>
+
+	<!-- mood lamp area -->
+	
+	
+
+	
 </div>
 	</div>
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
-	<script src="js/index.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-slider.js"></script>
+	<script src="../js/index.min.js"></script>
 
 	<script>
 		// Without JQuery
@@ -333,7 +278,7 @@ String dataW = "";
 }
 
 .modal__overlay {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -391,7 +336,7 @@ String dataW = "";
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
 		<div class="modal__content" style = 
-			"background-image: url('img/login3.jpg');
+			"background-image: url('../img/login3.jpg');
 	 		background-repeat: no-repeat;
 	  		background-size: cover;
 	  		background-position: center;
@@ -453,12 +398,12 @@ String dataW = "";
 		modalOpenBtn.addEventListener('click', openModal);
 	</script>
 
-<script src="js/index.min.js"></script>
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="../js/index.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <script type="text/javascript" src="js/custom.js"></script>
+  <script type="text/javascript" src="../js/custom.js"></script>
   
   
   <script>

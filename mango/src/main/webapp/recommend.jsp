@@ -31,15 +31,8 @@
 <title>당신의 하루 망고와 함께</title>
 
 <style>
-	#setting {
-	  	text-align: center;
-	  	width: 50%; 
-	  	height: 55%; 
-	  	margin-left: 25%;
-		background-color: rgba(255,255,255,0.1); 
-		padding: 2%;
-		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
-	  }
+
+	}
 
 	#modal_open {
 		border-color: transparent;
@@ -47,76 +40,35 @@
 		
 	}
 	
-	#onOff {
-		
-		display: block;
-    	margin: auto;
-    	margin-top: 30px;
-			
-	}
-	
-	#setTable {
-	  	
-	  	width: 80%;
-	  	margin: auto;
-	  	margin-bottom: 2%;
-	  
-	  }
-	  
-	  .join_row {
-		
-		vertical-align: bottom;
-		height: 5em;
-		
-		
-	}
-
-	.join {
-	
-		width : 90%;
-		text-align: left;
-		margin-left: 5%;
-	
-	}
-	
-	.box {
-		
-		width : 90%;
-		height: 2.5em;
-		
-		padding: 5px;
-		margin-top: -5px;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-bottom: 5px;
-		border: none;
-		border-bottom: 1px solid black;
-		background-color: transparent;
 
 	
+	
+	#wrap {
+	
+		width: 1200px;
+		height: 40%;
+		margin: auto;
+		padding-top: 70px; 
+		
 	}
 	
-	#btn{
-
-	width: 100px; 
-	height: 35px; 
-	margin: 10px;
-	background-color: black;
-	border-color: transparent;
-	color: white;
+	.row_pic {
 	
-
-	}	
-	
-	
-	::placeholder {
-	
-		color: white;
+		width: 300px;
+		height: auto;
+		position: relative;
+		float: left;
 	
 	}
 	
+	.pic {
 	
+		border-radius: 10%;
 	
+	}
+	
+
+
 </style>
 
 <!-- slider stylesheet -->
@@ -198,7 +150,7 @@ String dataW = "";
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent"">
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  " style = "padding-top: 5px;">
@@ -206,12 +158,11 @@ String dataW = "";
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp" style = "color: black;"> Light </a></li>
+									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="perfume.jsp"> Perfume </a></li>
+									href="perfume.jsp"  style = "color: black;"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
-								
 								<li class="nav-item">
 								<% String id = null;
 									id = (String) session.getAttribute("id");
@@ -238,12 +189,53 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>ME<span>SSA</span>GE</h2>
-        <p>
-        오늘도 당신을 그리고 있습니다.
-        </p>
+        <h2>RECO<span>MMEND</span></h2>
+        <div>
+         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+        </div>
       </div>
     </div>
+    
+    <div id = "wrap">
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+			</div>
+			<div>ㅇㅇ</div>
+	    </div>
+    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
+			</div>
+			<div>ㄴㄴ</div>
+	    </div>
+	    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
+			</div>
+			<div>ㄷㄷ</div>
+	    </div>
+	    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
+			</div>
+			<div>ㅇㅇ</div>
+	    </div>
+	    
+    </div>
+	
+	<section class=" footer_section">
+		<div class="container">
+			<p>
+				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span>
+			</p>
+		</div>
+	</section>
+	
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
@@ -255,41 +247,9 @@ String dataW = "";
 
 	<!-- mood lamp area -->
 	
-   <div id = "setting" style="padding-top: 62.5px;">
-	   
-	   <form action = "sendm.jsp">
-	   <table id = "setTable" border = "1">
-	   
-		   	<tr>
-				<td>번호</td>	   	
-				<td>작성자</td>	   	
-				<td>제목</td>
-				<td>날짜</td>
-		   	</tr>
-		   	
-		   	<tr>
-				<td></td>	   	
-				<td></td>	   	
-				<td></td>
-				<td></td>
-		   	</tr>
-	   
-	   </table>
-	   
-	        <p>
-	      	    <input type="submit" value="편지쓰기" id = "btn" style = "margin-top: 1%;">
-	        </p>
-	   </form>
-   </div>
-   
-	<section class=" footer_section">
-		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
-		</div>
-	</section>
+	
+
+	
 </div>
 	</div>
 
@@ -333,7 +293,7 @@ String dataW = "";
 }
 
 .modal__overlay {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	height: 100%;
 	position: absolute;
