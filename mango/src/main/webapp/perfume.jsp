@@ -148,7 +148,14 @@ String dataW = "";
                   </a>
                 </li>
                 <li class="nav-item">
+				 <% String id = null;
+					id = (String) session.getAttribute("id");
+					if(id == null){%>
 				  <button class="nav-link2" id="modal_open" style = "color:black; border: none;">Login</button>
+				<%}else{ %>
+				<a href = "#">MY PAGE</a>
+				<a href = "LogoutCon.do">LOGOUT</a>
+				<%} %>
 				</li>
               </ul>
             </div>

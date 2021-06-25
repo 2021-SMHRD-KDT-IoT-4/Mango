@@ -151,9 +151,15 @@ String dataW = "";
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
-								
 								<li class="nav-item">
+								<% String id = null;
+									id = (String) session.getAttribute("id");
+									if(id == null){%>
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
+								<%}else{ %>
+								<a href = "#">MY PAGE</a>
+								<a href = "LogoutCon.do">LOGOUT</a>
+								<%} %>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">

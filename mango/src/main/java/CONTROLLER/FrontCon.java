@@ -22,10 +22,13 @@ public class FrontCon extends HttpServlet {
 		Command inter = null;
 
 		if (resultURI.equals("LoginCon.do")) {
-			inter = new LoginCon();
+			inter = new LoginCon();}
+		else if(resultURI.equals("LogoutCon.do")) {
+			inter = new LogoutCon();}
+			
 
 			inter.command(request, response);
 
-		}
+		
 	}
 }
