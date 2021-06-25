@@ -1,6 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="MODEL.SongDAO"%>
-<%@page import="MODEL.SongDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -34,7 +31,15 @@
 <title>당신의 하루 망고와 함께</title>
 
 <style>
-	
+	#setting {
+	  	text-align: center;
+	  	width: 50%; 
+	  	height: 55%; 
+	  	margin-left: 25%;
+		background-color: rgba(255,255,255,0.1); 
+		padding: 2%;
+		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
+	  }
 
 	#modal_open {
 		border-color: transparent;
@@ -50,18 +55,69 @@
 			
 	}
 	
-	#playList {
-  		
-  		background-image: url('img/list2.jpg');
-  		background-repeat: no-repeat;
-  		background-size: cover;
-  		margin-top: 0px;
-  	
-  	}
+	#setTable {
+	  	
+	  	width: 80%;
+	  	height: 20em;
+	  	margin: auto;
+	  	margin-bottom: 2%;
+	  
+	  }
+	  
+	  .join_row {
+		
+		vertical-align: bottom;
+		height: 5em;
+		
+		
+	}
+
+	.join {
 	
+		width : 90%;
+		text-align: left;
+		margin-left: 5%;
+	
+	}
+	
+	.box {
+		
+		width : 90%;
+		height: 2.5em;
+		
+		padding: 5px;
+		margin-top: -5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid black;
+		background-color: transparent;
+
+	
+	}
+	
+	#btn{
+
+	width: 100px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
 	
 
-
+	}	
+	
+	
+	::placeholder {
+	
+		color: white;
+	
+	}
+	
+	
+	
 </style>
 
 <!-- slider stylesheet -->
@@ -151,21 +207,14 @@ String dataW = "";
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp"> Light </a></li>
+									href="light.jsp" style = "color: black;"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="music.jsp" style = "color: black;"> Music </a></li>
+									href="music.jsp"> Music </a></li>
+								
 								<li class="nav-item">
-								<% String id = null;
-									id = (String) session.getAttribute("id");
-									if(id == null){%>
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
-									<a href = "join.jsp">JOIN</a>
-								<%}else{ %>
-								<a href = "#">MY PAGE</a>
-								<a href = "LogoutCon.do">LOGOUT</a>
-								<%} %>
 								</li>
 							</ul>
 							<!-- <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
@@ -180,11 +229,17 @@ String dataW = "";
 	</div><br>
 	<!-- end hero area -->
 	
+	<div>
+		<a href = "information.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<a href = "setting.jsp">SETTING&nbsp;&nbsp;&nbsp;</a>
+		<a href = "recommend.jsp">RECOMMEND</a>
+	</div>
+	<br><br>
 	 <div class="container">
       <div class="heading_container">
-        <h2>MU<span>SIC</span></h2>
+        <h2>ME<span>SS</span>AGE</h2>
         <p>
-         오늘 당신의 하루는 어떤가요. 당신만을 위한 음악을 준비 했습니다.
+        친구들과 문자를 주고 받고 어쩌고
         </p>
       </div>
     </div>
@@ -199,124 +254,109 @@ String dataW = "";
 
 	<!-- mood lamp area -->
 	
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <div id="wrapper">
-    
-    	<div id = "playList" style = "float: right; position: relative; 
-        width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%; text-align: left;">
-            <ul>
-                <li><h1 style = "text-align: left">PlayList</h1></li>
-                <%
-                SongDAO sdao  = new SongDAO();
-                ArrayList<SongDTO> slist = sdao.showSong();
-                		for(int i =0; i <slist.size();i++){ %>
-                		  <li><%=i+1%>. <%=slist.get(i).getSinget()%> - <%=slist.get(i).getSong() %> </li>
-                		<%} %>
-            </ul>
-
-        </div>
-    
-        <div id="slider-wrap" style = "max-width: 100%">
-            <ul id="slider">
-                <li>
-                    <div>
-                        <h3>BTS</h3>
-                        <span>BUTTER</span>
-                    </div>
-                    <img src="img/music/BTS_BUTTER.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>Aespa</h3>
-                        <span>Next Level</span>
-                    </div>
-                    <img src="img/music/Aespa_nextLevel.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>Brave Girls</h3>
-                        <span>치맛바람</span>
-                    </div>
-                    <img src="./img/music/BraveGirs_chiMaBaRam.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>IU</h3>
-                        <span>Lilac</span>
-                    </div>
-                    <img src="./img/music/IU_lilac.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3>SG워너비</h3>
-                        <span>Timeless</span>
-                    </div>
-                    <img src="./img/music/SGwannabe_timeless.jpg">
-                </li>
-
-                <li>
-                    <div>
-                        <h3 style = "color: black">세븐틴</h3>
-                        <span>Falling for U</span>
-                    </div>
-                    <img src="./img/music/Falling_for_U.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">오마이걸</h3>
-                        <span>Dun Dun Dance</span>
-                    </div>
-                    <img src="./img/music/OMG_DunDunDance.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">BTS</h3>
-                        <span>Dynamite</span>
-                    </div>
-                    <img src="./img/music/BTS_DYNAMITE.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">IU</h3>
-                        <span>잠못드는밤 비는 내리고</span>
-                    </div>
-                    <img src="./img/music/IU_NIGHT.jpg">
-                </li>
-                
-                <li>
-                    <div>
-                        <h3 style = "color: black">ITZY</h3>
-                        <span>마.피.아. In the morning</span>
-                    </div>
-                    <img src="./img/music/ITZY_MAFIA.jpg">
-                </li>
-
-
-            </ul>
-
-            controls
-            <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-            <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-            <div id="counter"></div>
-
-            <div id="pagination-wrap">
-                <ul>
-                </ul>
-            </div>
-            controls
-
-        </div>
-
-    </div>
-      
-
+   <div id = "setting" style="padding-top: 62.5px;">
+	   <form>
+			<table id = "setTable" border = "1">
+				<% %>
+				<tr>
+					<td>설정5</td>
+					<td>향수5</td>
+					<td>날씨5</td>
+					<td>시간5</td>
+					<td>음악5</td>
+				</tr>
+				
+			</table>
+		</form>
+		
+	  	<form>
+		  <select name="setting" >
+		    <option value="none" selected>=== 옵션 ===</option>
+		    <option value="s1">설정1</option>
+		    <option value="s2">설정2</option>
+		    <option value="s3">설정3</option>
+		    <option value="s4">설정4</option>
+		    <option value="s5">설정5</option>
+		  </select>
+		  
+		  <select name="perfume" >
+		    <option value="none" selected>==== 향수 ====</option>
+		    <option value="p1">Floral</option>
+		    <option value="p2">Citrus</option>
+		    <option value="p3">Fruity</option>
+		    <option value="p4">Woody</option>
+		    <option value="p5">Green</option>
+		    <option value="p6">Herbal</option>
+		    <option value="p7">Spicy</option>
+		    <option value="p8">Animalic</option>
+		    <option value="p9">Powdery</option>
+		    <option value="p10">Mossy</option>
+		    <option value="p11">Oriental</option>
+		    <option value="p12">Tabacco leather</option>
+		    <option value="p13">Gourmand</option>
+		    <option value="p14">Aqua</option>
+		  </select>
+		  
+		  <select name="weather" >
+		    <option value="none" selected>=== 날씨 ===</option>
+		    <option value="w1">맑음</option>
+		    <option value="w2">비</option>
+		    <option value="w3">흐림</option>
+		    <option value="w4">눈</option>
+		  </select>
+		  
+		  <select name="time" >
+		    <option value="none" selected>=== 시간 ===</option>
+		    <option value="t6">06:00</option>
+		    <option value="t7">07:00</option>
+		    <option value="t8">08:00</option>
+		    <option value="t9">09:00</option>
+		    <option value="t10">10:00</option>
+		    <option value="t11">11:00</option>
+		    <option value="t12">12:00</option>
+		    <option value="t13">13:00</option>
+		    <option value="t14">14:00</option>
+		    <option value="t15">15:00</option>
+		    <option value="t16">16:00</option>
+		    <option value="t17">17:00</option>
+		    <option value="t18">18:00</option>
+		    <option value="t19">19:00</option>
+		    <option value="t20">20:00</option>
+		    <option value="t21">21:00</option>
+		    <option value="t22">22:00</option>
+		    <option value="t23">23:00</option>
+		    <option value="t24">24:00</option>
+		  </select>
+		  
+		  <select name="music">
+		    <option value="none" selected>=== 음악 ===</option>
+		    <option value="m1">트랙1</option>
+		    <option value="m2">트랙2</option>
+		    <option value="m3">트랙3</option>
+		    <option value="m4">트랙4</option>
+		    <option value="m5">트랙5</option>
+		    <option value="m6">트랙6</option>
+		    <option value="m7">트랙7</option>
+		    <option value="m8">트랙8</option>
+		    <option value="m9">트랙9</option>
+		    <option value="m10">트랙10</option>
+		    <option value="m11">트랙11</option>
+		    <option value="m12">트랙12</option>
+		    <option value="m13">트랙13</option>
+		    <option value="m14">트랙14</option>
+		    <option value="m15">트랙15</option>
+		  </select>
+		  
+	      <p>
+	      	<input type="submit" value="설정" id = "btn" style = "margin-top: 1%;">
+	      </p>
+	   
+	   </form>
+	   
+   </div>
+   
+   
+	
 	<section class=" footer_section">
 		<div class="container">
 			<p>
@@ -368,7 +408,7 @@ String dataW = "";
 }
 
 .modal__overlay {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -436,7 +476,7 @@ String dataW = "";
 			<ul style='list-style: none;'>
 				<li><h5
 						style='font-family: Nanum Gothic, sans-serif; font-weight: bold; margin-top: 18px;'>LOGIN</h5></li>
-				<form action="LoginCon.do">
+				<form action="LoginCon.do" method = post>
 					<li><input type="text" name=id class = "ip" placeholder="ID을 입력하세요."></li>
 					<li><input type="password" name=pw class = "ip" placeholder="Password를 입력하세요."></li>
 					<li>

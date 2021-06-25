@@ -32,6 +32,7 @@ insert into perfume values('5','애니멀릭','아쿠아','그린','허브','14900');
 
 
 --song  singer  album  songtype
+delete from song where song = 'mango'
 insert into song values ('mango','망고','망고의 하루','aa');
 insert into song values ('BUTTER','BTS','BUTTER','1');
 insert into song values ('Next Level','Aespa','Next Level','2');

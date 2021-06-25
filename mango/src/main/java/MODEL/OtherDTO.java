@@ -1,7 +1,9 @@
 package MODEL;
 
+import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class OtherDTO {
 
@@ -12,6 +14,13 @@ public class OtherDTO {
 	private int month = cal.get(Calendar.MONTH) + 1;
 	private int dayOfWeek;
 	
+	private long time = System.currentTimeMillis();
+	SimpleDateFormat formatter = new SimpleDateFormat("hh:mm:ss", Locale.KOREA);
+	String dTime = formatter.format(time);
+	
+	public String getTime() {
+		return dTime;
+	}
 	
 
 	public int getYear() {

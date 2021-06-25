@@ -194,6 +194,23 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			<!-- Heavy Rain -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-1" data-weather="<%=dataR%>">
 				<div class="slide__element slide__element--date"><%=date.getDay(0) %>, <%=date.getDayOfWeek(0)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+			
+				<div id ="javatest"></div>
+				<script>
+			<%-- 	var timer = setInterval(function(){
+				var dTime = "<%=date.getTime()%>";
+				document.getElementById("javatest").innerText = dTime;
+				},2000);
+				  --%>
+				
+				var now_day = new Date();
+				var nDay = now_day.getHours();
+				if(nDay>=17 && nDay<=18) console.log("아침입니다");
+				else {
+					console.log("메세지 기능 활성화");
+					 document.getElementById("javatest").innerHTML = "<a href = 'message.jsp'>Message</a>";}
+			
+				</script>
 				<div class="slide__element slide__element--temp"></div>
 			</div>
 			<!-- Drizzle -->
