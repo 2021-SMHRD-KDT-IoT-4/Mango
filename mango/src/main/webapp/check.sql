@@ -3,6 +3,18 @@ select * from info
 insert into info values ('aa','aa','aa','aa','aa','aa','aa');
 insert into info values ('mango','mango','5','4','0','2021','광주광역시 남구 송암로 60, CGI센터');
 insert into info values ('admin','admin','1','9','0','0000','광주광역시 남구 송암로 60, CGI센터');
+drop table info;
+create table info(
+id varchar2(50),
+pw varchar2(50),
+name varchar2(50),
+loc varchar2(200),
+perfume varchar2(20),
+pdnumber varchar2(50)
+);
+--id pw name loc perfume pdnum
+insert into info values ('mango','mango','망고','광주광역시 남구 송암로 60, CGI센터','1','2021');
+insert into info values ('admin','admin','관리자','광주광역시 남구 송암로 60, CGI센터','5','0000');
 
 
 

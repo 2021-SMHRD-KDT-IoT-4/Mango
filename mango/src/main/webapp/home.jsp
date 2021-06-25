@@ -96,7 +96,7 @@
 				id = (String) session.getAttribute("id");
 				if(id == null){%>
 				<button id = "modal_open">LOGIN</button>
-				<a href = "#">JOIN</a><%}else{ %>
+				<a href = "join.jsp">JOIN</a><%}else{ %>
 				<a href = "#">MY PAGE</a>
 				<a href = "LogoutCon.do">LOGOUT</a>
 				<%} %>

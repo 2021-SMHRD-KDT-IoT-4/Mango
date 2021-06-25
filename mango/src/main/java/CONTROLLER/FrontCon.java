@@ -25,6 +25,9 @@ public class FrontCon extends HttpServlet {
 			inter = new LoginCon();}
 		else if(resultURI.equals("LogoutCon.do")) {
 			inter = new LogoutCon();}
+		else if(resultURI.equals("JoinCon.do")) {
+			inter = new JoinCon();}
+		
 			
 
 			inter.command(request, response);

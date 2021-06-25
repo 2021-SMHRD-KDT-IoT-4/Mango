@@ -225,7 +225,7 @@ String dataW = "";
 
 
 	<div id = "setting">
-	   <form action ="">
+	   <form action ="JoinCon.do">
 	   		<div style = "width: 30%; height: 40%; margin-left: 35%;
 			background-color: rgba(255,255,255,0.1); padding: 2%;
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
@@ -252,17 +252,17 @@ String dataW = "";
 			
 			<div class = "join_row">
 				<div class = "join">Address</div>
-				<input type = "text" name = "addr" class = "box" placeholder = "주소를 입력해 주세요."><br>
+				<input type = "text" name = "loc" class = "box" placeholder = "주소를 입력해 주세요."><br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Phone</div>
-				<input type = "text" name = "phone" class = "box" placeholder = "전화번호를 입력해 주세요."><br>
+				<div class = "join">Perfume Type</div>
+				<input type = "text" name = "perfume" class = "box" placeholder = "향수번호를 입력해 주세요."><br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">E-mail</div>
-				<input type = "text" name = "email" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
+				<div class = "join">Product Number</div>
+				<input type = "text" name = "pdnumber" class = "box" placeholder = "제품번호를 입력해 주세요."><br><br>
 			</div>
 			
 			<input type = "submit" value = "가입하기" id = "btn">
