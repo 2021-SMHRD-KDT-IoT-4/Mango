@@ -141,6 +141,7 @@ String dataW = "";
 					id = (String) session.getAttribute("id");
 					if(id == null){%>
 				  <button class="nav-link2" id="modal_open" style = "color:black; border: none;">Login</button>
+				  <a href = "join.jsp">JOIN</a>
 				<%}else{ %>
 				<a href = "#">MY PAGE</a>
 				<a href = "LogoutCon.do">LOGOUT</a>

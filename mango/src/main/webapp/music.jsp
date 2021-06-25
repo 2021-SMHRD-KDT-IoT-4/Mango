@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="MODEL.SongDAO"%>
+<%@page import="MODEL.SongDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -158,6 +161,7 @@ String dataW = "";
 									id = (String) session.getAttribute("id");
 									if(id == null){%>
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none;">Login</button>
+									<a href = "join.jsp">JOIN</a>
 								<%}else{ %>
 								<a href = "#">MY PAGE</a>
 								<a href = "LogoutCon.do">LOGOUT</a>
@@ -202,16 +206,13 @@ String dataW = "";
         width: 600px; height: 600px; box-sizing: border-box; padding: 90px; max-width:100%; text-align: left;">
             <ul>
                 <li><h1 style = "text-align: left">PlayList</h1></li>
-                <li>1. BTS - BUTTER</li>
-                <li>2. Aespa - Next Level</li>
-                <li>3. Brave Girls - 치맛바람</li>
-                <li>4. IU - Lilac</li>
-                <li>5. SG워너비 - Timeless</li>
-                <li>6. 세븐틴 - Falling for U</li>
-                <li>7. 오마이걸 - Dun Dun Dance</li>
-                <li>8. BTS - Dynamite</li>
-                <li>9. IU - 잠못드는 밤 비는 내리고</li>
-                <li>10. ITZY - 마.피.아. In the morning</li>
+                <%
+                SongDAO sdao  = new SongDAO();
+                ArrayList<SongDTO> slist = sdao.showSong();
+                		for(int i =0; i <slist.size();i++){ %>
+                		  <li><%=i+1%>. <%=slist.get(i).getSinget()%> - <%=slist.get(i).getSong() %> </li>
+                		 
+                		<%} %>
             </ul>
 
         </div>
