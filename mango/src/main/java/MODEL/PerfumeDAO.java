@@ -53,7 +53,6 @@ public class PerfumeDAO extends totalDAO implements Perfume_name{
 				
 				dto = new PerfumeDTO(pertypetype, pertype1, pertype2, pertype3, pertype4, perprice);
 				
-				System.out.println("목록 출력");
 			}
 			
 		} catch (SQLException e) {
