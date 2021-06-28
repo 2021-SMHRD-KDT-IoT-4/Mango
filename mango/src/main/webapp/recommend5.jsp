@@ -46,7 +46,7 @@
 	#wrap {
 	
 		width: 1200px;
-		height: 400px;
+		height: 40%;
 		margin: auto;
 		padding-top: 30px; 
 		
@@ -62,20 +62,21 @@
 	}
 	
 	.pic {
+	
 		width: 80%;
 		height: 80%;
 		border-radius: 10%;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
+		margin-bottom: 10px;
 	
 	}
 	
 	.ft {
-		font-size: larger;
+		font-size: medium;
 		font-weight: bold;
 	
 	}
-	
 
 
 </style>
@@ -200,48 +201,39 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+         	<img src = 'img/recommend/g5.png' style = "width:30%; length:30%;">
+         	<div style="margin-top: 30px;">향수를 사용할 계절을 알려주세요.</div>
         </div>
       </div>
     </div>
     
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
-    
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+				<a href = "recommend6.jsp"><img src="img/recommend/5-1.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>기분을 전환시키는</div>
-			<div class = "ft">풀, 나무 향기</div>
+			<div class = "ft">봄</div>
 	    </div>
     
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
+				<a href = "recommend6.jsp"><img src="img/recommend/5-2.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>마음을 설레게 하는</div>
-			<div class = "ft">꽃 향기</div>
+			<div class = "ft">여름</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
+				<a href = "recommend6.jsp"><img src="img/recommend/5-3.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>주변 공기를 부드럽게</div>
-			<div class = "ft">달콤한 향기</div>
+			<div class = "ft">가을</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
+				<a href = "recommend6.jsp"><img src="img/recommend/5-4.jpg"  class = "pic"></a>
 			</div>
-			<br>
-			<div>차분하고 성숙한</div>
-			<div class = "ft">도시의 향기</div>
+			<div class = "ft">겨울</div>
 	    </div>
 	    
     </div>

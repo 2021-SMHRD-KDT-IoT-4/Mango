@@ -45,10 +45,10 @@
 	
 	#wrap {
 	
-		width: 1200px;
-		height: 400px;
+		width: 900px;
+		height: 40%;
 		margin: auto;
-		padding-top: 30px; 
+		padding-top: 70px; 
 		
 	}
 	
@@ -58,15 +58,17 @@
 		height: auto;
 		position: relative;
 		float: left;
+		
 	
 	}
 	
 	.pic {
-		width: 80%;
-		height: 80%;
+		width: 60%;
+		height: 60%; 
 		border-radius: 10%;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
+		margin-bottom: 10px;
 	
 	}
 	
@@ -75,7 +77,6 @@
 		font-weight: bold;
 	
 	}
-	
 
 
 </style>
@@ -200,48 +201,34 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+         	당신에게 어울리는 3가지 향수 입니다.
         </div>
       </div>
     </div>
     
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
-    
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+				<a href = "perfume.jsp"><img src="img/recommend/8-1.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>기분을 전환시키는</div>
-			<div class = "ft">풀, 나무 향기</div>
+			<div class = "ft">놀이동산 데이트</div>
+			<div>#순수한 #풀꽃 #데일리</div>
 	    </div>
     
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
+				<a href = "perfume.jsp"><img src="img/recommend/8-2.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>마음을 설레게 하는</div>
-			<div class = "ft">꽃 향기</div>
+			<div class = "ft">물기 머금은 장미</div>
+			<div>#깔끔한 #장미 #가벼운</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
+				<a href = "perfume.jsp"><img src="img/recommend/8-3.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>주변 공기를 부드럽게</div>
-			<div class = "ft">달콤한 향기</div>
-	    </div>
-	    
-	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
-			</div>
-			<br>
-			<div>차분하고 성숙한</div>
-			<div class = "ft">도시의 향기</div>
+			<div class = "ft">초록빛 기억</div>
+			<div>#청량한 #들꽃 #가벼운</div>
 	    </div>
 	    
     </div>

@@ -48,7 +48,7 @@
 		width: 600px;
 		height: 400px;
 		margin: auto;
-		padding-top: 70px; 
+		padding-top: 30px; 
 		
 	}
 	
@@ -77,7 +77,16 @@
 		color: white;
 		border-radius: 5px;
 		font-size: 18px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
 
+	}
+	
+	.btn3:hover {
+		
+		background-color: white;
+		color: black;
+	
 	}	
 
 </style>
@@ -179,7 +188,7 @@ String dataW = "";
 									id = (String) session.getAttribute("id");
 									if(id == null){%>
 									<a href = "join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
-									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px; background-color: transparent;">Login</button>
 								<%}else{ %>
 								<a class="nav-link2" href = "mypage.jsp" style="marign-left:0.9em;">MY PAGE</a>
 								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
@@ -207,29 +216,31 @@ String dataW = "";
       </div>
     </div>
     
+    	<div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
+    
      <div id = "wrap">
      
 	    <div class = "row_pic">
 		    <div>
-				<button class = "btn3">싱그러운</button>
+				<button class = "btn3" onClick="location.href='recommend4.jsp'">싱그러운</button>
 			</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<button class = "btn3">청순한</button>
+				<button class = "btn3" onClick="location.href='recommend4.jsp'">청순한</button>
 			</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<button class = "btn3">자연스러운</button>
+				<button class = "btn3" onClick="location.href='recommend4.jsp'">자연스러운</button>
 			</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<button class = "btn3">사랑스러운</button>
+				<button class = "btn3" onClick="location.href='recommend4.jsp'">사랑스러운</button>
 			</div>
 	    </div>
 	    

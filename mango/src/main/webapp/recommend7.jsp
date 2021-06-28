@@ -45,16 +45,17 @@
 	
 	#wrap {
 	
-		width: 1200px;
-		height: 400px;
+		width: 600px;
+		height: 420px;
 		margin: auto;
-		padding-top: 30px; 
+		padding-top: 30px;
+		
 		
 	}
 	
 	.row_pic {
 	
-		width: 300px;
+		width: 600px;
 		height: auto;
 		position: relative;
 		float: left;
@@ -62,21 +63,69 @@
 	}
 	
 	.pic {
-		width: 80%;
-		height: 80%;
+	
 		border-radius: 10%;
+	
+	}
+	
+	/* .btn3 {
+	
+		width: 400px; 
+		height: 50px; 
+		margin: 10px;
+		background-color: black;
+		border-color: transparent;
+		color: white;
+		border-radius: 5px;
+		font-size: 18px;
+
+	} */
+	
+	.btn2, .btn3 {
+	
+		width: 190px; 
+		height: 50px; 
+		margin: 10px;
+		background-color: black;
+		border-color: transparent;
+		color: white;
+		border-radius: 5px;
+		font-size: 18px;
+		position: relative;
+		float: left;
+		cursor: pointer;
+		text-align:center;
+		display:table-cell;
+		vertical-align:middle;
+		line-height:50px;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
+		
+		}
+	
+	.btn2:hover, .btn3:hover {
+		
+		background-color: white;
+		color: black;
 	
 	}
 	
-	.ft {
-		font-size: larger;
-		font-weight: bold;
-	
-	}
+	.clicked {
+        background-color: white;
+        color: black;
+    }
+    
+    #btn{
+
+	width: 100px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
 	
 
+	}
 
 </style>
 
@@ -169,7 +218,7 @@ String dataW = "";
 								<li class="nav-item active"><a class="nav-link2"
 									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="perfume.jsp"  style = "color: black;"> Perfume </a></li>
+									href="perfume.jsp" style = "color: black;"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
 								<li class="nav-item">
@@ -200,51 +249,105 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+         	<img src = 'img/recommend/g7.png' style = "width:30%; length:30%;">
+         	<div style="margin-top: 30px;">당신에 대해 조금 더 알려주세요.</div>
         </div>
       </div>
     </div>
-    
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
-    
+	<form action = "recommend8.jsp"> 
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+		    	<div>성별</div>
+		    	<div style="margin-left: 15%">
+					<div class = "btn2" >여</div>
+					<div class = "btn2" >남</div>
+					<div class = "btn2" style = "width: 400px;">Non-binary</div>
+		    	</div>
 			</div>
-			<br>
-			<div>기분을 전환시키는</div>
-			<div class = "ft">풀, 나무 향기</div>
 	    </div>
-    
-	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
-			</div>
-			<br>
-			<div>마음을 설레게 하는</div>
-			<div class = "ft">꽃 향기</div>
-	    </div>
+	    
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
+		    	<div>연령</div>
+		    	<div style="margin-left: 15%">
+			    	<div class = "btn3">10대</div>
+					<div class = "btn3">20대</div>
+			    	<div class = "btn3">30대</div>
+					<div class = "btn3">40대 이상</div>
+		    	</div>
 			</div>
-			<br>
-			<div>주변 공기를 부드럽게</div>
-			<div class = "ft">달콤한 향기</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
-			</div>
-			<br>
-			<div>차분하고 성숙한</div>
-			<div class = "ft">도시의 향기</div>
-	    </div>
 	    
     </div>
+    	<input type="submit" id = "btn">
+    </form>   
+    
+    <script>
+    
+	    var btn2 = document.getElementsByClassName("btn2");
+	
+	    function handleClick(event) {
+	        console.log(event.target);
+	        // console.log(this);
+	        // 콘솔창을 보면 둘다 동일한 값이 나온다
+	
+	        console.log(event.target.classList);
+	
+	        if (event.target.classList[1] === "clicked") {
+	            event.target.classList.remove("clicked");
+	        } else {
+	        	for (var i = 0; i < btn2.length; i++) {
+	                btn2[i].classList.remove("clicked");
+	              }
+	        	
+	            event.target.classList.add("clicked");
+	        }
+	    }
+
+	    function init() {
+	        for (var i = 0; i < btn2.length; i++) {
+	            btn2[i].addEventListener("click", handleClick);
+	        }
+	    }
+	
+	    init();
+	    
+    </script>
+    
+    <script>
+    
+    var btn3 = document.getElementsByClassName("btn3");
+	
+    function handleClick(event) {
+        console.log(event.target);
+        // console.log(this);
+        // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+        console.log(event.target.classList);
+
+        if (event.target.classList[1] === "clicked") {
+            event.target.classList.remove("clicked");
+        } else {
+        	for (var i = 0; i < btn3.length; i++) {
+                btn3[i].classList.remove("clicked");
+              }
+        	
+            event.target.classList.add("clicked");
+        }
+    }
+
+	    function init() {
+	        for (var i = 0; i < btn3.length; i++) {
+	            btn3[i].addEventListener("click", handleClick);
+	        }
+	    }
+	
+	    init();
+    
+    </script>
 	
 	<section class=" footer_section">
 		<div class="container">
@@ -548,6 +651,14 @@ String dataW = "";
 
 
 
+    </script>
+    
+    <script>
+	    $('.btn2').on('click', function(){
+	    	$(this).addClass('active');
+	    	})
+	
+	    .btn2.active{ backgrund-color: red; }
     </script>
 </body>
 
