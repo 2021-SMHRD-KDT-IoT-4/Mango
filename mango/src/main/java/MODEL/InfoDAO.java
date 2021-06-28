@@ -1,8 +1,11 @@
 package MODEL;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class InfoDAO extends totalDAO implements Info_name{
+	ArrayList<InfoDTO> arrDto = null; 
+	InfoDTO dto = null;
 	
 public int login(InfoDTO dto) {
 	conn();
@@ -23,7 +26,6 @@ public int login(InfoDTO dto) {
 	return result;
 }
 	
-
 public int join(InfoDTO dto) {
 		conn();
 		String sql = "insert into info values(?,?,?,?,?,?,set_seq.nextval)";
@@ -88,10 +90,6 @@ public int join2(InfoDTO dto) {
 	return result;
 }
 
-
-
-
-
 	
 public int change(InfoDTO dto) {
 	conn();
@@ -143,7 +141,33 @@ public InfoDTO showOne(String id) {
 	return dto;
 };
 
-
+public ArrayList<InfoDTO> showAll() {
+	arrDto = new ArrayList();
+	conn();
+	String sql = "select * from info";
+	try {
+		psmt = conn.prepareStatement(sql);
+		
+		rs = psmt.executeQuery();
+		while(rs.next()) {
+		String id =rs.getString(1);
+		String pw =rs.getString(2);
+		String name =rs.getString(3);
+		String loc =rs.getString(4);
+		String perfume =rs.getString(5);
+		String pdnum =rs.getString(6);
+		
+		dto = new InfoDTO(id, pw, name, loc, perfume, pdnum); 
+		arrDto.add(dto);
+		}
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return arrDto;
+};
 
 
 
