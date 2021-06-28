@@ -46,9 +46,9 @@
 	#wrap {
 	
 		width: 900px;
-		height: 40%;
+		height: 35%;
 		margin: auto;
-		padding-top: 70px; 
+		padding-top: 30px; 
 		
 	}
 	
@@ -201,7 +201,7 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	당신에게 어울리는 3가지 향수 입니다.
+         	당신에게 어울리는 3가지 향과 향수 입니다.
         </div>
       </div>
     </div>
@@ -228,6 +228,38 @@ String dataW = "";
 				<a href = "perfume.jsp"><img src="img/recommend/8-3.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">초록빛 기억</div>
+			<div>#청량한 #들꽃 #가벼운</div>
+	    </div>
+	    
+    </div>
+    
+    <hr style = "border: 1px solid white; width: 50%; text-align: center; margin-left: 25%;">
+    	<div>	
+         	클릭시 구매 페이지로 이동합니다.
+        </div>
+    
+    <div id = "wrap">
+	    <div class = "row_pic">
+		    <div>
+				<a href = "https://www.brandi.co.kr/products/26776710?gclid=CjwKCAjww-CGBhALEiwAQzWxOl9VUopDQk_AD-rg2PxauV_2Z1ayCejWryH5CEnh-nShH-KNH3qzAhoCeTIQAvD_BwE"><img src="img/recommend/p2.jpeg" class = "pic"></a>
+			</div>
+			<div class = "ft">조말론 우드세이지앤씨솔트</div>
+			<div>#순수한 #풀꽃 #데일리</div>
+	    </div>
+    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "https://perfumegraphy.com/product/detail.html?product_no=1469&cafe_mkt=google_dy&gclid=CjwKCAjww-CGBhALEiwAQzWxOgEay3sHw8Pz-8Isl53HVeN_f2YWfFTYw_WwHaDfkZTbT9kEWl7xjBoCNKgQAvD_BwE"><img src="img/recommend/p1.jpg" class = "pic"></a>
+			</div>
+			<div class = "ft">구찌 블룸 오드 퍼퓸</div>
+			<div>#깔끔한 #장미 #가벼운</div>
+	    </div>
+	    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "https://www.celeconc.com/shop/detail.php?pno=F38A44A88827D0B3CA88923491C240B5&ref=naver_open&utm_source=naverssa-pc&utm_medium=cpc&utm_campaign=shopping&utm_content=F38A44A88827D0B3CA88923491C240B5&utm_term={query}&NaPm=ct%3Dkqg252bs%7Cci%3Dd5e57a4c77198c2814b266ada2cb458b857f1e6f%7Ctr%3Dplac%7Csn%3D1892106%7Chk%3D94ee945c64aed40ca98bf445417648f4b605c398"><img src="img/recommend/p3.jpg" class = "pic"></a>
+			</div>
+			<div class = "ft">플라워 바이 겐조 오드 뚜왈렛</div>
 			<div>#청량한 #들꽃 #가벼운</div>
 	    </div>
 	    

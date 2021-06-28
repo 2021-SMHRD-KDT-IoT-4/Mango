@@ -31,14 +31,15 @@
 <title>당신의 하루 망고와 함께</title>
 
 <style>
-	#wcat {
-		text-align: center;
-		background-image: url('img/night_star.jpg');
-	  	background-repeat: no-repeat;
-	  	background-size: cover;
-	  	width: 60%;
-	  	margin-left: 20%;
-	}
+	#setting {
+	  	text-align: center;
+	  	width: 50%; 
+	  	height: 55%; 
+	  	margin-left: 25%;
+		background-color: rgba(255,255,255,0.1); 
+		padding: 2%;
+		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
+	  }
 
 	#modal_open {
 		border-color: transparent;
@@ -48,46 +49,75 @@
 	
 	#onOff {
 		
-		width: 100px; 
-		height: 35px; 
-		margin: 10px;
-		background-color: black;
-		border-color: transparent;
-		color: white;
-		margin-top: 25px;
+		display: block;
+    	margin: auto;
+    	margin-top: 30px;
 			
 	}
 	
-	@font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
+	#setTable {
+	  	
+	  	width: 80%;
+	  	margin: auto;
+	  	margin-bottom: 2%;
+	  
+	  }
+	  
+	  .join_row {
+		
+		vertical-align: bottom;
+		height: 5em;
+		
+		
+	}
+
+	.join {
+	
+		width : 90%;
+		text-align: left;
+		margin-left: 5%;
+	
 	}
 	
-	@font-face {
-     font-family: 'S-CoreDream-6Bold';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-	}
-	
-	h1 {
-	
-	font-family: 'S-CoreDream-6Bold';
-	
-	}
-	
-	#onOff:hover {
-	
-		background-color: white;
-		color: black;
+	.box {
+		
+		width : 90%;
+		height: 2.5em;
+		
+		padding: 5px;
+		margin-top: -5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid black;
+		background-color: transparent;
+
 	
 	}
+	
+	#btn{
+
+	width: 100px; 
+	height: 35px; 
+	margin: 10px;
+	background-color: black;
+	border-color: transparent;
+	color: white;
 	
 
+	}	
+	
+	
+	::placeholder {
+	
+		color: white;
+	
+	}
+	
+	
+	
 </style>
-
 
 <!-- slider stylesheet -->
 <link rel="stylesheet" type="text/css"
@@ -168,7 +198,7 @@ String dataW = "";
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
-					<div class="collapse navbar-collapse" id="navbarSupportedContent"">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<div
 							class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 							<ul class="navbar-nav  " style = "padding-top: 5px;">
@@ -181,6 +211,7 @@ String dataW = "";
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
+								
 								<li class="nav-item">
 								<% String id = null;
 									id = (String) session.getAttribute("id");
@@ -207,9 +238,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h1 style = "color: black;">Li<span style = "color: gray;">ght</span></h1>
-        <p style = "font-family: 'S-CoreDream-3Light';">
-         당신의 일상을 밝게 비춰줄게요.
+        <h2>MEM<span>BER</span></h2>
+        <p>
+        망고 회원 정보
         </p>
       </div>
     </div>
@@ -224,29 +255,35 @@ String dataW = "";
 
 	<!-- mood lamp area -->
 	
-	<div id="wcat">
-		<img src="img/wcat.png" width="600" style = "padding: 5%">
-	</div>
-	
-	<div>
-		<button id = "onOff"> Off </button>
-	</div>
-	
-	<div class="container">
-		
-		<div class="panel panel-default">
-			<div class="pannel-heading"></div>
-			<div class="panel-body" align="center" style = "margin-top: 30px;">
-
-				<!--슬라이더로 선택할 input-->
-				<div class="Container" >
-			        <input oninput = 'ShowSliderValue(this.value)'  type = "range" min='1' max='100' value='100'>
-			        <font size = 2 id = "slider_value_view">1</font>	
-			    </div>
-			</div>
-		</div>
-	</div>
-
+   <div id = "setting" style="padding-top: 62.5px;">
+	   
+	   <form action = "sendm.jsp">
+	   <table id = "setTable" border = "1">
+	   
+		   	<tr>
+				<td>ID</td>	   	
+				<td>NAME</td>	   	
+				<td>LOCATION</td>
+				<td>PERFUME TYPE</td>
+				<td>PD NUMBER</td>
+		   	</tr>
+		   	
+		   	<tr>
+				<td></td>	   	
+				<td></td>	   	
+				<td></td>
+				<td></td>
+				<td></td>
+		   	</tr>
+	   
+	   </table>
+	   
+	        <p>
+	      	    <input type="submit" value="삭제하기" id = "btn" style = "margin-top: 1%;">
+	        </p>
+	   </form>
+   </div>
+   
 	<section class=" footer_section">
 		<div class="container">
 			<p>
@@ -261,22 +298,6 @@ String dataW = "";
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
 	<script src="js/index.min.js"></script>
-	
-	<script>
-	
-	$(function() {
-	    $('#onOff').click( function() {
-	        if( $(this).html() == 'On' ) {
-	        $(this).html('Off');
-	        }
-	        else {
-	        $(this).html('On');
-	        }
-	    });
-	    });
-	
-	</script>
-	
 
 	<script>
 		// Without JQuery
@@ -285,12 +306,6 @@ String dataW = "";
 			var val = $('#mini').val();
 			document.getElementById("miniVal").textContent = val;
 		});
-		
-		function ShowSliderValue(sVal)
-	    {
-	        var obValueView = document.getElementById("slider_value_view");
-	        obValueView.innerHTML = sVal
-	    }
 	</script>
 
 
@@ -320,7 +335,7 @@ String dataW = "";
 }
 
 .modal__overlay {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -400,6 +415,19 @@ String dataW = "";
 			</ul>
 			<div class=blankt></div>
 			
+			<!-- <ul style='list-style: none;'>
+				<li><h5
+						style='font-family: Nanum Gothic, sans-serif; font-weight: bold'>회원가입</h5></li>
+				<form action="#" method=post>
+					<li><input type="text" name=id placeholder="Email을 입력하세요"></li>
+					<li><input type="password" name=pw placeholder="PW를 입력하세요"></li>
+					<li><input type="text" name=tel placeholder="전화번호를 입력하세요"></li>
+					<li><input type="text" name=addr placeholder="집주소를 입력하세요"></li>
+					<li><input type="submit" value="JoinUs" class="button fit"></li>
+				</form>
+			</ul>
+			<div class=blankt></div> -->
+
 		</div>
 	</div>
 

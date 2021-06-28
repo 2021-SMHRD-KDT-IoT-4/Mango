@@ -48,23 +48,26 @@
 		width: 1200px;
 		height: 400px;
 		margin: auto;
-		padding-top: 30px; 
+		padding-top: 30px;
+		
 		
 	}
 	
 	.row_pic {
 	
-		width: 300px;
+		width: 240px;
 		height: auto;
 		position: relative;
 		float: left;
+		margin: auto;
+		margin-right: 80px;
 	
 	}
 	
 	.pic {
-		width: 80%;
-		height: 80%;
-		border-radius: 10%;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 	
@@ -76,7 +79,21 @@
 	
 	}
 	
-
+	.pic_wrap {
+	
+		width: 240px;
+		height: 215.3px;
+		border-radius: 15px;
+	
+	}
+	
+	
+	.pic_wrap>a:hover img{
+	
+		 filter: brightness(50%);
+	
+	}
+	
 
 </style>
 
@@ -209,16 +226,16 @@ String dataW = "";
     
     <div id = "wrap">
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
-			</div>
+	    	</div>
 			<br>
 			<div>기분을 전환시키는</div>
 			<div class = "ft">풀, 나무 향기</div>
 	    </div>
     
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
 			</div>
 			<br>
@@ -227,7 +244,7 @@ String dataW = "";
 	    </div>
 	    
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
 			</div>
 			<br>
@@ -235,8 +252,8 @@ String dataW = "";
 			<div class = "ft">달콤한 향기</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
+	    <div class = "row_pic" style="margin-right: 0px">
+		    <div class = "pic_wrap">
 				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
 			</div>
 			<br>

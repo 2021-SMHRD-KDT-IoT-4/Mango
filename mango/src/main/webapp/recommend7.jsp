@@ -259,7 +259,7 @@ String dataW = "";
 	    <div class = "row_pic">
 		    <div>
 		    	<div>성별</div>
-		    	<div style="margin-left: 15%">
+		    	<div style="margin-left: 15% ">
 					<div class = "btn2" >여</div>
 					<div class = "btn2" >남</div>
 					<div class = "btn2" style = "width: 400px;">Non-binary</div>
@@ -268,7 +268,8 @@ String dataW = "";
 	    </div>
 	    
 	    
-	    <div class = "row_pic">
+	    
+	    <div class = "row_pic" style="margin-top: 20px">
 		    <div>
 		    	<div>연령</div>
 		    	<div style="margin-left: 15%">

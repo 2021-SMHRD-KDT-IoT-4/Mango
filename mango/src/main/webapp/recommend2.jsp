@@ -74,6 +74,20 @@
 	
 	}
 	
+	.pic_wrap {
+	
+		width: 240px;
+		height: 215.3px;
+		border-radius: 15px;
+	
+	}
+	
+	
+	.pic_wrap>a:hover img{
+	
+		 filter: brightness(50%);
+	
+	}
 
 
 </style>
@@ -207,16 +221,18 @@ String dataW = "";
     
     <div id = "wrap">
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend3.jsp"><img src="img/recommend/2-1.jpg" class = "pic"></a>
 			</div>
+			<br>
 			<div class = "ft">이제 막 피어나기 시작한 여린 꽃망울</div>
 	    </div>
     
 	    <div class = "row_pic">
-		    <div style = "margin-top: 30px;">
+	    	<div class = "pic_wrap" style = "margin-top: 30px;">
 				<a href = "recommend3.jsp" ><img src="img/recommend/2-2.jpg" class = "pic"></a>
 			</div>
+			<br>
 			<div class = "ft">디너 테이블 위 우아한 꽃다발</div>
 	    </div>
 	    

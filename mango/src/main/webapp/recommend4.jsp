@@ -54,18 +54,19 @@
 	
 	.row_pic {
 	
-		width: 300px;
+		width: 240px;
 		height: auto;
 		position: relative;
 		float: left;
-		margin-top: 20px;
+		margin: auto;
+		margin-right: 80px;
 	
 	}
 	
 	.pic {
-		width: 80%;
-		height: 80%;
-		border-radius: 10%;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 		margin-bottom: 10px;
@@ -74,6 +75,21 @@
 	.ft {
 		font-size: larger;
 		font-weight: bold;
+	
+	}
+	
+	.pic_wrap {
+	
+		width: 240px;
+		height: 215.3px;
+		border-radius: 15px;
+	
+	}
+	
+	
+	.pic_wrap>a:hover img{
+	
+		 filter: brightness(50%);
 	
 	}
 
@@ -208,7 +224,7 @@ String dataW = "";
     
     <div id = "wrap">
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-1.jpg" class = "pic"></a>
 			</div>
 			<div>강, 바다, 수영장의</div>
@@ -216,39 +232,39 @@ String dataW = "";
 	    </div>
     
 	    <div class = "row_pic">
-		    <div>
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-2.jpg" class = "pic"></a>
 			</div>
 			<div>달달한</div>
 			<div class = "ft">과일 한아름</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
+	    <div class = "row_pic" style="margin-right: 0px">
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-3.jpg" class = "pic"></a>
 			</div>
 			<div>코끝을 톡 건드리는</div>
 			<div class = "ft">시나몬</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
+	    <div class = "row_pic" style = "margin-top:20px;">
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-4.jpg"  class = "pic"></a>
 			</div>
 			<div>달짝지근한</div>
 			<div class = "ft">바닐라</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
+	    <div class = "row_pic" style = "margin-top:20px;">
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-5.jpg"  class = "pic"></a>
 			</div>
 			<div>보송보송한</div>
 			<div class = "ft">파우더</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
+	    <div class = "row_pic" style="margin-right: 0px; margin-top:20px;">
+		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-6.jpg"  class = "pic"></a>
 			</div>
 			<div>보송보송한</div>

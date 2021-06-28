@@ -64,7 +64,6 @@
 		vertical-align: bottom;
 		height: 5em;
 		
-		
 	}
 
 	.join {
@@ -88,7 +87,6 @@
 		border: none;
 		border-bottom: 1px solid black;
 		background-color: transparent;
-
 	
 	}
 	
@@ -100,7 +98,6 @@
 	background-color: black;
 	border-color: transparent;
 	color: white;
-	
 
 	}	
 	
@@ -109,6 +106,18 @@
 	
 		color: white;
 	
+	}
+	
+	.ft {
+	
+		font-size: 20px;
+		font-weight: bold;
+		
+	}
+	
+	.ft:hover {
+	
+		color: black;
 	}
 	
 	
@@ -233,8 +242,8 @@ String dataW = "";
 	<!-- end hero area -->
 	
 	<div>
-		<a href = "mypage.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
-		<a href = "setting.jsp">SETTING&nbsp;&nbsp;&nbsp;</a>
+		<a href = "mypage.jsp" class = "ft">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<a href = "setting.jsp" class = "ft">SETTING&nbsp;&nbsp;&nbsp;</a>
 	</div>
 	<br><br>
 	
