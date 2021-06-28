@@ -284,17 +284,17 @@ String dataW = "";
 	<!-- mood lamp area -->
 	
    <div id = "setting" style="padding-top: 62.5px;">
-          <form action="">
+          <form action="SendMessage.do">
             <div>
               <div class = "tt">ID</div>
-              <input type="text" name = "name" class = "box" placeholder="Name">
+              <input type="text" class = "box" placeholder="Name" value = "<%=id%>" disabled =disabled>
             </div>
             <div>
-              <div class = "tt">NAME</div>
-              <input type="text" name = "id" class = "box" placeholder="id">
+              <div class = "tt">TO~</div>
+              <input type="text" name = "receive" class = "box" placeholder="받는 상대의 id를 입력하세요">
             </div>
               <div class = "tt">LETTER</div>
-              <textarea id = "letter" class="message-box" placeholder="Message"></textarea>
+              <textarea id = "letter" name = "letter" class="message-box" placeholder="Message"></textarea>
               <p>
 	      	    <input type="submit" value="보내기" id = "btn" style = "margin-top: 1%;">
 	          </p>

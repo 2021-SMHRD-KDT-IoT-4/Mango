@@ -13,11 +13,6 @@ public int login(InfoDTO dto) {
 		psmt.setString(2, dto.getPw());
 		
 		result = psmt.executeUpdate();
-		if(result !=0) {
-			System.out.println("로그인 성공");
-		}else {
-			System.out.println("로그인 실패");
-		}
 		
 	} catch (SQLException e) {
 		e.printStackTrace();
@@ -43,11 +38,8 @@ public int join(InfoDTO dto) {
 			
 			result = psmt.executeUpdate();
 			
-			if(result !=0) {
-				System.out.println("회원가입 성공");
-			}else {
-				System.out.println("회원가입 실패");
-			}
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -56,6 +48,47 @@ public int join(InfoDTO dto) {
 		
 		return result;
 	}
+
+public int join2(InfoDTO dto) {
+	conn();
+	try {
+		String sql2 = "insert into setting values(?,'none','none','none','a')";
+		psmt = conn.prepareStatement(sql2);
+		psmt.setString(1, dto.getSetting());
+		psmt.executeUpdate();
+		String sql3 = "insert into setting values(?,'none','none','none','b')";
+		psmt = conn.prepareStatement(sql3);
+		psmt.setString(1, dto.getSetting());
+		psmt.executeUpdate();
+		String sql4 = "insert into setting values(?,'none','none','none','c')";
+		psmt = conn.prepareStatement(sql4);
+		psmt.setString(1, dto.getSetting());
+		psmt.executeUpdate();
+		String sql5 = "insert into setting values(?,'none','none','none','d')";
+		psmt = conn.prepareStatement(sql5);
+		psmt.setString(1, dto.getSetting());
+		psmt.executeUpdate();
+		String sql6 = "insert into setting values(?,'none','none','none','e')";
+		psmt = conn.prepareStatement(sql6);
+		psmt.setString(1, dto.getSetting());
+		psmt.executeUpdate();
+		String sql7 = "insert into setting values(?,'none','none','none','f')";
+		psmt = conn.prepareStatement(sql7);
+		psmt.setString(1, dto.getSetting());
+		result = psmt.executeUpdate();
+		
+		
+		
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	
+	return result;
+}
+
+
 
 
 

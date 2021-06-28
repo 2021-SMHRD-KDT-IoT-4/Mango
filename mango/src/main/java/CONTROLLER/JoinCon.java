@@ -30,6 +30,8 @@ public class JoinCon implements Command {
 			int result = dao.join(dto);
 		if(result !=0) {
 			System.out.println("회원가입 성공");
+			InfoDTO dto2 = dao.showOne(id);
+			dao.join2(dto2);
 		}else {
 			System.out.println("회원가입 실패");
 		}

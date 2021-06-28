@@ -19,12 +19,6 @@ public class MessageDAO extends totalDAO implements Message_name{
 			
 			result = psmt.executeUpdate();
 			
-			if(result !=0) {
-				System.out.println("메세지 전송 성공");
-			}else {
-				System.out.println("메세지 전송 실패");
-			}
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -52,7 +46,6 @@ public class MessageDAO extends totalDAO implements Message_name{
 			
 			dto = new MessageDTO(send, receive0, day, memo, num);
 			arrDto.add(dto);
-				System.out.println("메세지가 존재합니다");
 			}
 			
 		} catch (SQLException e) {
@@ -64,7 +57,7 @@ public class MessageDAO extends totalDAO implements Message_name{
 	};
 	
 	
-	public MessageDTO showOneMessage(String num) {
+	public MessageDTO showOneMessage(String receive, String num) {
 		
 		conn();
 		String sql = "select * from message where num = ?";
@@ -81,7 +74,6 @@ public class MessageDAO extends totalDAO implements Message_name{
 			int num0 =rs.getInt(5);
 			
 			dto = new MessageDTO(send, receive0, day, memo, num0);
-				System.out.println("메세지 선택완료");
 			}
 			
 		} catch (SQLException e) {
@@ -93,21 +85,16 @@ public class MessageDAO extends totalDAO implements Message_name{
 	};
 
 	
-	public int deleteMessage(String num) {
+	public int deleteMessage(String receive, String num) {
 		conn();
-		String sql = "delete from message where num = ?";
+		String sql = "delete from message where receive = ? and num = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, num);
+			psmt.setString(1, receive);
+			psmt.setString(2, num);
 			
 			result = psmt.executeUpdate();
 			
-			if(result !=0) {
-				System.out.println("삭제성공");
-			}else
-			{
-				System.out.println("삭제실패");
-			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -118,5 +105,25 @@ public class MessageDAO extends totalDAO implements Message_name{
 		
 		return result;
 	};
+
+	public int deleteAllMessage(String receive) {
+		conn();
+		String sql = "delete from message where receive = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, receive);
+			
+			result = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		
+		return result;
+	};
+	
 	
 }

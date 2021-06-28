@@ -1,6 +1,5 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="MODEL.MessageDTO"%>
 <%@page import="MODEL.MessageDAO"%>
+<%@page import="MODEL.MessageDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -37,7 +36,7 @@
 	#setting {
 	  	text-align: center;
 	  	width: 50%; 
-	  	height: 55%; 
+	  	height: 52em; 
 	  	margin-left: 25%;
 		background-color: rgba(255,255,255,0.1); 
 		padding: 2%;
@@ -61,6 +60,7 @@
 	#setTable {
 	  	
 	  	width: 80%;
+	  	height: 20em;
 	  	margin: auto;
 	  	margin-bottom: 2%;
 	  
@@ -74,17 +74,17 @@
 		
 	}
 
-	.join {
+	.tt {
 	
-		width : 90%;
+		width : 70%;
 		text-align: left;
-		margin-left: 5%;
+		margin-left: 15%;
 	
 	}
 	
 	.box {
 		
-		width : 90%;
+		width : 70%;
 		height: 2.5em;
 		
 		padding: 5px;
@@ -114,9 +114,36 @@
 	
 	::placeholder {
 	
-		color: white;
+		color: black;
 	
 	}
+	
+	#letter {
+	
+		resize: none;
+		width : 70%;
+		height: 31em;
+		
+		padding: 5px;
+		margin-top: 5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid black;
+		
+		background-attachment: local;
+  		background-image:
+	    linear-gradient(to right, white 10px, transparent 10px),
+	    linear-gradient(to left, white 10px, transparent 10px),
+	    repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+  		line-height: 31px;
+  		padding: 2px 10px;
+	
+	}
+	
+
+
 	
 	
 	
@@ -259,52 +286,32 @@ String dataW = "";
 	<!-- mood lamp area -->
 	
    <div id = "setting" style="padding-top: 62.5px;">
-	   
-	   <form action = "sendm.jsp">
-	   <table id = "setTable" border = "1">
-	   
-		   	<tr>
-				<td>번호</td>	   	
-				<td>보낸 사람</td>	   	
-				<td>제목</td>
-				<td>날짜</td>
-		   	</tr>
-		   <% 
-		 	String myid = (String) session.getAttribute("id");
-		    MessageDAO dao = new MessageDAO();
-		   	ArrayList<MessageDTO> list = new ArrayList<MessageDTO>();
-		   	list = dao.showMessage(myid);
-		   	
-		   	for(int i = 0; i <list.size(); i++){
-		   %>	
-		   	<tr>
-				<td><%=i+1%></td>	   	
-				<td><%=list.get(i).getSend()%></td>	   	
-				<td><a href = "receivem.jsp?num=<%=list.get(i).getNum()%>">
-				<%String memo = list.get(i).getMemo();
-				int length =memo.length();
-				int size = 0;
-				if (length<8){
-					size = length;
-				}else{
-					size = 8;
-				}
-				
-				%>
-				<%=list.get(i).getMemo().substring(0, size) %> …</a></td>
-				<td><%=list.get(i).getDay()%></td>
-		   	</tr>
-	   <%} %>
-	   </table>
-	   
-	        <p>
-	      	    <input type="submit" value="편지쓰기" id = "btn" style = "margin-top: 1%;">
-	      	    <input type="button" value="전체 삭제" id = "btn" style = "margin-top: 1%;"
-	      	    onclick="location.href='DeleteMessage.do'">
-	        </p>
-	   </form>
+          <form action = "message.jsp">
+          <%MessageDAO dao = new MessageDAO();
+          String receive = (String) session.getAttribute("id");  
+          String num = request.getParameter("num");
+          MessageDTO dto = dao.showOneMessage(receive,num);
+          %>
+            <div>
+              <div class = "tt">보낸사람 ID</div>
+              <input type="text" class = "box" placeholder="Name" value = "<%=dto.getSend()%>" disabled =disabled>
+            </div>
+            <div>
+              <div class = "tt">보낸 날짜</div>
+              <input type="text" class = "box" value = "<%=dto.getDay()%>" disabled =disabled>
+            </div>
+              <div class = "tt">LETTER</div>
+              <textarea id = "letter" class="message-box" disabled = disabled
+              ><%=dto.getMemo() %></textarea>
+          <p>
+          <input type="button" value="삭제하기" id = "btn" style = "margin-top: 1%;" onclick = "location.href = 'DeleteOneMessage.do?num=<%=num%>'">
+          <input type="submit" value="뒤로가기" id = "btn" style = "margin-top: 1%;">
+          </p>
+          </form>
    </div>
    
+   
+	
 	<section class=" footer_section">
 		<div class="container">
 			<p>

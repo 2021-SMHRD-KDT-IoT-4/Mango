@@ -31,6 +31,12 @@ public class FrontCon extends HttpServlet {
 			inter = new ModifyCon();}
 		else if(resultURI.equals("AddSettingCon.do")) {
 			inter = new AddSettingCon();}
+		else if(resultURI.equals("DeleteMessage.do")) {
+			inter = new DeleteMessageCon();}
+		else if(resultURI.equals("SendMessage.do")) {
+			inter = new SendMessageCon();}
+		else if(resultURI.equals("DeleteOneMessage.do")) {
+			inter = new DeleteOneMessageCon();}
 			
 
 			inter.command(request, response);
