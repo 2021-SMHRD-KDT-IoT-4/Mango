@@ -219,7 +219,7 @@ String dataW = "";
         <div id="slider-wrap" style = "max-width: 100%">
             <ul id="slider">
                 <li>
-                    <div>
+                    <div style = "text-align: left; color: white;">
                         <h3>BTS</h3>
                         <span>BUTTER</span>
                     </div>
@@ -227,7 +227,7 @@ String dataW = "";
                 </li>
 
                 <li>
-                    <div>
+                    <div style = "text-align: left; color: white;">
                         <h3>Aespa</h3>
                         <span>Next Level</span>
                     </div>
@@ -235,7 +235,7 @@ String dataW = "";
                 </li>
 
                 <li>
-                    <div>
+                    <div style = "text-align: left; color: black;">
                         <h3>Brave Girls</h3>
                         <span>치맛바람</span>
                     </div>
@@ -243,7 +243,7 @@ String dataW = "";
                 </li>
 
                 <li>
-                    <div>
+                    <div style = "text-align: left; color: black;">
                         <h3>IU</h3>
                         <span>Lilac</span>
                     </div>
@@ -251,7 +251,7 @@ String dataW = "";
                 </li>
 
                 <li>
-                    <div>
+                    <div style = "text-align: left; color: white;">
                         <h3>SG워너비</h3>
                         <span>Timeless</span>
                     </div>
@@ -259,40 +259,40 @@ String dataW = "";
                 </li>
 
                 <li>
-                    <div>
-                        <h3 style = "color: black">세븐틴</h3>
+                    <div style = "text-align: left; color: black;">
+                        <h3>세븐틴</h3>
                         <span>Falling for U</span>
                     </div>
                     <img src="./img/music/Falling_for_U.jpg">
                 </li>
                 
                 <li>
-                    <div>
-                        <h3 style = "color: black">오마이걸</h3>
+                    <div style = "text-align: left; color: white;">
+                        <h3>오마이걸</h3>
                         <span>Dun Dun Dance</span>
                     </div>
                     <img src="./img/music/OMG_DunDunDance.jpg">
                 </li>
                 
                 <li>
-                    <div>
-                        <h3 style = "color: black">BTS</h3>
+                    <div style = "text-align: left; color: black;">
+                        <h3>BTS</h3>
                         <span>Dynamite</span>
                     </div>
                     <img src="./img/music/BTS_DYNAMITE.jpg">
                 </li>
                 
                 <li>
-                    <div>
-                        <h3 style = "color: black">IU</h3>
+                    <div style = "text-align: left; color: black;">
+                        <h3>IU</h3>
                         <span>잠못드는밤 비는 내리고</span>
                     </div>
                     <img src="./img/music/IU_NIGHT.jpg">
                 </li>
                 
                 <li>
-                    <div>
-                        <h3 style = "color: black">ITZY</h3>
+                    <div style = "text-align: left; color: white;">
+                        <h3>ITZY</h3>
                         <span>마.피.아. In the morning</span>
                     </div>
                     <img src="./img/music/ITZY_MAFIA.jpg">
@@ -306,7 +306,7 @@ String dataW = "";
             <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
             <div id="counter"></div>
 
-            <div id="pagination-wrap">
+            <div id="pagination-wrap" style="margin-top: 530px;">
                 <ul>
                 </ul>
             </div>

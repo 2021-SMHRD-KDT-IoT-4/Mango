@@ -23,8 +23,8 @@
 <meta name="author" content="" />
 
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/style1.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style1.css" />
   
 
 
@@ -45,8 +45,8 @@
 	
 	#wrap {
 	
-		width: 1200px;
-		height: 400px;
+		width: 600px;
+		height: 600px;
 		margin: auto;
 		padding-top: 30px; 
 		
@@ -54,25 +54,23 @@
 	
 	.row_pic {
 	
-		width: 300px;
+		width: 600px;
 		height: auto;
-		position: relative;
-		float: left;
 	
 	}
 	
 	.pic {
-		width: 80%;
-		height: 80%;
-		border-radius: 10%;
+	
+		border-radius: 15px;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
 	
 	}
 	
 	.ft {
-		font-size: larger;
+		font-size: medium;
 		font-weight: bold;
+		margin-top: 10px;
 	
 	}
 	
@@ -169,7 +167,7 @@ String dataW = "";
 								<li class="nav-item active"><a class="nav-link2"
 									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
-									href="perfume.jsp"  style = "color: black;"> Perfume </a></li>
+									href="perfume.jsp" style = "color: black;"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="music.jsp"> Music </a></li>
 								<li class="nav-item">
@@ -200,49 +198,27 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+         	<img src = 'img/recommend/g6.png' style = "width:30%; length:30%;">
+         	<div style="margin-top: 30px;">향수를 사용할 시간을 알려주세요.</div>
         </div>
       </div>
     </div>
     
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
-    
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+				<a href = "recommend7.jsp"><img src="img/recommend/6-1.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>기분을 전환시키는</div>
-			<div class = "ft">풀, 나무 향기</div>
+			<div class = "ft">낮</div>
 	    </div>
     
 	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
+		    <div style="margin-top: 30px;">
+				<a href = "recommend7.jsp"><img src="img/recommend/6-2.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>마음을 설레게 하는</div>
-			<div class = "ft">꽃 향기</div>
+			<div class = "ft">밤</div>
 	    </div>
 	    
-	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
-			</div>
-			<br>
-			<div>주변 공기를 부드럽게</div>
-			<div class = "ft">달콤한 향기</div>
-	    </div>
-	    
-	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
-			</div>
-			<br>
-			<div>차분하고 성숙한</div>
-			<div class = "ft">도시의 향기</div>
-	    </div>
 	    
     </div>
 	
@@ -370,7 +346,7 @@ String dataW = "";
 	<div class="modal hidden">
 		<div class="modal__overlay"></div>
 		<div class="modal__content" style = 
-			"background-image: url('img/login3.jpg');
+			"background-image: url('../img/login3.jpg');
 	 		background-repeat: no-repeat;
 	  		background-size: cover;
 	  		background-position: center;

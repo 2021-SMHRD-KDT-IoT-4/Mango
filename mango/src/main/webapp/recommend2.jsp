@@ -48,7 +48,7 @@
 		width: 600px;
 		height: 600px;
 		margin: auto;
-		padding-top: 70px; 
+		padding-top: 30px; 
 		
 	}
 	
@@ -62,6 +62,15 @@
 	.pic {
 	
 		border-radius: 15px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
+		rgba(0, 0, 0, 0.23);
+	
+	}
+	
+	.ft {
+		font-size: medium;
+		font-weight: bold;
+		margin-top: 10px;
 	
 	}
 	
@@ -166,7 +175,7 @@ String dataW = "";
 									id = (String) session.getAttribute("id");
 									if(id == null){%>
 									<a href = "join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
-									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
+									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px; background-color: transparent;">Login</button>
 								<%}else{ %>
 								<a class="nav-link2" href = "mypage.jsp" style="marign-left:0.9em;">MY PAGE</a>
 								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
@@ -194,19 +203,21 @@ String dataW = "";
       </div>
     </div>
     
+    	<div style = "margin-top: 30px;">좋아하는 향기에 더 가까운 이미지를 골라주세요</div>
+    
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
 				<a href = "recommend3.jsp"><img src="img/recommend/2-1.jpg" class = "pic"></a>
 			</div>
-			<div>ㅇㅇ</div>
+			<div class = "ft">이제 막 피어나기 시작한 여린 꽃망울</div>
 	    </div>
     
 	    <div class = "row_pic">
-		    <div>
-				<a href = "recommend3.jsp"><img src="img/recommend/2-2.jpg" class = "pic"></a>
+		    <div style = "margin-top: 30px;">
+				<a href = "recommend3.jsp" ><img src="img/recommend/2-2.jpg" class = "pic"></a>
 			</div>
-			<div>ㄴㄴ</div>
+			<div class = "ft">디너 테이블 위 우아한 꽃다발</div>
 	    </div>
 	    
 	    

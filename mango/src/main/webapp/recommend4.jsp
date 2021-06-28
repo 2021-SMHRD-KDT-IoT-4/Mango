@@ -45,8 +45,8 @@
 	
 	#wrap {
 	
-		width: 1200px;
-		height: 400px;
+		width: 900px;
+		height: 700px;
 		margin: auto;
 		padding-top: 30px; 
 		
@@ -58,6 +58,7 @@
 		height: auto;
 		position: relative;
 		float: left;
+		margin-top: 20px;
 	
 	}
 	
@@ -67,7 +68,7 @@
 		border-radius: 10%;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px
 		rgba(0, 0, 0, 0.23);
-	
+		margin-bottom: 10px;
 	}
 	
 	.ft {
@@ -75,8 +76,6 @@
 		font-weight: bold;
 	
 	}
-	
-
 
 </style>
 
@@ -200,48 +199,60 @@ String dataW = "";
       <div class="heading_container">
         <h2>RECO<span>MMEND</span></h2>
         <div>
-         	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
+         	<img src = 'img/recommend/g4.png' style = "width:30%; length:30%;">
         </div>
       </div>
     </div>
     
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
+    	<div style = "margin-top: 30px;">싫어하는 느낌의 향기가 있다면 골라주세요</div>
     
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-1.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>기분을 전환시키는</div>
-			<div class = "ft">풀, 나무 향기</div>
+			<div>강, 바다, 수영장의</div>
+			<div class = "ft">물내음</div>
 	    </div>
     
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-2.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>마음을 설레게 하는</div>
-			<div class = "ft">꽃 향기</div>
+			<div>달달한</div>
+			<div class = "ft">과일 한아름</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-3.jpg" class = "pic"></a>
 			</div>
-			<br>
-			<div>주변 공기를 부드럽게</div>
-			<div class = "ft">달콤한 향기</div>
+			<div>코끝을 톡 건드리는</div>
+			<div class = "ft">시나몬</div>
 	    </div>
 	    
 	    <div class = "row_pic">
 		    <div>
-				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-4.jpg"  class = "pic"></a>
 			</div>
-			<br>
-			<div>차분하고 성숙한</div>
-			<div class = "ft">도시의 향기</div>
+			<div>달짝지근한</div>
+			<div class = "ft">바닐라</div>
+	    </div>
+	    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-5.jpg"  class = "pic"></a>
+			</div>
+			<div>보송보송한</div>
+			<div class = "ft">파우더</div>
+	    </div>
+	    
+	    <div class = "row_pic">
+		    <div>
+				<a href = "recommend5.jsp"><img src="img/recommend/4-6.jpg"  class = "pic"></a>
+			</div>
+			<div>보송보송한</div>
+			<div class = "ft">다 좋아요</div>
 	    </div>
 	    
     </div>

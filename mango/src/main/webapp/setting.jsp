@@ -121,6 +121,18 @@
 	
 	}
 	
+	.ft {
+	
+		font-size: 20px;
+		font-weight: bold;
+		
+	
+	}
+	
+	.ft:hover {
+	
+		color: black;
+	}
 	
 	
 </style>
@@ -243,8 +255,8 @@ String dataW = "";
 	<!-- end hero area -->
 	
 	<div>
-		<a href = "mypage.jsp">INFORMATION&nbsp;&nbsp;&nbsp;</a>
-		<a href = "setting.jsp">SETTING&nbsp;&nbsp;&nbsp;</a>
+		<a href = "mypage.jsp" class = "ft">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<a href = "setting.jsp" class = "ft">SETTING</a>
 	</div>
 	<br><br>
 	 <div class="container">
