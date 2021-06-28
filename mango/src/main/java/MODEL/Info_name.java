@@ -9,6 +9,10 @@ public interface Info_name {
 	public int join(InfoDTO dto);
 	
 	//회원정보 변경 메소드
-	//pw perfume song pdnumber loc만 가능함
+	//pw name loc perfume pdnumber 수정 가능
 	public int change(InfoDTO dto);
+	
+	//회원정보 출력 메소드
+	public InfoDTO showOne(String id);
+	
 }

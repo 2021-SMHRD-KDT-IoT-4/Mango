@@ -14,6 +14,27 @@ insert into info values ('admin','admin','包府磊','堡林堡开矫 巢备 价鞠肺 60, CG
 alter table info add (setting varchar2(20));
 
 
+
+select * from setting
+update setting set perfume='a', weather='b', time= 'd' where set_id='0' and num='a'
+
+delete from setting
+--setting table 积己
+create table setting(
+set_id varchar2(50),
+perfume varchar2(100),
+weather varchar2(50),
+time varchar2(50)
+);
+insert into setting values('0','none','none','none','a');
+insert into setting values('0','none','none','none','b');
+insert into setting values('0','none','none','none','c');
+insert into setting values('0','none','none','none','d');
+insert into setting values('0','none','none','none','e');
+
+
+
+
 create sequence set_seq
 start with 0
 increment by 1

@@ -198,15 +198,18 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			
 				<div id ="javatest"></div>
 				<script>
-			<%-- 	var timer = setInterval(function(){
-				var dTime = "<%=date.getTime()%>";
-				document.getElementById("javatest").innerText = dTime;
-				},2000);
-				  --%>
 				
-				var now_day = new Date();
-				var nDay = now_day.getHours();
-				if(nDay>=17 && nDay<=18) console.log("아침입니다");
+				let today = new Date();   
+
+				let hours = today.getHours(); // 시
+				let minutes = today.getMinutes();  // 분
+				let seconds = today.getSeconds();  // 초
+			
+				if(hours>=8 && hours<=18) {console.log("아침입니다"); //8시부터 6시까지
+				var timer = setInterval(function(){
+					document.getElementById("javatest").innerText = hours+ " : " +minutes+ " : " +seconds;
+					},1000);  
+				}
 				else {
 					console.log("메세지 기능 활성화");
 					 document.getElementById("javatest").innerHTML = "<a href = 'message.jsp'>Message</a>";}
@@ -249,7 +252,7 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 	<script src="js/index.min.js"></script>
 	<script src="js/jquery-3.6.0.min.js"></script>
 	
-	<script>
+	<script>	
 var apiURI = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid="+"01302211c0ad8247844362fd2d8280f7";
 $.ajax({
     url: apiURI,

@@ -15,6 +15,7 @@ public class LogoutCon implements Command {
 		request.setCharacterEncoding("EUC-KR");
 		HttpSession session = request.getSession();
 		session.removeAttribute("id");
+		session.removeAttribute("info_dto");
 		response.sendRedirect("home.jsp");
 	}
 

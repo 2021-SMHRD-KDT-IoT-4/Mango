@@ -260,7 +260,7 @@ String dataW = "";
      <%InfoDTO info = null;
    	 info =(InfoDTO)session.getAttribute("info_dto"); %>
     <div id = "setting">
-	   <form action ="">
+	   <form action ="ModifyCon.do">
 			<div style = "width: 30%; height: 40%; margin-left: 35%;
 			background-color: rgba(255,255,255,0.1); padding: 2%;
 			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
@@ -279,18 +279,22 @@ String dataW = "";
 				<span id="pwcheck" >
 				</span>
 				<script>
-				function pwcheck(){
-				var pw = document.getElementbyID("firstpw");
-				var pw2 = document.getElementbyID("secondpw");
-				
-				if(pw.eqauls(pw2)){
-					document.getElementbyID("pwcheck").innerHTML = "<span style = 'color:green' id = pwcheck>비밀번호가 일치합니다</span>"
-				}else{
-					document.getElementbyID("pwcheck").innerHTML = "<span style = 'color:red' id = pwcheck>비밀번호가 일치하지 않습니다</span>"
+			     let pw = "";
+			      let pw2 = "";
 
-				}
-				}
-				
+			    function pwcheck(){
+
+			        pw =  document.getElementById("firstpw").value;
+			        pw2 =  document.getElementById("secondpw").value;
+			        
+			      if(pw === pw2){
+
+			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:green' id = pwcheck>비밀번호가 일치합니다</span>";
+			    }else{
+			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:red' id = pwcheck>비밀번호가 일치하지 않습니다</span>";
+
+			    }
+			    };
 				</script>
 				
 				<br>
@@ -301,18 +305,18 @@ String dataW = "";
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Address</div>
-				<input type = "text" name = "addr" class = "box" placeholder = "주소를 입력해 주세요."><br>
+				<div class = "join">LOCATION</div>
+				<input type = "text" name = "loc" class = "box" placeholder = "주소를 입력해 주세요."><br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">Phone</div>
-				<input type = "text" name = "phone" class = "box" placeholder = "전화번호를 입력해 주세요."><br>
+				<div class = "join">PERFUME TYPE</div>
+				<input type = "text" name = "perfume" class = "box" placeholder = "전화번호를 입력해 주세요."><br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">E-mail</div>
-				<input type = "text" name = "email" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
+				<div class = "join">PD NUMBER</div>
+				<input type = "text" name = "pdnumber" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
 			</div>
 			
 			<input type = "submit" value = "수정하기" id = "btn">

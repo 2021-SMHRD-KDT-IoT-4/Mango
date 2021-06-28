@@ -1,3 +1,8 @@
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="MODEL.SettingDAO"%>
+<%@page import="MODEL.SettingDTO"%>
+<%@page import="MODEL.InfoDTO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -260,137 +265,177 @@ String dataW = "";
 	<script type="text/javascript" src="js/custom.js"></script>
 
 	<!-- mood lamp area -->
-	
+	<%SettingDAO dao = new SettingDAO();
+	InfoDTO getid = (InfoDTO) session.getAttribute("info_dto");
+	String setid = getid.getSetting();
+	ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
+	list= dao.showSetting(setid);
+	%>
    <div id = "setting" style="padding-top: 62.5px;">
-	   <form>
+	   <form action = "#">
 			<table id = "setTable" border = "1">
 				<tr>
-					<td>설정1</td>
-					<td>향수1</td>
-					<td>날씨1</td>
-					<td>시간1</td>
-					<td>음악1</td>
+					<td id=a1>설정1</td>
+					<td id=a2>향수</td>
+					<td id=a3>날씨</td>
+					<td id=a4>시간</td>
 				</tr>
-				
+					<tr>
+					<td id=b1>설정2</td>
+					<td id=b2>향수</td>
+					<td id=b3>날씨</td>
+					<td id=b4>시간</td>
+				</tr>
 				<tr>
-					<td>설정2</td>
-					<td>향수2</td>
-					<td>날씨2</td>
-					<td>시간2</td>
-					<td>음악2</td>
+					<td id=c1>설정3</td>
+					<td id=c2>향수</td>
+					<td id=c3>날씨</td>
+					<td id=c4>시간</td>
 				</tr>
-				
 				<tr>
-					<td>설정3</td>
-					<td>향수3</td>
-					<td>날씨3</td>
-					<td>시간3</td>
-					<td>음악3</td>
+					<td id=d1>설정4</td>
+					<td id=d2>향수</td>
+					<td id=d3>날씨</td>
+					<td id=d4>시간</td>
 				</tr>
-				
 				<tr>
-					<td>설정4</td>
-					<td>향수4</td>
-					<td>날씨4</td>
-					<td>시간4</td>
-					<td>음악4</td>
+					<td id=e1>설정5</td>
+					<td id=e2>향수</td>
+					<td id=e3>날씨</td>
+					<td id=e4>시간</td>
 				</tr>
-				
-				<tr>
-					<td>설정5</td>
-					<td>향수5</td>
-					<td>날씨5</td>
-					<td>시간5</td>
-					<td>음악5</td>
+					<tr>
+					<td id=f1>설정6</td>
+					<td id=f2>향수</td>
+					<td id=f3>날씨</td>
+					<td id=f4>시간</td>
 				</tr>
-				
 			</table>
 		</form>
-		
-	  	<form>
-		  <select name="setting" >
+	
+	  	<form action = "AddSettingCon.do">
+		  <select name="num" >
 		    <option value="none" selected>=== 옵션 ===</option>
 		    <option value="s1">설정1</option>
 		    <option value="s2">설정2</option>
 		    <option value="s3">설정3</option>
 		    <option value="s4">설정4</option>
 		    <option value="s5">설정5</option>
+		    <option value="s6">설정5</option>
 		  </select>
 		  
 		  <select name="perfume" >
 		    <option value="none" selected>==== 향수 ====</option>
-		    <option value="p1">Floral</option>
-		    <option value="p2">Citrus</option>
-		    <option value="p3">Fruity</option>
-		    <option value="p4">Woody</option>
-		    <option value="p5">Green</option>
-		    <option value="p6">Herbal</option>
-		    <option value="p7">Spicy</option>
-		    <option value="p8">Animalic</option>
-		    <option value="p9">Powdery</option>
-		    <option value="p10">Mossy</option>
-		    <option value="p11">Oriental</option>
-		    <option value="p12">Tabacco leather</option>
-		    <option value="p13">Gourmand</option>
-		    <option value="p14">Aqua</option>
+		    <option value="Floral">Floral</option>
+		    <option value="Citrus">Citrus</option>
+		    <option value="Fruity">Fruity</option>
+		    <option value="Woody">Woody</option>
+		    <option value="Green">Green</option>
+		    <option value="Herbal">Herbal</option>
+		    <option value="Spicy">Spicy</option>
+		    <option value="Animalic">Animalic</option>
+		    <option value="Powdery">Powdery</option>
+		    <option value="Mossy">Mossy</option>
+		    <option value="Oriental">Oriental</option>
+		    <option value="Tabacco leather">Tabacco leather</option>
+		    <option value="Gourmand">Gourmand</option>
+		    <option value="Aqua">Aqua</option>
 		  </select>
 		  
 		  <select name="weather" >
 		    <option value="none" selected>=== 날씨 ===</option>
-		    <option value="w1">맑음</option>
-		    <option value="w2">비</option>
-		    <option value="w3">흐림</option>
-		    <option value="w4">눈</option>
+		    <option value="맑음">맑음</option>
+		    <option value="흐림">흐림</option>
+		    <option value="비">비</option>
+		    <option value="눈">눈</option>
 		  </select>
 		  
 		  <select name="time" >
 		    <option value="none" selected>=== 시간 ===</option>
-		    <option value="t6">06:00</option>
-		    <option value="t7">07:00</option>
-		    <option value="t8">08:00</option>
-		    <option value="t9">09:00</option>
-		    <option value="t10">10:00</option>
-		    <option value="t11">11:00</option>
-		    <option value="t12">12:00</option>
-		    <option value="t13">13:00</option>
-		    <option value="t14">14:00</option>
-		    <option value="t15">15:00</option>
-		    <option value="t16">16:00</option>
-		    <option value="t17">17:00</option>
-		    <option value="t18">18:00</option>
-		    <option value="t19">19:00</option>
-		    <option value="t20">20:00</option>
-		    <option value="t21">21:00</option>
-		    <option value="t22">22:00</option>
-		    <option value="t23">23:00</option>
-		    <option value="t24">24:00</option>
+		    <option value="06:00">06:00</option>
+		    <option value="07:00">07:00</option>
+		    <option value="08:00">08:00</option>
+		    <option value="09:00">09:00</option>
+		    <option value="10:00">10:00</option>
+		    <option value="11:00">11:00</option>
+		    <option value="12:00">12:00</option>
+		    <option value="13:00">13:00</option>
+		    <option value="14:00">14:00</option>
+		    <option value="15:00">15:00</option>
+		    <option value="16:00">16:00</option>
+		    <option value="17:00">17:00</option>
+		    <option value="18:00">18:00</option>
+		    <option value="19:00">19:00</option>
+		    <option value="20:00">20:00</option>
+		    <option value="21:00">21:00</option>
+		    <option value="22:00">22:00</option>
+		    <option value="23:00">23:00</option>
+		    <option value="24:00">24:00</option>
 		  </select>
-		  
-		  <select name="music">
-		    <option value="none" selected>=== 음악 ===</option>
-		    <option value="m1">트랙1</option>
-		    <option value="m2">트랙2</option>
-		    <option value="m3">트랙3</option>
-		    <option value="m4">트랙4</option>
-		    <option value="m5">트랙5</option>
-		    <option value="m6">트랙6</option>
-		    <option value="m7">트랙7</option>
-		    <option value="m8">트랙8</option>
-		    <option value="m9">트랙9</option>
-		    <option value="m10">트랙10</option>
-		    <option value="m11">트랙11</option>
-		    <option value="m12">트랙12</option>
-		    <option value="m13">트랙13</option>
-		    <option value="m14">트랙14</option>
-		    <option value="m15">트랙15</option>
-		  </select>
-		  
-	      <p>
-	      	<input type="submit" value="설정" id = "btn" style = "margin-top: 1%;">
+		  <p>
+	      	<input type="submit" value="설정" id = "btn" style = "margin-top: 1%" onclick="set()">
 	      </p>
 	   
 	   </form>
-	   
+	   <script>
+	   function set(){
+		   
+		   <%
+	
+		   	for(int i = 0; i< list.size(); i++){
+		   		String num = list.get(i).getNum();
+		   		String Addperfume = list.get(i).getPerfume();
+		   	 	String Addweather = list.get(i).getWeather();
+			    String Addtime = list.get(i).getTime();
+			    System.out.println("처음" + num);
+			    System.out.println("처음" + Addperfume);
+			    System.out.println("처음" + Addweather);
+			    System.out.println("처음" + Addtime);
+			    
+		   		if(num.equals("a")){
+		   			%>
+		   			document.getElementById("a2").innerText = Addperfume;
+				  	document.getElementById("a3").innerText = Addweather;
+				  	document.getElementById("a4").innerText = Addtime;
+		   			<%
+		   		}
+		   	}
+		   %>
+			<%-- for(var a = 0; a <<%=list.size()%>;a++){
+				   let Addnum = <%=list.get(a).getNum()%>;
+				   let Addperfume = '<%=list.get(a).getPerfume()%>';
+				   let Addweather = '<%=list.get(a).getWeather()%>';
+				   let Addtime = '<%=list.get(a).getTime()%>';
+				 
+					if(Addnum == "a"){   
+				  	document.getElementById("a2").innerText = Addperfume;
+				  	document.getElementById("a3").innerText = Addweather;
+				  	document.getElementById("a4").innerText = Addtime;
+					}else if(Addnum == "b"){   
+				  	document.getElementById("b2").innerText = Addperfume;
+				  	document.getElementById("b3").innerText = Addweather;
+				  	document.getElementById("b4").innerText = Addtime;
+					}else if(Addnum == "c"){   
+					document.getElementById("c2").innerText = Addperfume;
+					document.getElementById("c3").innerText = Addweather;
+					document.getElementById("c4").innerText = Addtime;
+					}else if(Addnum == "d"){   
+					document.getElementById("d2").innerText = Addperfume;
+					document.getElementById("d3").innerText = Addweather;
+					document.getElementById("d4").innerText = Addtime;
+					}else if(Addnum == "e"){   
+					document.getElementById("e2").innerText = Addperfume;
+					document.getElementById("e3").innerText = Addweather;
+					document.getElementById("e4").innerText = Addtime;
+					}else if(Addnum == "f"){   
+					document.getElementById("f2").innerText = Addperfume;
+					document.getElementById("f3").innerText = Addweather;
+					document.getElementById("f4").innerText = Addtime;
+					}
+			   } --%>
+			
+			};
+	   </script>
    </div>
    
    

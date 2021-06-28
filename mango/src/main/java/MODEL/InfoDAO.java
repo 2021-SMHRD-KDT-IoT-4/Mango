@@ -62,7 +62,7 @@ public int join(InfoDTO dto) {
 	
 public int change(InfoDTO dto) {
 	conn();
-	String sql = "update info set pw = ?, name = ?, loc = ?, perfume = ?, pdnumber =?";
+	String sql = "update info set pw = ?, name = ?, loc = ?, perfume = ?, pdnumber =? where id = ?";
 	try {
 		psmt = conn.prepareStatement(sql);
 		psmt.setString(1, dto.getPw());
@@ -70,6 +70,7 @@ public int change(InfoDTO dto) {
 		psmt.setString(3, dto.getLoc());
 		psmt.setString(4, dto.getPerfume());
 		psmt.setString(5, dto.getPdnumber());
+		psmt.setString(6, dto.getId());
 		
 		result = psmt.executeUpdate();
 	} catch (SQLException e) {
@@ -99,7 +100,6 @@ public InfoDTO showOne(String id) {
 		String setting =rs.getString(7);
 		
 		dto = new InfoDTO(id0, pw, name, loc, perfume, pdnumber, setting);
-		System.out.println("메세지 선택완료");
 		}
 		
 	} catch (SQLException e) {
