@@ -198,22 +198,58 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			
 				<div id ="javatest"></div>
 				<script>
-				
 				let today = new Date();   
-
+				
 				let hours = today.getHours(); // 시
 				let minutes = today.getMinutes();  // 분
 				let seconds = today.getSeconds();  // 초
-			
-				if(hours>=8 && hours<=18) {console.log("아침입니다"); //8시부터 6시까지
-				var timer = setInterval(function(){
-					document.getElementById("javatest").innerText = hours+ " : " +minutes+ " : " +seconds;
-					},1000);  
+				
+				function clock(){
+
+				let today = new Date();   
+					
+				let hours = today.getHours(); // 시
+				let minutes = today.getMinutes();  // 분
+				let seconds = today.getSeconds();  // 초
+					
+				let sec= hours+ " : " +minutes+ " : " +seconds;
+				document.getElementById("javatest").innerHTML = sec;
+				};
+				
+				function Init(){
+					clock();
+					setInterval(clock,1000);
+				};
+				
+				/* Init(); */
+				
+				var id = '<%=id%>';
+				console.log("확인 : " + id);
+				
+				
+				if(id !== 'null'){
+					console.log("확인2 : " + id);
+					if(id == 'admin'){
+						document.getElementById("javatest").innerHTML = "<a href = 'message.jsp'>Message</a>";
+						
+					}else{
+						if(hours>=8 && hours<=18) {
+							Init();
+							
+						}else {
+							console.log("메세지 기능 활성화");
+							document.getElementById("javatest").innerHTML = "<a href = 'message.jsp'>Message</a>";
+						}
+					}
+				}else {
+					if(hours>=8 && hours<=18) {
+						document.getElementById("javatest").innerText = "로그인 후 메세지 기능 사용이 가능합니다.";
+
+					}else{
+						console.log("여기인가");
+						Init();
+					}
 				}
-				else {
-					console.log("메세지 기능 활성화");
-					 document.getElementById("javatest").innerHTML = "<a href = 'message.jsp'>Message</a>";}
-			
 				</script>
 				<div class="slide__element slide__element--temp"></div>
 			</div>

@@ -49,22 +49,22 @@ public class SettingDAO extends totalDAO implements Setting_name {
 	public ArrayList<SettingDTO> showSetting(String setId) {
 		arrDto = new ArrayList<SettingDTO>();
 		conn();
-		String sql = "select * from message where receive = ?";
+		String sql = "select * from setting where set_id = ? order by num";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, setId);
 			
 			rs = psmt.executeQuery();
 			while(rs.next()) {
-			String num =rs.getString(1);
-			String setId0 =rs.getString(2);
-			String perfume =rs.getString(3);
-			String weather =rs.getString(4);
-			String time =rs.getString(5);
+			String set_id =rs.getString("set_id");
+			String perfume =rs.getString("perfume");
+			String weather =rs.getString("weather");
+			String time =rs.getString("time");
+			String num =rs.getString("num");
 			
-			dto = new SettingDTO(num, setId0, perfume, weather, time);
+			dto = new SettingDTO(num, set_id, perfume, weather, time);
 			arrDto.add(dto);
-				System.out.println("메세지가 존재합니다");
+			
 			}
 			
 		} catch (SQLException e) {

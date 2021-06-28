@@ -158,11 +158,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap slider CSS-->
 <link href="css/bootstrap-slider.css" rel="stylesheet">
-
-
-</head>
-
-<body class="sub_page demo-1">
 <%
 String urlstr = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid="+"01302211c0ad8247844362fd2d8280f7";
 URL url2 = new URL(urlstr);
@@ -197,6 +192,19 @@ String dataW = "";
 			if(todayW.equals("Clear"))dataR = "sunny";
 			if(todayW.equals("Clouds"))dataR = "fallout";
 %>
+<script>
+	   
+	  
+		
+	   
+	
+	   };  
+	   </script>
+
+</head>
+
+<body class="sub_page demo-1">
+
 
 <div class="container" style = "margin-left : 0">
 			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
@@ -277,51 +285,25 @@ String dataW = "";
 	<script type="text/javascript" src="js/custom.js"></script>
 
 	<!-- mood lamp area -->
-	<%SettingDAO dao = new SettingDAO();
-	InfoDTO getid = (InfoDTO) session.getAttribute("info_dto");
-	String setid = getid.getSetting();
-	ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
-	list= dao.showSetting(setid);
-	%>
+	
    <div id = "setting" style="padding-top: 62.5px;">
 	   <form action = "#">
 			<table id = "setTable" border = "1">
+				<%
+				SettingDAO dao = new SettingDAO();
+				InfoDTO getid = (InfoDTO) session.getAttribute("info_dto");
+				String setid = getid.getSetting();
+				ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
+				list= dao.showSetting(setid);
+				
+				for(int i =0; i<list.size();i++){ %>
 				<tr>
-					<td id=a1>설정1</td>
-					<td id=a2>향수</td>
-					<td id=a3>날씨</td>
-					<td id=a4>시간</td>
+					<td id=a1>설정<%=i+1%></td>
+					<td id=f2><%=list.get(i).getPerfume() %></td>
+					<td id=f3><%=list.get(i).getWeather() %></td>
+					<td id=f4><%=list.get(i).getTime()%></td>
 				</tr>
-					<tr>
-					<td id=b1>설정2</td>
-					<td id=b2>향수</td>
-					<td id=b3>날씨</td>
-					<td id=b4>시간</td>
-				</tr>
-				<tr>
-					<td id=c1>설정3</td>
-					<td id=c2>향수</td>
-					<td id=c3>날씨</td>
-					<td id=c4>시간</td>
-				</tr>
-				<tr>
-					<td id=d1>설정4</td>
-					<td id=d2>향수</td>
-					<td id=d3>날씨</td>
-					<td id=d4>시간</td>
-				</tr>
-				<tr>
-					<td id=e1>설정5</td>
-					<td id=e2>향수</td>
-					<td id=e3>날씨</td>
-					<td id=e4>시간</td>
-				</tr>
-					<tr>
-					<td id=f1>설정6</td>
-					<td id=f2>향수</td>
-					<td id=f3>날씨</td>
-					<td id=f4>시간</td>
-				</tr>
+				<%} %>
 			</table>
 		</form>
 	
@@ -334,6 +316,7 @@ String dataW = "";
 		    <option value="s4">설정4</option>
 		    <option value="s5">설정5</option>
 		    <option value="s6">설정5</option>
+		    <option value="s7">설정6</option>
 		  </select>
 		  
 		  <select name="perfume" >
@@ -352,6 +335,7 @@ String dataW = "";
 		    <option value="Tabacco leather">Tabacco leather</option>
 		    <option value="Gourmand">Gourmand</option>
 		    <option value="Aqua">Aqua</option>
+		    <option value="none">none</option>
 		  </select>
 		  
 		  <select name="weather" >
@@ -360,6 +344,7 @@ String dataW = "";
 		    <option value="흐림">흐림</option>
 		    <option value="비">비</option>
 		    <option value="눈">눈</option>
+		    <option value="none">none</option>
 		  </select>
 		  
 		  <select name="time" >
@@ -383,71 +368,14 @@ String dataW = "";
 		    <option value="22:00">22:00</option>
 		    <option value="23:00">23:00</option>
 		    <option value="24:00">24:00</option>
+		    <option value="none">none</option>
 		  </select>
 		  <p>
 	      	<input type="submit" value="설정" id = "btn" style = "margin-top: 1%" onclick="set()">
 	      </p>
 	   
 	   </form>
-	   <script>
-	   function set(){
-		   
-		   <%
-	
-		   	for(int i = 0; i< list.size(); i++){
-		   		String num = list.get(i).getNum();
-		   		String Addperfume = list.get(i).getPerfume();
-		   	 	String Addweather = list.get(i).getWeather();
-			    String Addtime = list.get(i).getTime();
-			    System.out.println("처음" + num);
-			    System.out.println("처음" + Addperfume);
-			    System.out.println("처음" + Addweather);
-			    System.out.println("처음" + Addtime);
-			    
-		   		if(num.equals("a")){
-		   			%>
-		   			document.getElementById("a2").innerText = Addperfume;
-				  	document.getElementById("a3").innerText = Addweather;
-				  	document.getElementById("a4").innerText = Addtime;
-		   			<%
-		   		}
-		   	}
-		   %>
-			<%-- for(var a = 0; a <<%=list.size()%>;a++){
-				   let Addnum = <%=list.get(a).getNum()%>;
-				   let Addperfume = '<%=list.get(a).getPerfume()%>';
-				   let Addweather = '<%=list.get(a).getWeather()%>';
-				   let Addtime = '<%=list.get(a).getTime()%>';
-				 
-					if(Addnum == "a"){   
-				  	document.getElementById("a2").innerText = Addperfume;
-				  	document.getElementById("a3").innerText = Addweather;
-				  	document.getElementById("a4").innerText = Addtime;
-					}else if(Addnum == "b"){   
-				  	document.getElementById("b2").innerText = Addperfume;
-				  	document.getElementById("b3").innerText = Addweather;
-				  	document.getElementById("b4").innerText = Addtime;
-					}else if(Addnum == "c"){   
-					document.getElementById("c2").innerText = Addperfume;
-					document.getElementById("c3").innerText = Addweather;
-					document.getElementById("c4").innerText = Addtime;
-					}else if(Addnum == "d"){   
-					document.getElementById("d2").innerText = Addperfume;
-					document.getElementById("d3").innerText = Addweather;
-					document.getElementById("d4").innerText = Addtime;
-					}else if(Addnum == "e"){   
-					document.getElementById("e2").innerText = Addperfume;
-					document.getElementById("e3").innerText = Addweather;
-					document.getElementById("e4").innerText = Addtime;
-					}else if(Addnum == "f"){   
-					document.getElementById("f2").innerText = Addperfume;
-					document.getElementById("f3").innerText = Addweather;
-					document.getElementById("f4").innerText = Addtime;
-					}
-			   } --%>
-			
-			};
-	   </script>
+	   
    </div>
    
    

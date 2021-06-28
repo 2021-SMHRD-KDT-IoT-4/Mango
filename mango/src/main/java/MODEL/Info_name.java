@@ -15,4 +15,5 @@ public interface Info_name {
 	//회원정보 출력 메소드
 	public InfoDTO showOne(String id);
 	
+	
 }

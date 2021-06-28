@@ -17,6 +17,13 @@ public MessageDTO(String send, String receive, String day, String memo, int num)
 }
 
 
+public MessageDTO(String send, String receive, String memo) {
+	this.send = send;
+	this.receive = receive;
+	this.memo = memo;
+}
+
+
 
 public String getSend() {
 	return send;

@@ -26,13 +26,8 @@ perfume varchar2(100),
 weather varchar2(50),
 time varchar2(50)
 );
-insert into setting values('0','none','none','none','a');
-insert into setting values('0','none','none','none','b');
-insert into setting values('0','none','none','none','c');
-insert into setting values('0','none','none','none','d');
-insert into setting values('0','none','none','none','e');
 
-
+select * from message
 
 
 create sequence set_seq
