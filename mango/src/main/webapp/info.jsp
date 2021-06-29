@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="MODEL.InfoDTO"%>
+<%@page import="MODEL.InfoDAO"%>
 <%@page import="java.net.URL"%>
 <%@page import="org.json.simple.parser.ParseException"%>
 <%@page import="org.json.simple.parser.JSONParser"%>
@@ -286,20 +289,21 @@ String dataW = "";
 				<td>PERFUME TYPE</td>
 				<td>PD NUMBER</td>
 		   	</tr>
-		   	
+		   	<%
+		   	InfoDAO dao = new InfoDAO();
+			ArrayList<InfoDTO> list = new ArrayList<InfoDTO>();
+		   	list = dao.showAll();
+		   	for(int i = 0; i<list.size();i++){ %>
 		   	<tr>
-				<td></td>	   	
-				<td></td>	   	
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><%=list.get(i).getId() %></td>	   	
+				<td><%=list.get(i).getName() %></td>	   	
+				<td><%=list.get(i).getLoc() %></td>
+				<td><%=list.get(i).getPerfume() %></td>
+				<td><%=list.get(i).getPdnumber() %></td>
 		   	</tr>
-	   
+	   <%} %>
 	   </table>
 	   
-	        <p>
-	      	    <input type="submit" value="삭제하기" id = "btn" style = "margin-top: 1%;">
-	        </p>
 	   </form>
    </div>
    

@@ -277,7 +277,11 @@ String dataW = "";
 	
 	<div>
 		<a href = "mypage.jsp" class = "ft">INFORMATION&nbsp;&nbsp;&nbsp;</a>
+		<%if(id.equals("admin")){ %>
+		<a href = "info.jsp" class = "ft">SETTING</a>
+		<%}else{ %>
 		<a href = "setting.jsp" class = "ft">SETTING</a>
+		<%} %>
 	</div>
 	<br>	
 
