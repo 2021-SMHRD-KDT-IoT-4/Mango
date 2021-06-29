@@ -135,7 +135,7 @@
 	
 	::placeholder {
 	
-		color: white;
+		color: #656972;
 	
 	}
 
