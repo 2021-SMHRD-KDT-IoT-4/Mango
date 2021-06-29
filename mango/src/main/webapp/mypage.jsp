@@ -72,7 +72,18 @@
 		width : 90%;
 		text-align: left;
 		margin-left: 5%;
+		font-family: 'S-CoreDream-3Light';
+		color: white;
+		
+	}
 	
+	.join2 {
+	
+		width : 90%;
+		text-align: left;
+		margin-left: 5%;
+		font-family: 'S-CoreDream-3Light';
+		
 	}
 	
 	.box {
@@ -88,7 +99,7 @@
 		border: none;
 		border-bottom: 1px solid black;
 		background-color: transparent;
-
+		font-family: 'S-CoreDream-3Light';
 	
 	}
 	
@@ -115,7 +126,7 @@
 	
 		font-size: 20px;
 		font-weight: bold;
-		
+		font-family: 'S-CoreDream-6Bold';
 	
 	}
 	
@@ -124,6 +135,25 @@
 		color: black;
 	}
 	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
+	
+	}
 	
 	
 </style>
@@ -190,7 +220,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -249,8 +279,7 @@ String dataW = "";
 		<a href = "mypage.jsp" class = "ft">INFORMATION&nbsp;&nbsp;&nbsp;</a>
 		<a href = "setting.jsp" class = "ft">SETTING</a>
 	</div>
-	<br><br>
-	
+	<br>	
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
@@ -264,9 +293,9 @@ String dataW = "";
    
    <div class="container">
       <div class="heading_container">
-        <h2>INFOR<span>MATION</span></h2>
-        <p>
-         회원정보
+        <h1 style = "color: #293040;">INFOR<span style = "color: #6475BC;">MATION</span></h1>
+        <p style = "font-family: 'S-CoreDream-3Light'; color: #5F5F5F;">
+         회원<span style = "color: #A60F1B;">정보</span>
         </p>
       </div>
     </div>
@@ -276,35 +305,35 @@ String dataW = "";
 	   <form action ="modify.jsp">
 			<div style = "width: 30%; height: 40%; margin-left: 35%;
 			background-color: rgba(255,255,255,0.1); padding: 2%;
-			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
+			box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%); font-family: 'S-CoreDream-3Light'; 
   			">
 			<div class = "join_row">
-				<div class = "join">ID</div>
+				<div class = "join2">ID</div>
 				<div class = "join"><%=info.getId()%></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">PW</div>
+				<div class = "join2">PW</div>
 				<div class = "join"><%=info.getPw()%></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">NAME</div>
+				<div class = "join2">NAME</div>
 				<div class = "join"><%=info.getName() %></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">LOCATION</div>
+				<div class = "join2">LOCATION</div>
 				<div class = "join"><%=info.getLoc() %></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">PERFUME TYPE</div>
+				<div class = "join2">PERFUME TYPE</div>
 				<div class = "join"><%=info.getPerfume()%></div> <br>
 			</div>
 			
 			<div class = "join_row">
-				<div class = "join">PD NUMBER</div>
+				<div class = "join2">PD NUMBER</div>
 				<div class = "join"><%=info.getPdnumber()%></div> <br>
 			</div>
 			
@@ -314,10 +343,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 </div>

@@ -126,6 +126,32 @@
 	
 
 	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
+	
+	}
+	
+	.ft {
+		font-size: medium;
+		font-family: 'S-CoreDream-3Light';
+	
+	}
 
 </style>
 
@@ -247,10 +273,10 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>RECO<span>MMEND</span></h2>
+        <h1 style = "color: #293040;">RECO<span style = "color: #A60F1B;">MMEND</span></h1>
         <div>
          	<img src = 'img/recommend/g7.png' style = "width:30%; length:30%;">
-         	<div style="margin-top: 30px;">당신에 대해 조금 더 알려주세요.</div>
+         	<div style="margin-top: 30px;  font-family: 'S-CoreDream-3Light'; color: black;"><span style = "color: #2846F9;">당신</span>에 대해 <span style = "color: #2846F9;">조금 더</span> 알려주세요.</div>
         </div>
       </div>
     </div>
@@ -258,7 +284,7 @@ String dataW = "";
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div>
-		    	<div>성별</div>
+		    	<div class = "ft">성별</div>
 		    	<div style="margin-left: 15% ">
 					<div class = "btn2" >여</div>
 					<div class = "btn2" >남</div>
@@ -352,10 +378,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 	

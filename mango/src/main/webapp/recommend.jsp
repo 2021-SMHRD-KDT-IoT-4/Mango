@@ -75,8 +75,13 @@
 	
 	.ft {
 		font-size: larger;
-		font-weight: bold;
+		font-family: 'S-CoreDream-6Bold';
 	
+	}
+	
+	.ft2 {
+	    font-family: 'S-CoreDream-3Light';
+		
 	}
 	
 	.pic_wrap {
@@ -91,6 +96,26 @@
 	.pic_wrap>a:hover img{
 	
 		 filter: brightness(50%);
+	
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
 	
 	}
 	
@@ -159,7 +184,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -215,22 +240,22 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>RECO<span>MMEND</span></h2>
+        <h1 style = "color: #293040;">RECO<span style = "color: #A60F1B;">MMEND</span></h1>
         <div>
          	<img src = 'img/recommend/g1.png' style = "width:30%; length:30%;">
         </div>
       </div>
-    </div>
+    </div >
     
-	    <div style = "margin-top: 30px;">떠올리는 것만으로도 행복하거나 편안해지는 향기를 골라주세요</div>
-    
+	    	<div style = "margin-top: 30px; font-family: 'S-CoreDream-3Light'; color: black;">떠올리는 것만으로도 <span style = "color: #2846F9;">행복</span>하거나 <span style = "color: #2846F9;">편안해지는 향기</span>를 골라주세요</div>
+    	
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div class = "pic_wrap">
 				<a href = "recommend2.jsp"><img src="img/recommend/1.jpg" class = "pic"></a>
 	    	</div>
 			<br>
-			<div>기분을 전환시키는</div>
+			<div class = "ft2">기분을 전환시키는</div>
 			<div class = "ft">풀, 나무 향기</div>
 	    </div>
     
@@ -239,7 +264,7 @@ String dataW = "";
 				<a href = "recommend2.jsp"><img src="img/recommend/2.jpg" class = "pic"></a>
 			</div>
 			<br>
-			<div>마음을 설레게 하는</div>
+			<div class = "ft2">마음을 설레게 하는</div>
 			<div class = "ft">꽃 향기</div>
 	    </div>
 	    
@@ -248,7 +273,7 @@ String dataW = "";
 				<a href = "recommend2.jsp"><img src="img/recommend/3.jpg" class = "pic"></a>
 			</div>
 			<br>
-			<div>주변 공기를 부드럽게</div>
+			<div class = "ft2">주변 공기를 부드럽게</div>
 			<div class = "ft">달콤한 향기</div>
 	    </div>
 	    
@@ -257,7 +282,7 @@ String dataW = "";
 				<a href = "recommend2.jsp"><img src="img/recommend/4.jpg"  class = "pic"></a>
 			</div>
 			<br>
-			<div>차분하고 성숙한</div>
+			<div class = "ft2">차분하고 성숙한</div>
 			<div class = "ft">도시의 향기</div>
 	    </div>
 	    
@@ -265,10 +290,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 	

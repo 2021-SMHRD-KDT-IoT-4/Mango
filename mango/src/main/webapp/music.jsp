@@ -58,6 +58,26 @@
   		margin-top: 0px;
   	
   	}
+  	
+  	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
+	
+	}
 	
 	
 
@@ -126,7 +146,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -182,9 +202,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>MU<span>SIC</span></h2>
-        <p>
-         오늘 당신의 하루는 어떤가요. 당신만을 위한 음악을 준비 했습니다.
+        <h1 style = "color: #293040;">MU<span style = "color: #6475BC;">SIC</span></h1>
+        <p style = "font-family: 'S-CoreDream-3Light'; color: #5F5F5F;">
+         오늘 <span style = "color: #A60F1B;">당신의 하루</span>는 어떤가요. 당신만을 위한 <span style = "color: #A60F1B;">음악</span>을 준비 했습니다.
         </p>
       </div>
     </div>
@@ -216,7 +236,7 @@ String dataW = "";
 
         </div>
     
-        <div id="slider-wrap" style = "max-width: 100%">
+        <div id="slider-wrap" style = "max-width: 100%; font-family: 'S-CoreDream-3Light';">
             <ul id="slider">
                 <li>
                     <div style = "text-align: left; color: white;">
@@ -319,10 +339,10 @@ String dataW = "";
 
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 </div>

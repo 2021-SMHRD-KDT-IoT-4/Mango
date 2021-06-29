@@ -151,7 +151,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -207,9 +207,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h1 style = "color: black;">Li<span style = "color: gray;">ght</span></h1>
-        <p style = "font-family: 'S-CoreDream-3Light';">
-         당신의 일상을 밝게 비춰줄게요.
+        <h1 style = "color: #293040;">Li<span style = "color: #6475BC;">ght</span></h1>
+        <p style = "font-family: 'S-CoreDream-3Light'; color: #5F5F5F;">
+         <span style = "color: #A60F1B;">당신</span>의 <span style = "color: #A60F1B;">일상</span>을 밝게 비춰줄게요.
         </p>
       </div>
     </div>
@@ -229,8 +229,23 @@ String dataW = "";
 	</div>
 	
 	<div>
-		<button id = "onOff"> Off </button>
+		<button id = "onOff" onclick = "check()"> Off </button>
 	</div>
+	
+	<script>
+	var ch = false;
+	function check(){
+		if(ch){
+			ch = false; 
+			ShowSliderValue(1);document.querySelector("#wcat>img").style.opacity = 0;}
+			else{
+			ch = true;
+			ShowSliderValue(100);document.querySelector("#wcat>img").style.opacity = 100;
+			}
+		
+		
+	};
+	</script>
 	
 	<div class="container">
 		
@@ -239,9 +254,9 @@ String dataW = "";
 			<div class="panel-body" align="center" style = "margin-top: 30px;">
 
 				<!--슬라이더로 선택할 input-->
-				<div class="Container" >
-			        <input oninput = 'ShowSliderValue(this.value)'  type = "range" min='1' max='100' value='100'>
-			        <font size = 2 id = "slider_value_view">1</font>	
+				<div class="Container">
+			        <input oninput = 'ShowSliderValue(this.value);document.querySelector("#wcat>img").style.opacity = this.value/100;'  type = "range" min='1' max='100' value='100' id = ch style = "text-align: center;">
+			        <font size = 3 id = "slider_value_view" style = "text-align: center;">100</font>	
 			    </div>
 			</div>
 		</div>
@@ -249,10 +264,10 @@ String dataW = "";
 
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 </div>

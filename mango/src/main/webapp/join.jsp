@@ -38,6 +38,26 @@
 		BACKGROUND-COLOR: transparent;
 		
 	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
+	
+	}
 
 
 </style>
@@ -78,6 +98,7 @@
 		width : 90%;
 		text-align: left;
 		margin-left: 5%;
+		font-family: 'S-CoreDream-3Light';
 	
 	}
 	
@@ -94,6 +115,7 @@
 		border: none;
 		border-bottom: 1px solid black;
 		background-color: transparent;
+		font-family: 'S-CoreDream-3Light';
 
 	
 	}
@@ -158,7 +180,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -215,9 +237,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>jo<span>in</span></h2>
+        <h1 style = "color: #293040;">jo<span style = "color: #6475BC;">in</span></h1>
         <p>
-         망고와 함께해요.
+         <span style = "color: #A60F1B;">망고</span>와 함께해요.
         </p>
       </div>
     </div>
@@ -283,10 +305,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 </div>

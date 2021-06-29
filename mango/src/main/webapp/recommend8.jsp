@@ -75,6 +75,31 @@
 	.ft {
 		font-size: larger;
 		font-weight: bold;
+		font-family: 'S-CoreDream-6Bold';
+	}
+	
+	.ft2 {
+	    font-family: 'S-CoreDream-3Light';
+		
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
 	
 	}
 
@@ -143,7 +168,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -199,9 +224,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>RECO<span>MMEND</span></h2>
-        <div>
-         	당신에게 어울리는 3가지 향과 향수 입니다.
+        <h1 style = "color: #293040;">RECO<span style = "color: #A60F1B;">MMEND</span></h1>
+        <div style = "margin-top: 30px; font-family: 'S-CoreDream-3Light'; color: black;">
+         	당신에게 어울리는 <span style = "color: #2846F9;">3가지 향과 향수</span> 입니다.
         </div>
       </div>
     </div>
@@ -212,7 +237,7 @@ String dataW = "";
 				<a href = "perfume.jsp"><img src="img/recommend/8-1.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">놀이동산 데이트</div>
-			<div>#순수한 #풀꽃 #데일리</div>
+			<div class = "ft2">#순수한 #풀꽃 #데일리</div>
 	    </div>
     
 	    <div class = "row_pic">
@@ -220,7 +245,7 @@ String dataW = "";
 				<a href = "perfume.jsp"><img src="img/recommend/8-2.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">물기 머금은 장미</div>
-			<div>#깔끔한 #장미 #가벼운</div>
+			<div class = "ft2">#깔끔한 #장미 #가벼운</div>
 	    </div>
 	    
 	    <div class = "row_pic">
@@ -228,14 +253,14 @@ String dataW = "";
 				<a href = "perfume.jsp"><img src="img/recommend/8-3.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">초록빛 기억</div>
-			<div>#청량한 #들꽃 #가벼운</div>
+			<div class = "ft2">#청량한 #들꽃 #가벼운</div>
 	    </div>
 	    
     </div>
     
-    <hr style = "border: 1px solid white; width: 50%; text-align: center; margin-left: 25%;">
-    	<div>	
-         	클릭시 구매 페이지로 이동합니다.
+    <hr style = "border: 1px solid #293040; width: 60%; text-align: center; margin-left: 20%;">
+    	<div class = "ft">	
+         	클릭시 <span style = "color: #6475BC;">구매 페이지</span>로 이동합니다.
         </div>
     
     <div id = "wrap">
@@ -244,7 +269,7 @@ String dataW = "";
 				<a href = "https://www.brandi.co.kr/products/26776710?gclid=CjwKCAjww-CGBhALEiwAQzWxOl9VUopDQk_AD-rg2PxauV_2Z1ayCejWryH5CEnh-nShH-KNH3qzAhoCeTIQAvD_BwE"><img src="img/recommend/p2.jpeg" class = "pic"></a>
 			</div>
 			<div class = "ft">조말론 우드세이지앤씨솔트</div>
-			<div>#순수한 #풀꽃 #데일리</div>
+			<div class = "ft2">놀이동산 데이트</div>
 	    </div>
     
 	    <div class = "row_pic">
@@ -252,7 +277,7 @@ String dataW = "";
 				<a href = "https://perfumegraphy.com/product/detail.html?product_no=1469&cafe_mkt=google_dy&gclid=CjwKCAjww-CGBhALEiwAQzWxOgEay3sHw8Pz-8Isl53HVeN_f2YWfFTYw_WwHaDfkZTbT9kEWl7xjBoCNKgQAvD_BwE"><img src="img/recommend/p1.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">구찌 블룸 오드 퍼퓸</div>
-			<div>#깔끔한 #장미 #가벼운</div>
+			<div class = "ft2">물기 머금은 장미</div>
 	    </div>
 	    
 	    <div class = "row_pic">
@@ -260,17 +285,17 @@ String dataW = "";
 				<a href = "https://www.celeconc.com/shop/detail.php?pno=F38A44A88827D0B3CA88923491C240B5&ref=naver_open&utm_source=naverssa-pc&utm_medium=cpc&utm_campaign=shopping&utm_content=F38A44A88827D0B3CA88923491C240B5&utm_term={query}&NaPm=ct%3Dkqg252bs%7Cci%3Dd5e57a4c77198c2814b266ada2cb458b857f1e6f%7Ctr%3Dplac%7Csn%3D1892106%7Chk%3D94ee945c64aed40ca98bf445417648f4b605c398"><img src="img/recommend/p3.jpg" class = "pic"></a>
 			</div>
 			<div class = "ft">플라워 바이 겐조 오드 뚜왈렛</div>
-			<div>#청량한 #들꽃 #가벼운</div>
+			<div class = "ft2">초록빛 기억</div>
 	    </div>
 	    
     </div>
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 	

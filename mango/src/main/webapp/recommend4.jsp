@@ -46,7 +46,7 @@
 	#wrap {
 	
 		width: 900px;
-		height: 700px;
+		height: 600px;
 		margin: auto;
 		padding-top: 30px; 
 		
@@ -74,8 +74,13 @@
 	
 	.ft {
 		font-size: larger;
-		font-weight: bold;
+		font-family: 'S-CoreDream-6Bold';
 	
+	}
+	
+	.ft2 {
+	    font-family: 'S-CoreDream-3Light';
+		
 	}
 	
 	.pic_wrap {
@@ -90,6 +95,26 @@
 	.pic_wrap>a:hover img{
 	
 		 filter: brightness(50%);
+	
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
 	
 	}
 
@@ -157,7 +182,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -213,21 +238,21 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>RECO<span>MMEND</span></h2>
+        <h1 style = "color: #293040;">RECO<span style = "color: #A60F1B;">MMEND</span></h1>
         <div>
          	<img src = 'img/recommend/g4.png' style = "width:30%; length:30%;">
         </div>
       </div>
     </div>
     
-    	<div style = "margin-top: 30px;">싫어하는 느낌의 향기가 있다면 골라주세요</div>
+    	<div style = "margin-top: 30px; font-family: 'S-CoreDream-3Light'; color: black;"><span style = "color: #2846F9;">싫어하는 느낌</span>의 <span style = "color: #2846F9;">향기</span>가 있다면 골라주세요</div>
     
     <div id = "wrap">
 	    <div class = "row_pic">
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-1.jpg" class = "pic"></a>
 			</div>
-			<div>강, 바다, 수영장의</div>
+			<div class = "ft2">강, 바다, 수영장의</div>
 			<div class = "ft">물내음</div>
 	    </div>
     
@@ -235,7 +260,7 @@ String dataW = "";
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-2.jpg" class = "pic"></a>
 			</div>
-			<div>달달한</div>
+			<div class = "ft2">달달한</div>
 			<div class = "ft">과일 한아름</div>
 	    </div>
 	    
@@ -243,7 +268,7 @@ String dataW = "";
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-3.jpg" class = "pic"></a>
 			</div>
-			<div>코끝을 톡 건드리는</div>
+			<div class = "ft2">코끝을 톡 건드리는</div>
 			<div class = "ft">시나몬</div>
 	    </div>
 	    
@@ -251,7 +276,7 @@ String dataW = "";
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-4.jpg"  class = "pic"></a>
 			</div>
-			<div>달짝지근한</div>
+			<div class = "ft2">달짝지근한</div>
 			<div class = "ft">바닐라</div>
 	    </div>
 	    
@@ -259,7 +284,7 @@ String dataW = "";
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-5.jpg"  class = "pic"></a>
 			</div>
-			<div>보송보송한</div>
+			<div class = "ft2">보송보송한</div>
 			<div class = "ft">파우더</div>
 	    </div>
 	    
@@ -267,7 +292,7 @@ String dataW = "";
 		    <div class = "pic_wrap">
 				<a href = "recommend5.jsp"><img src="img/recommend/4-6.jpg"  class = "pic"></a>
 			</div>
-			<div>보송보송한</div>
+			<div class = "ft2">보송보송한</div>
 			<div class = "ft">다 좋아요</div>
 	    </div>
 	    
@@ -275,10 +300,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 	

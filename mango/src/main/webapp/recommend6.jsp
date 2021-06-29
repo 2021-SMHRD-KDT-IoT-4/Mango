@@ -69,7 +69,7 @@
 	
 	.ft {
 		font-size: medium;
-		font-weight: bold;
+		font-family: 'S-CoreDream-6Bold';
 		margin-top: 10px;
 	
 	}
@@ -89,7 +89,25 @@
 	
 	}
 	
-
+	@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	@font-face {
+     font-family: 'S-CoreDream-6Bold';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+	}
+	
+	h1 {
+	
+	font-family: 'S-CoreDream-6Bold';
+	
+	}
 
 </style>
 
@@ -155,7 +173,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
@@ -211,10 +229,10 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>RECO<span>MMEND</span></h2>
+        <h1 style = "color: #293040;">RECO<span style = "color: #A60F1B;">MMEND</span></h1>
         <div>
          	<img src = 'img/recommend/g6.png' style = "width:30%; length:30%;">
-         	<div style="margin-top: 30px;">향수를 사용할 시간을 알려주세요.</div>
+         	<div style="margin-top: 30px; font-family: 'S-CoreDream-3Light'; color: black;"><span style = "color: #2846F9;">향수</span>를 <span style = "color: #2846F9;">사용할 시간</span>을 알려주세요.</div>
         </div>
       </div>
     </div>
@@ -241,10 +259,10 @@ String dataW = "";
 	
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 	
