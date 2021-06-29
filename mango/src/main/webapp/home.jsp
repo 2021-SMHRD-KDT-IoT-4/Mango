@@ -402,7 +402,11 @@ $.ajax({
 
 }
 
+a:hover {
 
+	color: black;
+
+}
 
 /* ::placeholder {
 	color : white;
