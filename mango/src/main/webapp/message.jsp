@@ -42,7 +42,7 @@
 		background-color: rgba(255,255,255,0.1); 
 		padding: 2%;
 		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
-		color: white;
+		color: #656972;
 		font-family: 'S-CoreDream-3Light';
 	  }
 
@@ -287,7 +287,7 @@ String dataW = "";
 	   <form action = "sendm.jsp">
 	   <table id = "setTable" border = "1">
 	   
-		   	<tr>
+		   	<tr style = "color: black; font-family: 'S-CoreDream-6Bold';">
 				<td>번호</td>	   	
 				<td>보낸 사람</td>	   	
 				<td>제목</td>

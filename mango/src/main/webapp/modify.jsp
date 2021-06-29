@@ -114,7 +114,7 @@
 	
 	::placeholder {
 	
-		color: white;
+		color: #656972;
 	
 	}
 	
@@ -355,7 +355,7 @@ String dataW = "";
 			
 			<div class = "join_row">
 				<div class = "join2">PD NUMBER</div>
-				<input type = "text" name = "pdnumber" class = "box" placeholder = "이메일을 입력해 주세요."><br><br>
+				<input type = "text" name = "pdnumber" class = "box" placeholder = "제품번호를 입력해 주세요."><br><br>
 			</div>
 			
 			<input type = "submit" value = "수정하기" id = "btn">
