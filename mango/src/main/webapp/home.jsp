@@ -47,7 +47,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- bootstrap core css -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <!-- <link rel="styleshee\t" type="text/css" href="css/bootstrap.css" /> -->
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
@@ -223,16 +223,14 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 				/* Init(); */
 				
 				var id = '<%=id%>';
-				console.log("확인 : " + id);
 				
 				
 				if(id !== 'null'){
-					console.log("확인2 : " + id);
 					if(id == 'admin'){
 						document.getElementById("javatest").innerHTML = "<a href = 'message.jsp' style = 'color: #656972;'>Message</a>";
 						
 					}else{
-						if(hours>=8 && hours<=18) {
+						if(hours>=11 && hours<=18) {
 							Init();
 							
 						}else {

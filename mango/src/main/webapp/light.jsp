@@ -230,6 +230,7 @@ String dataW = "";
 	
 	<div>
 		<button id = "onOff" onclick = "check()"> Off </button>
+		<button id = "onOff" onclick = "location.href = 'http://192.168.137.144/'"> Off </button>
 	</div>
 	
 	<script>
