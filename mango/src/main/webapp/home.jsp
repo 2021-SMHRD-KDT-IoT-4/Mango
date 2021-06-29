@@ -19,7 +19,6 @@
 	<title>당신의 하루 망고와 함께</title>
 	<meta name="description" content="Some WebGL experiments with raindrop effects" />
 	<meta name="keywords" content="webgl, raindrops, effect, rain, web, video, background" />
-	<meta name="author" content="Lucas Bebber for Codrops" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
