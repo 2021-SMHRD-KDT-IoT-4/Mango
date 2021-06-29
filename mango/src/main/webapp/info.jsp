@@ -42,6 +42,8 @@
 		background-color: rgba(255,255,255,0.1); 
 		padding: 2%;
 		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
+		color: #656972;
+		font-family: 'S-CoreDream-3Light';
 	  }
 
 	#modal_open {
@@ -63,6 +65,7 @@
 	  	width: 80%;
 	  	margin: auto;
 	  	margin-bottom: 2%;
+	  	border-color: black;
 	  
 	  }
 	  
@@ -79,6 +82,7 @@
 		width : 90%;
 		text-align: left;
 		margin-left: 5%;
+		font-family: 'S-CoreDream-3Light';
 	
 	}
 	
@@ -228,7 +232,7 @@ String dataW = "";
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp" style = "color: black;"> Light </a></li>
+									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
@@ -241,7 +245,7 @@ String dataW = "";
 									<a href = "join.jsp" class="nav-link2" style = "margin-left: 15px;" >JOIN</a>
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
 								<%}else{ %>
-								<a class="nav-link2" href = "mypage.jsp" style="marign-left:0.9em;">MY PAGE</a>
+								<a class="nav-link2" href = "mypage.jsp" style="marign-left:0.9em; color: black;">MY PAGE</a>
 								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
 								<%} %>
 								</li>
@@ -260,9 +264,9 @@ String dataW = "";
 	
 	 <div class="container">
       <div class="heading_container">
-        <h2>MEM<span>BER</span></h2>
-        <p>
-        망고 회원 정보
+        <h1 style = "color: #293040;">MEM<span style = "color: #6475BC;">BER</span></h1>
+        <p style = "font-family: 'S-CoreDream-3Light'; color: #5F5F5F;">
+        <span style = "color: #A60F1B;">망고</span> 회원 <span style = "color: #A60F1B;">정보</span>
         </p>
       </div>
     </div>
@@ -282,7 +286,7 @@ String dataW = "";
 	   <form action = "sendm.jsp">
 	   <table id = "setTable" border = "1">
 	   
-		   	<tr>
+		   	<tr style = "color: black; font-family: 'S-CoreDream-6Bold';">
 				<td>ID</td>	   	
 				<td>NAME</td>	   	
 				<td>LOCATION</td>
@@ -309,10 +313,10 @@ String dataW = "";
    
 	<section class=" footer_section">
 		<div class="container">
-			<p>
-				&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
-					pictures cannot be copied without permission.</span>
-			</p>
+			<p style = "border-top: 1.5px solid #A60F1B; color: black; padding-top: 0px;">
+				<h6 style = "font-family: S-CoreDream-3Light;">&copy; <span id="displayYear"></span> Copyright2021. Mango <span>All
+					pictures cannot be copied without permission.</span></h6>
+			<br>
 		</div>
 	</section>
 </div>

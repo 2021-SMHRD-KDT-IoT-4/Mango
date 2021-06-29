@@ -230,7 +230,7 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 				if(id !== 'null'){
 					console.log("확인2 : " + id);
 					if(id == 'admin'){
-						document.getElementById("javatest").innerHTML = "<a href = 'message.jsp' style = 'color: #E0E0E0;'>Message</a>";
+						document.getElementById("javatest").innerHTML = "<a href = 'message.jsp' style = 'color: #656972;'>Message</a>";
 						
 					}else{
 						if(hours>=8 && hours<=18) {
@@ -238,7 +238,7 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 							
 						}else {
 							console.log("메세지 기능 활성화");
-							document.getElementById("javatest").innerHTML = "<a href = 'message.jsp' style = 'color: #E0E0E0;'>Message</a>";
+							document.getElementById("javatest").innerHTML = "<a href = 'message.jsp' style = 'color: #656972;'>Message</a>";
 						}
 					}
 				}else {
@@ -402,11 +402,6 @@ $.ajax({
 
 }
 
-a:hover {
-
-	color: black;
-
-}
 
 /* ::placeholder {
 	color : white;

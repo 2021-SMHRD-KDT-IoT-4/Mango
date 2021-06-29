@@ -73,7 +73,7 @@
 		text-align: left;
 		margin-left: 5%;
 		font-family: 'S-CoreDream-3Light';
-		color: white;
+		color: #656972;
 		
 	}
 	

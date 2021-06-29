@@ -44,7 +44,7 @@
 		background-color: rgba(255,255,255,0.1); 
 		padding: 2%;
 		box-shadow: 0 0 35px 0 rgb(0 0 0 / 15%);
-		color: white;
+		color: #656972;
 		font-family: 'S-CoreDream-3Light';
 	  }
 

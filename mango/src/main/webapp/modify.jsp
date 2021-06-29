@@ -241,7 +241,7 @@ String dataW = "";
 										<span class="sr-only">(current)</span>
 								</a></li>
 								<li class="nav-item active"><a class="nav-link2"
-									href="light.jsp" style = "color: black;"> Light </a></li>
+									href="light.jsp"> Light </a></li>
 								<li class="nav-item"><a class="nav-link2"
 									href="perfume.jsp"> Perfume </a></li>
 								<li class="nav-item"><a class="nav-link2"
@@ -255,7 +255,7 @@ String dataW = "";
 									<button class="nav-link2" id="modal_open" style = "color: black; border: none; margin-left: 13px;">Login</button>
 								<%}else{ %>
 								<a class="nav-link2" href = "mypage.jsp" style = "color: black;">MY PAGE</a>
-								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em; color: black;">LOGOUT</a>
+								<a class="nav-link2" href = "LogoutCon.do" style = "margin-left: 1em;">LOGOUT</a>
 								<%} %>
 								</li>
 							</ul>
