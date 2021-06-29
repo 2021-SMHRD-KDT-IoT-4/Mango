@@ -233,6 +233,7 @@ String dataW = "";
 	</div>
 	
 	<script>
+	var URL = "192.168.137.27" // url 랜카드 ip로 입력 시켜야함
 	var ch = false;
 	function check(){
 		if(ch){
@@ -255,7 +256,7 @@ String dataW = "";
 
 				<!--슬라이더로 선택할 input-->
 				<div class="Container">
-			        <input oninput = 'ShowSliderValue(this.value);document.querySelector("#wcat>img").style.opacity = this.value/100;'  type = "range" min='1' max='100' value='100' id = ch style = "text-align: center;">
+			        <input oninput = 'ShowSliderValue(this.value);document.querySelector("#wcat>img").style.opacity = this.value/100;brightness();'  type = "range" min='1' max='100' value='100' id = ch style = "text-align: center;">
 			        <font size = 3 id = "slider_value_view" style = "text-align: center;">100</font>	
 			    </div>
 			</div>
@@ -287,6 +288,7 @@ String dataW = "";
 	        else {
 	        $(this).html('On');
 	        }
+	        onoff();
 	    });
 	    });
 	
@@ -555,8 +557,81 @@ String dataW = "";
             $('#pagination-wrap ul li').removeClass('active');
             $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
         }
+		function info(){ 
+               $.ajax({
+                       type : "POST",
+                       dataType : "json",
+                       url : "http://"+URL+"/state",
+                       /*data : {
+                              json : jsonData
+                       },*/
+                       success : function(data) {
+                              // data는 서버로부터 전송받은 결과(JSON)이므로 바로 사용한다
+                              if(!data.isOn){
+                            	  $('#onOff').click();
+                              }
+                              document.getElementById('ch').value=data.brightness;
+                              ShowSliderValue(data.brightness);
+                              document.querySelector("#wcat>img").style.opacity = data.brightness/100;
+                       },
 
+                       error : function(e) {
+                              alert('서버 연결 도중 에러가 났습니다. 다시 시도해 주십시오.');
+                       }
+               });
 
+			
+		}
+		info();
+		function onoff(){
+			var d;
+			if(ch){
+				var d = "true" 
+			}else{
+				var d = "false"
+			}
+            $.ajax({
+                    type : "POST",
+                    dataType : "json",
+                    url : "http://"+URL+"/onoff",
+                    data : {
+                           isOn : d
+                    },
+                    success : function(data) {
+                           // data는 서버로부터 전송받은 결과(JSON)이므로 바로 사용한다
+                           console.log('켜기/끄기성공')
+                           console.log(data)
+                    },
+
+                    error : function(e) {
+                           alert('서버 연결 도중 에러가 났습니다. 다시 시도해 주십시오.');
+                    }
+            });
+
+			
+		}
+		function brightness(){ 
+            $.ajax({
+                    type : "GET",
+                    dataType : "json",
+                    url : "http://"+URL+"/brightness",
+                    data : {
+                           value : document.getElementById('ch').value
+                    },
+                    success : function(data) {
+                           // data는 서버로부터 전송받은 결과(JSON)이므로 바로 사용한다
+							console.log('밝기조정 성공')
+                           	console.log(data)
+                          
+                    },
+
+                    error : function(e) {
+                           alert('서버 연결 도중 에러가 났습니다. 다시 시도해 주십시오.');
+                    }
+            });
+
+			
+		}
 
     </script>
 </body>
