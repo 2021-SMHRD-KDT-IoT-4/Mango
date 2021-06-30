@@ -192,14 +192,17 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			if(todayW.equals("Clear"))dataR = "sunny";
 			if(todayW.equals("Clouds"))dataR = "fallout";
 		
+			
 			InfoDAO dao = new InfoDAO();
+			ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
+			if(id != null){
 			InfoDTO dto = dao.showOne(id);
 			String setting = dto.getSetting();
 			
 			SettingDAO dao2 = new SettingDAO();
-			ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
-			list= dao2.showSetting(setting); 
 			
+			list= dao2.showSetting(setting);
+			}
 	 %>
 
 	 
