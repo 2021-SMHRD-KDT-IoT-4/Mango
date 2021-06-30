@@ -1,3 +1,7 @@
+<%@page import="MODEL.SettingDTO"%>
+<%@page import="MODEL.SettingDAO"%>
+<%@page import="MODEL.InfoDAO"%>
+<%@page import="MODEL.InfoDTO"%>
 <%@page import="java.io.InputStreamReader"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.net.URL"%>
@@ -61,7 +65,6 @@
 	<%
 	OtherDTO date = new OtherDTO();
 	int gYear = date.getYear();
-	String gMonth = date.getMonth();
 	%>
 			<%String downJson=""; %>
 
@@ -174,7 +177,6 @@ JSONArray weatherArray2 = (JSONArray) jsonObj2.get("weather");
 JSONObject wea = (JSONObject) weatherArray2.get(0);
 /* System.out.println("날씨 : "+wea.get("main")); */
 
-
 %>
 
 
@@ -189,11 +191,21 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			if(todayW.equals("Rain"))dataR = "rain";
 			if(todayW.equals("Clear"))dataR = "sunny";
 			if(todayW.equals("Clouds"))dataR = "fallout";
+		
+			InfoDAO dao = new InfoDAO();
+			InfoDTO dto = dao.showOne(id);
+			String setting = dto.getSetting();
+			
+			SettingDAO dao2 = new SettingDAO();
+			ArrayList<SettingDTO> list = new ArrayList<SettingDTO>();
+			list= dao2.showSetting(setting); 
 			
 	 %>
+
+	 
 			<!-- Heavy Rain -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-1" data-weather="<%=dataR%>">
-				<div class="slide__element slide__element--date"><%=date.getDay(0) %>, <%=date.getDayOfWeek(0)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+				<div class="slide__element slide__element--date"><%=date.getDay(0) %>, <%=date.getDayOfWeek(0)%> <sup>th</sup> of <%=date.getMonth(0) %> <%=gYear%></div>
 			
 				<div id ="javatest"></div>
 				<script>
@@ -202,25 +214,52 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 				let hours = today.getHours(); // 시
 				let minutes = today.getMinutes();  // 분
 				let seconds = today.getSeconds();  // 초
+				let time_list = [];
+				<%for(int i=0; i<list.size();i++){%>
+					time_list.push('<%=list.get(i).getTime()%>');
+				<%}%>
+				let weather_list = [];
+				<%for(int i=0; i<list.size();i++){%>
+					weather_list.push('<%=list.get(i).getWeather()%>');
+				<%}%>
 				
 				function clock(){
 
-				let today = new Date();   
+				today = new Date();   
 					
-				let hours = today.getHours(); // 시
-				let minutes = today.getMinutes();  // 분
-				let seconds = today.getSeconds();  // 초
+				hours = today.getHours(); // 시
+				minutes = today.getMinutes();  // 분
+				seconds = today.getSeconds();  // 초
 					
 				let sec= hours+ " : " +minutes+ " : " +seconds;
 				document.getElementById("javatest").innerHTML = sec;
+				
+				check();
 				};
+				
+				
+				
+				function check(){
+					 for(var i =0;i<time_list.length;i++){
+							let time = time_list[i];
+							let weather = weather_list[i];
+							let array=[];
+							array[i] = time.split(":");
+							if(hours == array[i][0] && minutes == array[1] && dataR==weather){
+								fresult =1;
+								window.location.href= '${pageContext.request.contextPath}/test.jsp?rere='+fresult;
+							}
+							
+						
+						}	
+				};
+				
 				
 				function Init(){
 					clock();
 					setInterval(clock,1000);
 				};
 				
-				/* Init(); */
 				
 				var id = '<%=id%>';
 				
@@ -252,31 +291,31 @@ JSONObject wea = (JSONObject) weatherArray2.get(0);
 			</div>
 			<!-- Drizzle -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-2" data-weather="drizzle">
-				<div class="slide__element slide__element--date"><%=date.getDay(1) %>, <%=date.getDayOfWeek(1)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+				<div class="slide__element slide__element--date"><%=date.getDay(1) %>, <%=date.getDayOfWeek(1)%> <sup>th</sup> of <%=date.getMonth(1) %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(0)%>°<small>C</small></div>
 			</div>
 			<!-- Sunny -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-3" data-weather="sunny">
-				<div class="slide__element slide__element--date"><%=date.getDay(2)%>, <%=date.getDayOfWeek(2)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+				<div class="slide__element slide__element--date"><%=date.getDay(2)%>, <%=date.getDayOfWeek(2)%> <sup>th</sup> of <%=date.getMonth(2) %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(1)%>°<small>C</small></div>
 			</div>
 			<!-- Heavy rain -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-5" data-weather="storm">
-				<div class="slide__element slide__element--date"><%=date.getDay(3) %>, <%=date.getDayOfWeek(3)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+				<div class="slide__element slide__element--date"><%=date.getDay(3) %>, <%=date.getDayOfWeek(3)%> <sup>th</sup> of <%=date.getMonth(3) %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(2)%>°<small>C</small></div>
 			</div>
 			<!-- Fallout (greenish overlay with slightly greenish/yellowish drops) -->
 			<div class="slide" style= "padding : 35vh 0 0 0" id="slide-4" data-weather="fallout">
-				<div class="slide__element slide__element--date"><%=date.getDay(4) %>, <%=date.getDayOfWeek(4)%> <sup>th</sup> of <%=gMonth %> <%=gYear%></div>
+				<div class="slide__element slide__element--date"><%=date.getDay(4) %>, <%=date.getDayOfWeek(4)%> <sup>th</sup> of <%=date.getMonth(4) %> <%=gYear%></div>
 				<div class="slide__element slide__element--temp"><%=finalResult.get(3)%>°<small>C</small></div>
 			</div>
 			<nav class="slideshow__nav" style = "margin-bottom: 50px;">	
 	
-				<a class="nav-item" href="#slide-1" style = "margin:17.5px;"><i class="icon icon--rainy"></i><span><%=gMonth%>/<%=date.getDay(0)%></span></a>
-				<a class="nav-item" href="#slide-2" style = "margin:17.5px;"><i class="icon icon--drizzle"></i><span><%=gMonth%>/<%=date.getDay(1)%></span></a>
-				<a class="nav-item" href="#slide-3" style = "margin:17.5px;"><i class="icon icon--sun"></i><span><%=gMonth%>/<%=date.getDay(2)%></span></a>
-				<a class="nav-item" href="#slide-5" style = "margin:17.5px;"><i class="icon icon--storm"></i><span><%=gMonth%>/<%=date.getDay(3)%></span></a>
-				<a class="nav-item" href="#slide-4" style = "margin:17.5px;"><i class="icon icon--radioactive"></i><span><%=gMonth%>/<%=date.getDay(4)%></span></a>
+				<a class="nav-item" href="#slide-1" style = "margin:17.5px;"><i class="icon icon--rainy"></i><span><%=date.getMonth(0)%>/<%=date.getDay(0)%></span></a>
+				<a class="nav-item" href="#slide-2" style = "margin:17.5px;"><i class="icon icon--drizzle"></i><span><%=date.getMonth(1)%>/<%=date.getDay(1)%></span></a>
+				<a class="nav-item" href="#slide-3" style = "margin:17.5px;"><i class="icon icon--sun"></i><span><%=date.getMonth(2)%>/<%=date.getDay(2)%></span></a>
+				<a class="nav-item" href="#slide-5" style = "margin:17.5px;"><i class="icon icon--storm"></i><span><%=date.getMonth(3)%>/<%=date.getDay(3)%></span></a>
+				<a class="nav-item" href="#slide-4" style = "margin:17.5px;"><i class="icon icon--radioactive"></i><span><%=date.getMonth(4)%>/<%=date.getDay(4)%></span></a>
 			</nav>
 		</div>
 		<p class="nosupport">Sorry, but your browser does not support WebGL!</p>

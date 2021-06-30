@@ -328,9 +328,9 @@ String dataW = "";
 			        
 			      if(pw === pw2){
 
-			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:green' id = pwcheck>비밀번호가 일치합니다</span>";
+			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:green; font-size:12px; display:block;' id = pwcheck>비밀번호가 일치합니다</span>";
 			    }else{
-			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:red' id = pwcheck>비밀번호가 일치하지 않습니다</span>";
+			        document.getElementById("pwcheck").innerHTML = "<span style = 'color:red; font-size:12px; display:block;' id = pwcheck>비밀번호가 일치하지 않습니다</span>";
 
 			    }
 			    };
