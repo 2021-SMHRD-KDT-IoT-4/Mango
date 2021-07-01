@@ -232,7 +232,7 @@ String dataW = "";
 %>
 
 <div class="container" style = "margin-left : 0">
-			<canvas id="container" style= "position: absolute;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
+			<canvas id="container" style= "position: fixed;  left: -0.5vw;  width: 100.5vw; height: 100vh;"></canvas>
 	<div class="slide" id="slide-1" data-weather="<%=dataR%>" style = "padding:0">
 	<div class="hero_area">
 		<!-- header section strats -->
